@@ -1,0 +1,38 @@
+start dropout v3 0.25
+  0%|                                                                                                                                                            | 0/16 [00:00<?, ?it/s]  6%|█████████▎                                                                                                                                          | 1/16 [00:00<00:05,  2.78it/s] 31%|██████████████████████████████████████████████▎                                                                                                     | 5/16 [00:00<00:01,  9.29it/s] 56%|███████████████████████████████████████████████████████████████████████████████████▎                                                                | 9/16 [00:00<00:00, 10.31it/s] 81%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                           | 13/16 [00:01<00:00, 13.36it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.42it/s]
+  0%|                                                                                                                                                            | 0/16 [00:00<?, ?it/s]  6%|█████████▎                                                                                                                                          | 1/16 [00:00<00:04,  3.56it/s] 31%|██████████████████████████████████████████████▎                                                                                                     | 5/16 [00:00<00:01, 10.54it/s] 56%|███████████████████████████████████████████████████████████████████████████████████▎                                                                | 9/16 [00:00<00:00, 11.68it/s] 81%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                           | 13/16 [00:01<00:00, 14.17it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.26it/s]dropout_v3_0_25_R2plus1D_18_MotionNet.pth has 31575731 parameters.
+
+Traceback (most recent call last):
+  File "./warren-random/train_new_models/train_new_model_2.py", line 183, in <module>
+    train_loss = train_with_log(epoch, train_loader=train_dataloader, model=model, optimizer=optimizer, log_file = log_file)
+  File "/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking/src/train_test.py", line 91, in train_with_log
+    optimizer.step()
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 15, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/optim/adam.py", line 107, in step
+    denom = (exp_avg_sq.sqrt() / math.sqrt(bias_correction2)).add_(group['eps'])
+RuntimeError: CUDA error: an illegal memory access was encountered
+
+real	1m44.494s
+user	4m2.350s
+sys	0m33.055s
+training models done...now try to create create csv data from them...
+start creating csv for dropout v3 0.25
+  0%|                                                                                                                                                            | 0/16 [00:00<?, ?it/s]  6%|█████████▎                                                                                                                                          | 1/16 [00:00<00:04,  3.43it/s] 31%|██████████████████████████████████████████████▎                                                                                                     | 5/16 [00:00<00:01,  8.73it/s] 56%|███████████████████████████████████████████████████████████████████████████████████▎                                                                | 9/16 [00:00<00:00, 11.10it/s] 81%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                           | 13/16 [00:01<00:00, 13.27it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.71it/s]
+  0%|                                                                                                                                                            | 0/16 [00:00<?, ?it/s]  6%|█████████▎                                                                                                                                          | 1/16 [00:00<00:04,  3.25it/s] 31%|██████████████████████████████████████████████▎                                                                                                     | 5/16 [00:00<00:01, 10.54it/s] 56%|███████████████████████████████████████████████████████████████████████████████████▎                                                                | 9/16 [00:00<00:00, 13.67it/s] 81%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                           | 13/16 [00:01<00:00, 14.57it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.35it/s]
+  0%|                                                                                                                                                            | 0/16 [00:00<?, ?it/s]  6%|█████████▎                                                                                                                                          | 1/16 [00:00<00:04,  3.21it/s] 31%|██████████████████████████████████████████████▎                                                                                                     | 5/16 [00:00<00:01, 10.59it/s] 56%|███████████████████████████████████████████████████████████████████████████████████▎                                                                | 9/16 [00:00<00:00, 12.89it/s] 81%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                           | 13/16 [00:01<00:00, 14.06it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.68it/s]
+Traceback (most recent call last):
+  File "./warren-random/quantifying-performance/create_csv.py", line 209, in <module>
+    model.load_state_dict(torch.load(model_save_path)["model"])
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 584, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 234, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 215, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'save_models/dropout_v3_0_25_R2plus1D_18_MotionNet.pth'
+
+real	0m12.816s
+user	0m40.746s
+sys	0m2.881s
+runme.sh script finished

@@ -1,0 +1,3 @@
+- visualize motion tracking warping frame by frame to better understand what the model is doing
+- compute meta stats on our strain calculations of our models
+- better understand the differences between our dropout models with the original model

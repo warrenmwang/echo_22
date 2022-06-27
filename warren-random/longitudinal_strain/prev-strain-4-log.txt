@@ -1,0 +1,6727 @@
+test dataset length: 1276
+Original_Pretrained_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+retrain_original_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_0_10_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_0_25_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+dropout_0_50_R2plus1DMotionSegNet_model.pth has 31575731 parameters.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 0
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5556%
+ground_truth_strain: -16.0584%
+RMSE: 0.005028386050283856
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5414%
+ground_truth_strain: -16.0584%
+RMSE: 0.004829592228747043
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0376%
+ground_truth_strain: -16.0584%
+RMSE: 0.010208001756215362
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.6716%
+ground_truth_strain: -16.0584%
+RMSE: 0.0038675236953916448
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2482%
+ground_truth_strain: -16.0584%
+RMSE: 0.021897810218978103
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7080%
+ground_truth_strain: -16.0584%
+RMSE: 0.036496350364963515
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2963%
+ground_truth_strain: -16.0584%
+RMSE: 0.002379021357123562
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5182%
+ground_truth_strain: -16.0584%
+RMSE: 0.014598540145985411
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9118%
+ground_truth_strain: -16.0584%
+RMSE: 0.008533705452984125
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 1
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.6667%
+ground_truth_strain: -10.1190%
+RMSE: 0.034523809523809526
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.4848%
+ground_truth_strain: -10.1190%
+RMSE: 0.016341991341991338
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6970%
+ground_truth_strain: -10.1190%
+RMSE: 0.004220779220779222
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.9286%
+ground_truth_strain: -10.1190%
+RMSE: 0.011904761904761904
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.4848%
+ground_truth_strain: -10.1190%
+RMSE: 0.016341991341991338
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6386%
+ground_truth_strain: -10.1190%
+RMSE: 0.004804934021801488
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.2840%
+ground_truth_strain: -10.1190%
+RMSE: 0.018350239504085653
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.7143%
+ground_truth_strain: -10.1190%
+RMSE: 0.005952380952380945
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.5808%
+ground_truth_strain: -10.1190%
+RMSE: 0.005382092956943252
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 2
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2174%
+ground_truth_strain: -11.8881%
+RMSE: 0.03329279416235939
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5556%
+ground_truth_strain: -11.8881%
+RMSE: 0.03667443667443668
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3824%
+ground_truth_strain: -11.8881%
+RMSE: 0.06494241053064584
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5182%
+ground_truth_strain: -11.8881%
+RMSE: 0.056301362870705945
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2963%
+ground_truth_strain: -11.8881%
+RMSE: 0.044081844081844096
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5182%
+ground_truth_strain: -11.8881%
+RMSE: 0.056301362870705945
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -11.8881%
+RMSE: 0.04778554778554778
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.0584%
+ground_truth_strain: -11.8881%
+RMSE: 0.041702822724720534
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7050%
+ground_truth_strain: -11.8881%
+RMSE: 0.06816924083111134
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 3
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.0952%
+ground_truth_strain: -8.8608%
+RMSE: 0.0423447860156721
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.7143%
+ground_truth_strain: -8.8608%
+RMSE: 0.04853526220614829
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4706%
+ground_truth_strain: -8.8608%
+RMSE: 0.07609828741623231
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.6905%
+ground_truth_strain: -8.8608%
+RMSE: 0.04829716696805306
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.8434%
+ground_truth_strain: -8.8608%
+RMSE: 0.019826140003050177
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7907%
+ground_truth_strain: -8.8608%
+RMSE: 0.03929938180747719
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0351%
+ground_truth_strain: -8.8608%
+RMSE: 0.05174328225627359
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2012%
+ground_truth_strain: -8.8608%
+RMSE: 0.05340423938281777
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.5152%
+ground_truth_strain: -8.8608%
+RMSE: 0.026543920214806296
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 4
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3333%
+ground_truth_strain: -18.0645%
+RMSE: 0.01268817204301076
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3333%
+ground_truth_strain: -18.0645%
+RMSE: 0.03268817204301078
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9189%
+ground_truth_strain: -18.0645%
+RMSE: 0.00854402789886663
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9459%
+ground_truth_strain: -18.0645%
+RMSE: 0.028814298169136887
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -18.0645%
+RMSE: 0.01935483870967744
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1342%
+ground_truth_strain: -18.0645%
+RMSE: 0.020697120588872048
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1342%
+ground_truth_strain: -18.0645%
+RMSE: 0.020697120588872048
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1342%
+ground_truth_strain: -18.0645%
+RMSE: 0.020697120588872048
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1781%
+ground_truth_strain: -18.0645%
+RMSE: 0.011135660627485638
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 5
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -11.9048%
+RMSE: 0.034798534798534814
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -11.9048%
+RMSE: 0.06277056277056278
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7305%
+ground_truth_strain: -11.9048%
+RMSE: 0.05825734549138806
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0141%
+ground_truth_strain: -11.9048%
+RMSE: 0.07109322602280349
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1844%
+ground_truth_strain: -11.9048%
+RMSE: 0.022796352583586643
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.7832%
+ground_truth_strain: -11.9048%
+RMSE: 0.0487845487845488
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3099%
+ground_truth_strain: -11.9048%
+RMSE: 0.06405097250167674
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8919%
+ground_truth_strain: -11.9048%
+RMSE: 0.04987129987129987
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6056%
+ground_truth_strain: -11.9048%
+RMSE: 0.05700871898054996
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 6
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5439%
+ground_truth_strain: -19.8830%
+RMSE: 0.023391812865497075
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5689%
+ground_truth_strain: -19.8830%
+RMSE: 0.04314178660223411
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5629%
+ground_truth_strain: -19.8830%
+RMSE: 0.013201666841755083
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9641%
+ground_truth_strain: -19.8830%
+RMSE: 0.019189690793850883
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6471%
+ground_truth_strain: -19.8830%
+RMSE: 0.022359821121431006
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7515%
+ground_truth_strain: -19.8830%
+RMSE: 0.02131561645731686
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2982%
+ground_truth_strain: -19.8830%
+RMSE: 0.005847953216374269
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0476%
+ground_truth_strain: -19.8830%
+RMSE: 0.00835421888053467
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2619%
+ground_truth_strain: -19.8830%
+RMSE: 0.02621136173767752
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 7
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8413%
+ground_truth_strain: -14.8760%
+RMSE: 0.049652367834186
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8525%
+ground_truth_strain: -14.8760%
+RMSE: 0.03976425958542201
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -14.8760%
+RMSE: 0.05123966942148761
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5484%
+ground_truth_strain: -14.8760%
+RMSE: 0.036723540389229536
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8000%
+ground_truth_strain: -14.8760%
+RMSE: 0.05923966942148759
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3548%
+ground_truth_strain: -14.8760%
+RMSE: 0.04478805651826179
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1613%
+ground_truth_strain: -14.8760%
+RMSE: 0.05285257264729404
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8525%
+ground_truth_strain: -14.8760%
+RMSE: 0.03976425958542201
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8525%
+ground_truth_strain: -14.8760%
+RMSE: 0.03976425958542201
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 8
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9399%
+ground_truth_strain: -15.8470%
+RMSE: 0.010928961748633864
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.7598%
+ground_truth_strain: -15.8470%
+RMSE: 0.009127820007937215
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6796%
+ground_truth_strain: -15.8470%
+RMSE: 0.018325634755305964
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2011%
+ground_truth_strain: -15.8470%
+RMSE: 0.0035412278291662713
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.7598%
+ground_truth_strain: -15.8470%
+RMSE: 0.009127820007937215
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7778%
+ground_truth_strain: -15.8470%
+RMSE: 0.01930783242258652
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6796%
+ground_truth_strain: -15.8470%
+RMSE: 0.018325634755305964
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -15.8470%
+RMSE: 0.008196721311475391
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.0221%
+ground_truth_strain: -15.8470%
+RMSE: 0.0017510491199468625
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 9
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6522%
+ground_truth_strain: -18.6813%
+RMSE: 0.019708552317247968
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7391%
+ground_truth_strain: -18.6813%
+RMSE: 0.030578117534639265
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8791%
+ground_truth_strain: -18.6813%
+RMSE: 0.021978021978021983
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7650%
+ground_truth_strain: -18.6813%
+RMSE: 0.02083708641085691
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1087%
+ground_truth_strain: -18.6813%
+RMSE: 0.01427376970855232
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8791%
+ground_truth_strain: -18.6813%
+RMSE: 0.021978021978021983
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2186%
+ground_truth_strain: -18.6813%
+RMSE: 0.015372605536539963
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2308%
+ground_truth_strain: -18.6813%
+RMSE: 0.005494505494505503
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4599%
+ground_truth_strain: -18.6813%
+RMSE: 0.037785743668096616
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 10
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.9630%
+ground_truth_strain: -10.3030%
+RMSE: 0.026599326599326595
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8148%
+ground_truth_strain: -10.3030%
+RMSE: 0.04511784511784511
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7576%
+ground_truth_strain: -10.3030%
+RMSE: 0.054545454545454536
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3374%
+ground_truth_strain: -10.3030%
+RMSE: 0.05034393009853133
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.9394%
+ground_truth_strain: -10.3030%
+RMSE: 0.036363636363636376
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.6627%
+ground_truth_strain: -10.3030%
+RMSE: 0.05359620299379336
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.4578%
+ground_truth_strain: -10.3030%
+RMSE: 0.041548010222709014
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5680%
+ground_truth_strain: -10.3030%
+RMSE: 0.06265017034247805
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3374%
+ground_truth_strain: -10.3030%
+RMSE: 0.05034393009853133
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 11
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7941%
+ground_truth_strain: -16.9935%
+RMSE: 0.058006535947712407
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.3083%
+ground_truth_strain: -16.9935%
+RMSE: 0.06314806624404146
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8955%
+ground_truth_strain: -16.9935%
+RMSE: 0.039020583357721184
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -16.9935%
+RMSE: 0.011883541295306
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8978%
+ground_truth_strain: -16.9935%
+RMSE: 0.04904346166690521
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6047%
+ground_truth_strain: -16.9935%
+RMSE: 0.01611187110503115
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3008%
+ground_truth_strain: -16.9935%
+RMSE: 0.033072878274116646
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -26.4706%
+ground_truth_strain: -16.9935%
+RMSE: 0.09477124183006536
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8529%
+ground_truth_strain: -16.9935%
+RMSE: 0.028594771241830047
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 12
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8000%
+ground_truth_strain: -12.6050%
+RMSE: 0.08194957983193277
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2131%
+ground_truth_strain: -12.6050%
+RMSE: 0.04608072737291638
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3548%
+ground_truth_strain: -12.6050%
+RMSE: 0.06749796692870697
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4000%
+ground_truth_strain: -12.6050%
+RMSE: 0.057949579831932774
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2540%
+ground_truth_strain: -12.6050%
+RMSE: 0.056489262371615306
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5484%
+ground_truth_strain: -12.6050%
+RMSE: 0.059433450799674714
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1613%
+ground_truth_strain: -12.6050%
+RMSE: 0.07556248305773922
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3934%
+ground_truth_strain: -12.6050%
+RMSE: 0.03788400606144096
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.5122%
+ground_truth_strain: -12.6050%
+RMSE: 0.06907153105144498
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 13
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6000%
+ground_truth_strain: -5.3435%
+RMSE: 0.04256488549618321
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.4839%
+ground_truth_strain: -5.3435%
+RMSE: 0.051403595173602566
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.3175%
+ground_truth_strain: -5.3435%
+RMSE: 0.049739488670786376
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.2362%
+ground_truth_strain: -5.3435%
+RMSE: 0.048927090220592655
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.8000%
+ground_truth_strain: -5.3435%
+RMSE: 0.0345648854961832
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.2362%
+ground_truth_strain: -5.3435%
+RMSE: 0.048927090220592655
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.1111%
+ground_truth_strain: -5.3435%
+RMSE: 0.05767599660729431
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.9375%
+ground_truth_strain: -5.3435%
+RMSE: 0.05593988549618321
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6000%
+ground_truth_strain: -5.3435%
+RMSE: 0.04256488549618321
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 14
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2000%
+ground_truth_strain: -18.3333%
+RMSE: 0.008666666666666684
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5738%
+ground_truth_strain: -18.3333%
+RMSE: 0.027595628415300527
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9355%
+ground_truth_strain: -18.3333%
+RMSE: 0.013978494623655913
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2540%
+ground_truth_strain: -18.3333%
+RMSE: 0.0007936507936507908
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3226%
+ground_truth_strain: -18.3333%
+RMSE: 0.030107526881720414
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3934%
+ground_truth_strain: -18.3333%
+RMSE: 0.019398907103825136
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0328%
+ground_truth_strain: -18.3333%
+RMSE: 0.003005464480874298
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5289%
+ground_truth_strain: -18.3333%
+RMSE: 0.01804407713498621
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7025%
+ground_truth_strain: -18.3333%
+RMSE: 0.026308539944903564
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 15
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7407%
+ground_truth_strain: -19.4444%
+RMSE: 0.037037037037037035
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -19.4444%
+RMSE: 0.02777777777777779
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.5607%
+ground_truth_strain: -19.4444%
+RMSE: 0.011163032191069566
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8145%
+ground_truth_strain: -19.4444%
+RMSE: 0.01370035193564606
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3620%
+ground_truth_strain: -19.4444%
+RMSE: 0.009175465057817994
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3486%
+ground_truth_strain: -19.4444%
+RMSE: 0.010958205912334346
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.9095%
+ground_truth_strain: -19.4444%
+RMSE: 0.004650578179989928
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.4612%
+ground_truth_strain: -19.4444%
+RMSE: 0.020167427701674262
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8082%
+ground_truth_strain: -19.4444%
+RMSE: 0.01636225266362254
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 16
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2053%
+ground_truth_strain: -25.3165%
+RMSE: 0.06111157682957499
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -25.3165%
+RMSE: 0.05316455696202532
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -25.3165%
+RMSE: 0.05316455696202532
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3333%
+ground_truth_strain: -25.3165%
+RMSE: 0.059831223628692004
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2614%
+ground_truth_strain: -25.3165%
+RMSE: 0.05055017787705801
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3684%
+ground_truth_strain: -25.3165%
+RMSE: 0.029480346435709542
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2614%
+ground_truth_strain: -25.3165%
+RMSE: 0.05055017787705801
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2614%
+ground_truth_strain: -25.3165%
+RMSE: 0.05055017787705801
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.5686%
+ground_truth_strain: -25.3165%
+RMSE: 0.0374782824522214
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 17
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1374%
+ground_truth_strain: -19.5489%
+RMSE: 0.025885323997015458
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6641%
+ground_truth_strain: -19.5489%
+RMSE: 0.04115249956953454
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4848%
+ground_truth_strain: -19.5489%
+RMSE: 0.039359763043973595
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9008%
+ground_truth_strain: -19.5489%
+RMSE: 0.033518911783274985
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.8120%
+ground_truth_strain: -19.5489%
+RMSE: 0.05263157894736842
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7054%
+ground_truth_strain: -19.5489%
+RMSE: 0.021565541761380203
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4848%
+ground_truth_strain: -19.5489%
+RMSE: 0.039359763043973595
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7273%
+ground_truth_strain: -19.5489%
+RMSE: 0.031784005468216
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4806%
+ground_truth_strain: -19.5489%
+RMSE: 0.02931747974587634
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 18
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1102%
+ground_truth_strain: -18.3824%
+RMSE: 0.002721167207040298
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8976%
+ground_truth_strain: -18.3824%
+RMSE: 0.005152848540991184
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1550%
+ground_truth_strain: -18.3824%
+RMSE: 0.017726858185134503
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.9697%
+ground_truth_strain: -18.3824%
+RMSE: 0.03587344028520498
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -18.3824%
+RMSE: 0.016176470588235292
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -18.3824%
+RMSE: 0.003676470588235281
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -18.3824%
+RMSE: 0.003676470588235281
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1550%
+ground_truth_strain: -18.3824%
+RMSE: 0.017726858185134503
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3798%
+ground_truth_strain: -18.3824%
+RMSE: 0.009974920200638393
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 19
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.5476%
+ground_truth_strain: -5.1136%
+RMSE: 0.01433982683982684
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.6145%
+ground_truth_strain: -5.1136%
+RMSE: 0.014991785323110629
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -5.9880%
+ground_truth_strain: -5.1136%
+RMSE: 0.008743875884594444
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.1006%
+ground_truth_strain: -5.1136%
+RMSE: 0.019869553523399676
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.5868%
+ground_truth_strain: -5.1136%
+RMSE: 0.014731899836690258
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -5.3892%
+ground_truth_strain: -5.1136%
+RMSE: 0.0027558519324986375
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -5.4217%
+ground_truth_strain: -5.1136%
+RMSE: 0.0030805038335158796
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.6923%
+ground_truth_strain: -5.1136%
+RMSE: 0.025786713286713288
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.0241%
+ground_truth_strain: -5.1136%
+RMSE: 0.009104600219058047
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 20
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1176%
+ground_truth_strain: -15.8273%
+RMSE: 0.032903089293271265
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1493%
+ground_truth_strain: -15.8273%
+RMSE: 0.04321915601846882
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8955%
+ground_truth_strain: -15.8273%
+RMSE: 0.05068184258563299
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9394%
+ground_truth_strain: -15.8273%
+RMSE: 0.031120558098975376
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3008%
+ground_truth_strain: -15.8273%
+RMSE: 0.044734137502028454
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -15.8273%
+RMSE: 0.023544800523217807
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -15.8273%
+RMSE: 0.041726618705035995
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9104%
+ground_truth_strain: -15.8273%
+RMSE: 0.020831096316976272
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1493%
+ground_truth_strain: -15.8273%
+RMSE: 0.04321915601846882
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 21
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.8889%
+ground_truth_strain: -13.8614%
+RMSE: 0.0002750275027502691
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5138%
+ground_truth_strain: -13.8614%
+RMSE: 0.026523753292760466
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3636%
+ground_truth_strain: -13.8614%
+RMSE: 0.02502250225022501
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.6789%
+ground_truth_strain: -13.8614%
+RMSE: 0.008175129439549456
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.9630%
+ground_truth_strain: -13.8614%
+RMSE: 0.008984231756509004
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1171%
+ground_truth_strain: -13.8614%
+RMSE: 0.032557309785032545
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1171%
+ground_truth_strain: -13.8614%
+RMSE: 0.032557309785032545
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8571%
+ground_truth_strain: -13.8614%
+RMSE: 0.03995756718528995
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.4312%
+ground_truth_strain: -13.8614%
+RMSE: 0.03569806521936597
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 22
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8010%
+ground_truth_strain: -18.3673%
+RMSE: 0.0056629981835666365
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2775%
+ground_truth_strain: -18.3673%
+RMSE: 0.01089860027780748
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3246%
+ground_truth_strain: -18.3673%
+RMSE: 0.0004273960893257933
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5532%
+ground_truth_strain: -18.3673%
+RMSE: 0.008141554494138087
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6528%
+ground_truth_strain: -18.3673%
+RMSE: 0.0028550280215713097
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7083%
+ground_truth_strain: -18.3673%
+RMSE: 0.006590136054421769
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9474%
+ground_truth_strain: -18.3673%
+RMSE: 0.00580021482277121
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0213%
+ground_truth_strain: -18.3673%
+RMSE: 0.013460703430308307
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4021%
+ground_truth_strain: -18.3673%
+RMSE: 0.0196523053665911
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 23
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1509%
+ground_truth_strain: -9.5238%
+RMSE: 0.046271338724168914
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.8911%
+ground_truth_strain: -9.5238%
+RMSE: 0.013672795851013678
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.6214%
+ground_truth_strain: -9.5238%
+RMSE: 0.030975496994914475
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8224%
+ground_truth_strain: -9.5238%
+RMSE: 0.07298620382732532
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -9.5238%
+RMSE: 0.047619047619047616
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.0000%
+ground_truth_strain: -9.5238%
+RMSE: 0.014761904761904768
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.0000%
+ground_truth_strain: -9.5238%
+RMSE: 0.005238095238095236
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.4286%
+ground_truth_strain: -9.5238%
+RMSE: 0.01904761904761905
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.5385%
+ground_truth_strain: -9.5238%
+RMSE: 0.020146520146520158
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 24
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1892%
+ground_truth_strain: -18.3007%
+RMSE: 0.04111464405582052
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -18.3007%
+RMSE: 0.04014939309056956
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.1074%
+ground_truth_strain: -18.3007%
+RMSE: 0.021932710444356712
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8378%
+ground_truth_strain: -18.3007%
+RMSE: 0.054628157569334035
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7651%
+ground_truth_strain: -18.3007%
+RMSE: 0.035355529236303
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.9660%
+ground_truth_strain: -18.3007%
+RMSE: 0.033346672002134176
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -18.3007%
+RMSE: 0.04014939309056956
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -18.3007%
+RMSE: 0.04014939309056956
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1892%
+ground_truth_strain: -18.3007%
+RMSE: 0.04111464405582052
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 25
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7586%
+ground_truth_strain: -22.0690%
+RMSE: 0.006896551724137945
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.6027%
+ground_truth_strain: -22.0690%
+RMSE: 0.00533774208786017
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.1379%
+ground_truth_strain: -22.0690%
+RMSE: 0.020689655172413807
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2877%
+ground_truth_strain: -22.0690%
+RMSE: 0.01218705715635332
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7586%
+ground_truth_strain: -22.0690%
+RMSE: 0.006896551724137945
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2222%
+ground_truth_strain: -22.0690%
+RMSE: 0.0015325670498084198
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2877%
+ground_truth_strain: -22.0690%
+RMSE: 0.01218705715635332
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.6027%
+ground_truth_strain: -22.0690%
+RMSE: 0.00533774208786017
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9167%
+ground_truth_strain: -22.0690%
+RMSE: 0.008477011494252867
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 26
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.4650%
+ground_truth_strain: -8.1761%
+RMSE: 0.03288867523935425
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.8974%
+ground_truth_strain: -8.1761%
+RMSE: 0.027213352685050804
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7389%
+ground_truth_strain: -8.1761%
+RMSE: 0.04562752874253896
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1019%
+ground_truth_strain: -8.1761%
+RMSE: 0.039258101990946606
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.5541%
+ground_truth_strain: -8.1761%
+RMSE: 0.013780394984577185
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.9497%
+ground_truth_strain: -8.1761%
+RMSE: 0.03773584905660378
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.0253%
+ground_truth_strain: -8.1761%
+RMSE: 0.038492158267653856
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.5786%
+ground_truth_strain: -8.1761%
+RMSE: 0.04402515723270441
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7389%
+ground_truth_strain: -8.1761%
+RMSE: 0.04562752874253896
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 27
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.1695%
+ground_truth_strain: -12.6984%
+RMSE: 0.025289211729889682
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.4348%
+ground_truth_strain: -12.6984%
+RMSE: 0.02263630089717046
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.9658%
+ground_truth_strain: -12.6984%
+RMSE: 0.007326007326007314
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7119%
+ground_truth_strain: -12.6984%
+RMSE: 0.00013451708366962745
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7119%
+ground_truth_strain: -12.6984%
+RMSE: 0.00013451708366962745
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.3448%
+ground_truth_strain: -12.6984%
+RMSE: 0.023535851122058013
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.0690%
+ground_truth_strain: -12.6984%
+RMSE: 0.006294471811713179
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.8644%
+ground_truth_strain: -12.6984%
+RMSE: 0.008340059187516805
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7119%
+ground_truth_strain: -12.6984%
+RMSE: 0.00013451708366962745
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 28
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -23.1343%
+RMSE: 0.005779373807653476
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8045%
+ground_truth_strain: -23.1343%
+RMSE: 0.013298170800134679
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.3083%
+ground_truth_strain: -23.1343%
+RMSE: 0.0017394231848277264
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7273%
+ground_truth_strain: -23.1343%
+RMSE: 0.004070556309362289
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8045%
+ground_truth_strain: -23.1343%
+RMSE: 0.013298170800134679
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9630%
+ground_truth_strain: -23.1343%
+RMSE: 0.001713653952459926
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3740%
+ground_truth_strain: -23.1343%
+RMSE: 0.017602825566822383
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.3083%
+ground_truth_strain: -23.1343%
+RMSE: 0.0017394231848277264
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -23.1343%
+RMSE: 0.005779373807653476
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 29
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9167%
+ground_truth_strain: -20.5674%
+RMSE: 0.02349290780141844
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4043%
+ground_truth_strain: -20.5674%
+RMSE: 0.028368794326241148
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2394%
+ground_truth_strain: -20.5674%
+RMSE: 0.026720607331934876
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.4755%
+ground_truth_strain: -20.5674%
+RMSE: 0.03908148588999655
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5352%
+ground_truth_strain: -20.5674%
+RMSE: 0.019678353810808125
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.9437%
+ground_truth_strain: -20.5674%
+RMSE: 0.03376286085306163
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.8571%
+ground_truth_strain: -20.5674%
+RMSE: 0.022897669706180346
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.3056%
+ground_truth_strain: -20.5674%
+RMSE: 0.037381796690307334
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.6950%
+ground_truth_strain: -20.5674%
+RMSE: 0.021276595744680854
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 30
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.5509%
+ground_truth_strain: -17.6471%
+RMSE: 0.06903839380063401
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2892%
+ground_truth_strain: -17.6471%
+RMSE: 0.04642097802976611
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4940%
+ground_truth_strain: -17.6471%
+RMSE: 0.058469170800850456
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9412%
+ground_truth_strain: -17.6471%
+RMSE: 0.052941176470588214
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6686%
+ground_truth_strain: -17.6471%
+RMSE: 0.06021580229725024
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8095%
+ground_truth_strain: -17.6471%
+RMSE: 0.06162464985994395
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2892%
+ground_truth_strain: -17.6471%
+RMSE: 0.04642097802976611
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9581%
+ground_truth_strain: -17.6471%
+RMSE: 0.03311025008805915
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.9521%
+ground_truth_strain: -17.6471%
+RMSE: 0.0630503698485382
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 31
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.9236%
+ground_truth_strain: -12.2581%
+RMSE: 0.03665502362851859
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -12.2581%
+RMSE: 0.03126550868486354
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1935%
+ground_truth_strain: -12.2581%
+RMSE: 0.019354838709677427
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -12.2581%
+RMSE: 0.020276497695852533
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -12.2581%
+RMSE: 0.03126550868486354
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4839%
+ground_truth_strain: -12.2581%
+RMSE: 0.032258064516129045
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1935%
+ground_truth_strain: -12.2581%
+RMSE: 0.019354838709677427
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.0256%
+ground_truth_strain: -12.2581%
+RMSE: 0.037675765095119954
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7436%
+ground_truth_strain: -12.2581%
+RMSE: 0.024855252274607123
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 32
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3684%
+ground_truth_strain: -23.1293%
+RMSE: 0.007608306480486937
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.5686%
+ground_truth_strain: -23.1293%
+RMSE: 0.015606242496998796
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.1830%
+ground_truth_strain: -23.1293%
+RMSE: 0.010537548352674397
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7105%
+ground_truth_strain: -23.1293%
+RMSE: 0.014187253848907982
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -23.1293%
+RMSE: 0.03129251700680272
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2614%
+ground_truth_strain: -23.1293%
+RMSE: 0.028678137921835406
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.0260%
+ground_truth_strain: -23.1293%
+RMSE: 0.008967223252937528
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.1830%
+ground_truth_strain: -23.1293%
+RMSE: 0.010537548352674397
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.5294%
+ground_truth_strain: -23.1293%
+RMSE: 0.004001600640256092
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 33
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.8485%
+ground_truth_strain: -12.9771%
+RMSE: 0.03128614388156373
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.0000%
+ground_truth_strain: -12.9771%
+RMSE: 0.029770992366412202
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7820%
+ground_truth_strain: -12.9771%
+RMSE: 0.0019514434942317638
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.9237%
+ground_truth_strain: -12.9771%
+RMSE: 0.030534351145038163
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.0301%
+ground_truth_strain: -12.9771%
+RMSE: 0.009470240486712966
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5263%
+ground_truth_strain: -12.9771%
+RMSE: 0.02450783447167537
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.4504%
+ground_truth_strain: -12.9771%
+RMSE: 0.015267175572519082
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5263%
+ground_truth_strain: -12.9771%
+RMSE: 0.02450783447167537
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.3636%
+ground_truth_strain: -12.9771%
+RMSE: 0.016134628730048575
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 34
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8750%
+ground_truth_strain: -21.3740%
+RMSE: 0.005009541984732829
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7742%
+ground_truth_strain: -21.3740%
+RMSE: 0.004001477468603798
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4000%
+ground_truth_strain: -21.3740%
+RMSE: 0.010259541984732834
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7742%
+ground_truth_strain: -21.3740%
+RMSE: 0.004001477468603798
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9677%
+ground_truth_strain: -21.3740%
+RMSE: 0.004063038660428453
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0159%
+ground_truth_strain: -21.3740%
+RMSE: 0.016418272143462975
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9677%
+ground_truth_strain: -21.3740%
+RMSE: 0.004063038660428453
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2000%
+ground_truth_strain: -21.3740%
+RMSE: 0.01825954198473284
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3548%
+ground_truth_strain: -21.3740%
+RMSE: 0.020192070918492983
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 35
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6471%
+ground_truth_strain: -15.2381%
+RMSE: 0.024089635854341734
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8218%
+ground_truth_strain: -15.2381%
+RMSE: 0.025836869401225815
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.1616%
+ground_truth_strain: -15.2381%
+RMSE: 0.009235209235209235
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.6863%
+ground_truth_strain: -15.2381%
+RMSE: 0.004481792717086819
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -15.2381%
+RMSE: 0.014285714285714263
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0000%
+ground_truth_strain: -15.2381%
+RMSE: 0.012380952380952381
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -15.2381%
+RMSE: 0.014285714285714263
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.3077%
+ground_truth_strain: -15.2381%
+RMSE: 0.020695970695970678
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.6863%
+ground_truth_strain: -15.2381%
+RMSE: 0.004481792717086819
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 36
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1304%
+ground_truth_strain: -16.3793%
+RMSE: 0.027511244377811106
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9655%
+ground_truth_strain: -16.3793%
+RMSE: 0.025862068965517238
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.3913%
+ground_truth_strain: -16.3793%
+RMSE: 0.010119940029985008
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9655%
+ground_truth_strain: -16.3793%
+RMSE: 0.025862068965517238
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5841%
+ground_truth_strain: -16.3793%
+RMSE: 0.022047604516325925
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5217%
+ground_truth_strain: -16.3793%
+RMSE: 0.0014242878560719596
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -16.3793%
+RMSE: 0.036206896551724155
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6991%
+ground_truth_strain: -16.3793%
+RMSE: 0.013198046994202017
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -16.3793%
+RMSE: 0.036206896551724155
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 37
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2547%
+ground_truth_strain: -19.2771%
+RMSE: 0.00022450048641772802
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0886%
+ground_truth_strain: -19.2771%
+RMSE: 0.021885008387982324
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.4969%
+ground_truth_strain: -19.2771%
+RMSE: 0.0021974691217701015
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2390%
+ground_truth_strain: -19.2771%
+RMSE: 0.010381147230431181
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3522%
+ground_truth_strain: -19.2771%
+RMSE: 0.029249071758733064
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1250%
+ground_truth_strain: -19.2771%
+RMSE: 0.011521084337349413
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0886%
+ground_truth_strain: -19.2771%
+RMSE: 0.021885008387982324
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9873%
+ground_truth_strain: -19.2771%
+RMSE: 0.0028976666158304076
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4557%
+ground_truth_strain: -19.2771%
+RMSE: 0.028214122312032963
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 38
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.3243%
+ground_truth_strain: -18.5393%
+RMSE: 0.057849984816276956
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.9780%
+ground_truth_strain: -18.5393%
+RMSE: 0.034386961353253476
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -26.0870%
+ground_truth_strain: -18.5393%
+RMSE: 0.075476306790425
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2044%
+ground_truth_strain: -18.5393%
+RMSE: 0.046650940468061314
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6264%
+ground_truth_strain: -18.5393%
+RMSE: 0.050870477836769956
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.0223%
+ground_truth_strain: -18.5393%
+RMSE: 0.054830205260184534
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.3243%
+ground_truth_strain: -18.5393%
+RMSE: 0.057849984816276956
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4973%
+ground_truth_strain: -18.5393%
+RMSE: 0.049579419168662126
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9508%
+ground_truth_strain: -18.5393%
+RMSE: 0.04411493829434518
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 39
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6486%
+ground_truth_strain: -17.0886%
+RMSE: 0.0656004105371194
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.9726%
+ground_truth_strain: -17.0886%
+RMSE: 0.06883995144789318
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8095%
+ground_truth_strain: -17.0886%
+RMSE: 0.067209162145871
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4899%
+ground_truth_strain: -17.0886%
+RMSE: 0.06401325290969331
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7687%
+ground_truth_strain: -17.0886%
+RMSE: 0.04680099888056488
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6486%
+ground_truth_strain: -17.0886%
+RMSE: 0.0656004105371194
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4490%
+ground_truth_strain: -17.0886%
+RMSE: 0.05360371996900026
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.9178%
+ground_truth_strain: -17.0886%
+RMSE: 0.048292006242413726
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.3243%
+ground_truth_strain: -17.0886%
+RMSE: 0.07235716729387617
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 40
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.8158%
+ground_truth_strain: -17.0588%
+RMSE: 0.03243034055727553
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.6667%
+ground_truth_strain: -17.0588%
+RMSE: 0.023921568627450984
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7517%
+ground_truth_strain: -17.0588%
+RMSE: 0.04307145677062771
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2338%
+ground_truth_strain: -17.0588%
+RMSE: 0.008250572956455315
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2318%
+ground_truth_strain: -17.0588%
+RMSE: 0.018270354499415664
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.2450%
+ground_truth_strain: -17.0588%
+RMSE: 0.03813790416828983
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.2450%
+ground_truth_strain: -17.0588%
+RMSE: 0.03813790416828983
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.9073%
+ground_truth_strain: -17.0588%
+RMSE: 0.03151538761199846
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2866%
+ground_truth_strain: -17.0588%
+RMSE: 0.017721993255901097
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 41
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7895%
+ground_truth_strain: -11.2782%
+RMSE: 0.045112781954887216
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5414%
+ground_truth_strain: -11.2782%
+RMSE: 0.05263157894736842
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.9091%
+ground_truth_strain: -11.2782%
+RMSE: 0.04630895420369105
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1791%
+ground_truth_strain: -11.2782%
+RMSE: 0.029009089888901357
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0376%
+ground_truth_strain: -11.2782%
+RMSE: 0.03759398496240601
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.6364%
+ground_truth_strain: -11.2782%
+RMSE: 0.023581681476418315
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -11.2782%
+RMSE: 0.041064198958935816
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.7405%
+ground_truth_strain: -11.2782%
+RMSE: 0.024622625265453724
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.5038%
+ground_truth_strain: -11.2782%
+RMSE: 0.03225621305171325
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 42
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.8974%
+ground_truth_strain: -13.0952%
+RMSE: 0.021978021978021983
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.9677%
+ground_truth_strain: -13.0952%
+RMSE: 0.021274961597542247
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.9032%
+ground_truth_strain: -13.0952%
+RMSE: 0.0019201228878648335
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.4650%
+ground_truth_strain: -13.0952%
+RMSE: 0.016302699423718536
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.6129%
+ground_truth_strain: -13.0952%
+RMSE: 0.014823348694316438
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1795%
+ground_truth_strain: -13.0952%
+RMSE: 0.009157509157509167
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.4650%
+ground_truth_strain: -13.0952%
+RMSE: 0.016302699423718536
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.4615%
+ground_truth_strain: -13.0952%
+RMSE: 0.00366300366300365
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.6582%
+ground_truth_strain: -13.0952%
+RMSE: 0.004370102471368292
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 43
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.2647%
+ground_truth_strain: -23.4848%
+RMSE: 0.007798573975044548
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.0602%
+ground_truth_strain: -23.4848%
+RMSE: 0.005753018910913621
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -23.4848%
+RMSE: 0.009284575074048784
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.1343%
+ground_truth_strain: -23.4848%
+RMSE: 0.003505201266395308
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7273%
+ground_truth_strain: -23.4848%
+RMSE: 0.007575757575757597
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7273%
+ground_truth_strain: -23.4848%
+RMSE: 0.007575757575757597
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8806%
+ground_truth_strain: -23.4848%
+RMSE: 0.003957485300768865
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.4444%
+ground_truth_strain: -23.4848%
+RMSE: 0.009595959595959574
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.1343%
+ground_truth_strain: -23.4848%
+RMSE: 0.003505201266395308
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 44
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -14.4654%
+RMSE: 0.04284591194968554
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -14.4654%
+RMSE: 0.05534591194968555
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8758%
+ground_truth_strain: -14.4654%
+RMSE: 0.054103675924840805
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0886%
+ground_truth_strain: -14.4654%
+RMSE: 0.026231987899052622
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -14.4654%
+RMSE: 0.04284591194968554
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3544%
+ground_truth_strain: -14.4654%
+RMSE: 0.0388902157471539
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8679%
+ground_truth_strain: -14.4654%
+RMSE: 0.04402515723270442
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1083%
+ground_truth_strain: -14.4654%
+RMSE: 0.04642871449745625
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6203%
+ground_truth_strain: -14.4654%
+RMSE: 0.05154844359525515
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 45
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7744%
+ground_truth_strain: -14.3939%
+RMSE: 0.04619503303713832
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.2137%
+ground_truth_strain: -14.3939%
+RMSE: 0.021801989359241283
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1212%
+ground_truth_strain: -14.3939%
+RMSE: 0.022727272727272735
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.2782%
+ground_truth_strain: -14.3939%
+RMSE: 0.03115743905217591
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7820%
+ground_truth_strain: -14.3939%
+RMSE: 0.016119845067213506
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7820%
+ground_truth_strain: -14.3939%
+RMSE: 0.016119845067213506
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.9771%
+ground_truth_strain: -14.3939%
+RMSE: 0.014168401572981743
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8148%
+ground_truth_strain: -14.3939%
+RMSE: 0.00420875420875419
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1212%
+ground_truth_strain: -14.3939%
+RMSE: 0.022727272727272735
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 46
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3333%
+ground_truth_strain: -13.9073%
+RMSE: 0.014260485651214128
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2318%
+ground_truth_strain: -13.9073%
+RMSE: 0.013245033112582794
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -13.9073%
+RMSE: 0.027593818984547464
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8649%
+ground_truth_strain: -13.9073%
+RMSE: 0.009575800966529463
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8649%
+ground_truth_strain: -13.9073%
+RMSE: 0.009575800966529463
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3333%
+ground_truth_strain: -13.9073%
+RMSE: 0.014260485651214128
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3333%
+ground_truth_strain: -13.9073%
+RMSE: 0.014260485651214128
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5405%
+ground_truth_strain: -13.9073%
+RMSE: 0.016332557723286206
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4362%
+ground_truth_strain: -13.9073%
+RMSE: 0.015289568425263356
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 47
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -0.8264%
+ground_truth_strain: -0.7692%
+RMSE: 0.0005721551176096629
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.9062%
+ground_truth_strain: -0.7692%
+RMSE: 0.03137019230769231
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -4.7619%
+ground_truth_strain: -0.7692%
+RMSE: 0.039926739926739924
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -2.4000%
+ground_truth_strain: -0.7692%
+RMSE: 0.016307692307692308
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.9062%
+ground_truth_strain: -0.7692%
+RMSE: 0.03137019230769231
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -4.0323%
+ground_truth_strain: -0.7692%
+RMSE: 0.032630272952853596
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -4.0323%
+ground_truth_strain: -0.7692%
+RMSE: 0.032630272952853596
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.1746%
+ground_truth_strain: -0.7692%
+RMSE: 0.02405372405372405
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.9062%
+ground_truth_strain: -0.7692%
+RMSE: 0.03137019230769231
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 48
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5714%
+ground_truth_strain: -15.0000%
+RMSE: 0.035714285714285726
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5468%
+ground_truth_strain: -15.0000%
+RMSE: 0.01546762589928058
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1159%
+ground_truth_strain: -15.0000%
+RMSE: 0.031159420289855078
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4397%
+ground_truth_strain: -15.0000%
+RMSE: 0.03439716312056737
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7305%
+ground_truth_strain: -15.0000%
+RMSE: 0.027304964539007104
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7183%
+ground_truth_strain: -15.0000%
+RMSE: 0.04718309859154929
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7143%
+ground_truth_strain: -15.0000%
+RMSE: 0.007142857142857145
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1159%
+ground_truth_strain: -15.0000%
+RMSE: 0.031159420289855078
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9856%
+ground_truth_strain: -15.0000%
+RMSE: 0.029856115107913667
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 49
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8605%
+ground_truth_strain: -12.6506%
+RMSE: 0.04209862706640516
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4706%
+ground_truth_strain: -12.6506%
+RMSE: 0.03819985825655564
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1598%
+ground_truth_strain: -12.6506%
+RMSE: 0.04509160903970913
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4762%
+ground_truth_strain: -12.6506%
+RMSE: 0.028255880665519234
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4762%
+ground_truth_strain: -12.6506%
+RMSE: 0.028255880665519234
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2012%
+ground_truth_strain: -12.6506%
+RMSE: 0.015505810223141098
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1598%
+ground_truth_strain: -12.6506%
+RMSE: 0.04509160903970913
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8810%
+ground_truth_strain: -12.6506%
+RMSE: 0.022303499713138275
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -12.6506%
+RMSE: 0.02734012974976832
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 50
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7561%
+ground_truth_strain: -8.6957%
+RMSE: 0.010604453870625669
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5691%
+ground_truth_strain: -8.6957%
+RMSE: 0.01873453517143868
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5691%
+ground_truth_strain: -8.6957%
+RMSE: 0.01873453517143868
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.2903%
+ground_truth_strain: -8.6957%
+RMSE: 0.025946704067321177
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1951%
+ground_truth_strain: -8.6957%
+RMSE: 0.03499469777306469
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.1967%
+ground_truth_strain: -8.6957%
+RMSE: 0.00498930862437634
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.3821%
+ground_truth_strain: -8.6957%
+RMSE: 0.026864616472251676
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5691%
+ground_truth_strain: -8.6957%
+RMSE: 0.01873453517143868
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1951%
+ground_truth_strain: -8.6957%
+RMSE: 0.03499469777306469
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 51
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4806%
+ground_truth_strain: -26.5734%
+RMSE: 0.04092806418387812
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8750%
+ground_truth_strain: -26.5734%
+RMSE: 0.04698426573426573
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3077%
+ground_truth_strain: -26.5734%
+RMSE: 0.04265734265734264
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9008%
+ground_truth_strain: -26.5734%
+RMSE: 0.036726632146479476
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6970%
+ground_truth_strain: -26.5734%
+RMSE: 0.06876456876456877
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6641%
+ground_truth_strain: -26.5734%
+RMSE: 0.029093044360219922
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -26.5734%
+RMSE: 0.04017035595982965
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.7037%
+ground_truth_strain: -26.5734%
+RMSE: 0.028697228697228683
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4848%
+ground_truth_strain: -26.5734%
+RMSE: 0.030885780885780867
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 52
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9012%
+ground_truth_strain: -18.1818%
+RMSE: 0.0028058361391694875
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7547%
+ground_truth_strain: -18.1818%
+RMSE: 0.02572898799313894
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2308%
+ground_truth_strain: -18.1818%
+RMSE: 0.010489510489510495
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2547%
+ground_truth_strain: -18.1818%
+RMSE: 0.010728402032749856
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3750%
+ground_truth_strain: -18.1818%
+RMSE: 0.011931818181818182
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6250%
+ground_truth_strain: -18.1818%
+RMSE: 0.024431818181818166
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6250%
+ground_truth_strain: -18.1818%
+RMSE: 0.024431818181818166
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4557%
+ground_truth_strain: -18.1818%
+RMSE: 0.01726121979286538
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3750%
+ground_truth_strain: -18.1818%
+RMSE: 0.011931818181818182
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 53
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7660%
+ground_truth_strain: -12.1622%
+RMSE: 0.006037952846463468
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8571%
+ground_truth_strain: -12.1622%
+RMSE: 0.00694980694980693
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8571%
+ground_truth_strain: -12.1622%
+RMSE: 0.00694980694980693
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0845%
+ground_truth_strain: -12.1622%
+RMSE: 0.01922344880091359
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.3803%
+ground_truth_strain: -12.1622%
+RMSE: 0.01218119527978681
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.6853%
+ground_truth_strain: -12.1622%
+RMSE: 0.02523152523152522
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7660%
+ground_truth_strain: -12.1622%
+RMSE: 0.006037952846463468
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1844%
+ground_truth_strain: -12.1622%
+RMSE: 0.020222350009584056
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.5108%
+ground_truth_strain: -12.1622%
+RMSE: 0.006513707952556874
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 54
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8543%
+ground_truth_strain: -20.2703%
+RMSE: 0.015840343654913186
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1477%
+ground_truth_strain: -20.2703%
+RMSE: 0.018773807364411393
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8054%
+ground_truth_strain: -20.2703%
+RMSE: 0.005350988572465076
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3333%
+ground_truth_strain: -20.2703%
+RMSE: 0.010630630630630633
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3333%
+ground_truth_strain: -20.2703%
+RMSE: 0.010630630630630633
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0263%
+ground_truth_strain: -20.2703%
+RMSE: 0.027560455192034122
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3333%
+ground_truth_strain: -20.2703%
+RMSE: 0.010630630630630633
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6667%
+ground_truth_strain: -20.2703%
+RMSE: 0.003963963963963951
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1342%
+ground_truth_strain: -20.2703%
+RMSE: 0.0013604208235080961
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 55
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.9379%
+ground_truth_strain: -8.5890%
+RMSE: 0.01348931143543039
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.1111%
+ground_truth_strain: -8.5890%
+RMSE: 0.025221540558963862
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1951%
+ground_truth_strain: -8.5890%
+RMSE: 0.036061648960047876
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.7784%
+ground_truth_strain: -8.5890%
+RMSE: 0.02189486058557731
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.9091%
+ground_truth_strain: -8.5890%
+RMSE: 0.023201338538761843
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1975%
+ground_truth_strain: -8.5890%
+RMSE: 0.05608573808982806
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.3333%
+ground_truth_strain: -8.5890%
+RMSE: 0.04744376278118609
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6386%
+ground_truth_strain: -8.5890%
+RMSE: 0.01049597161652746
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.2699%
+ground_truth_strain: -8.5890%
+RMSE: 0.03680981595092024
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 56
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5430%
+ground_truth_strain: -16.3399%
+RMSE: 0.022031770765701425
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6667%
+ground_truth_strain: -16.3399%
+RMSE: 0.023267973856209156
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -16.3399%
+RMSE: 0.03660130718954249
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.7785%
+ground_truth_strain: -16.3399%
+RMSE: 0.004386542088871348
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6667%
+ground_truth_strain: -16.3399%
+RMSE: 0.023267973856209156
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6667%
+ground_truth_strain: -16.3399%
+RMSE: 0.023267973856209156
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2053%
+ground_truth_strain: -16.3399%
+RMSE: 0.028654287321992822
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2432%
+ground_truth_strain: -16.3399%
+RMSE: 0.01903373962197491
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7919%
+ground_truth_strain: -16.3399%
+RMSE: 0.02452077027679081
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 57
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.0472%
+ground_truth_strain: -17.4603%
+RMSE: 0.04586926634170729
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.2188%
+ground_truth_strain: -17.4603%
+RMSE: 0.0675843253968254
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6000%
+ground_truth_strain: -17.4603%
+RMSE: 0.041396825396825404
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7742%
+ground_truth_strain: -17.4603%
+RMSE: 0.043138760880696375
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5806%
+ground_truth_strain: -17.4603%
+RMSE: 0.051203277009728626
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.8346%
+ground_truth_strain: -17.4603%
+RMSE: 0.0537432820897388
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7742%
+ground_truth_strain: -17.4603%
+RMSE: 0.043138760880696375
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5806%
+ground_truth_strain: -17.4603%
+RMSE: 0.051203277009728626
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2222%
+ground_truth_strain: -17.4603%
+RMSE: 0.047619047619047616
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 58
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8976%
+ground_truth_strain: -12.6984%
+RMSE: 0.061992250968628926
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5484%
+ground_truth_strain: -12.6984%
+RMSE: 0.05849974398361496
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9355%
+ground_truth_strain: -12.6984%
+RMSE: 0.04237071172555043
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.5312%
+ground_truth_strain: -12.6984%
+RMSE: 0.06832837301587302
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6850%
+ground_truth_strain: -12.6984%
+RMSE: 0.06986626671666044
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2000%
+ground_truth_strain: -12.6984%
+RMSE: 0.06501587301587303
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2131%
+ground_truth_strain: -12.6984%
+RMSE: 0.045147020556856626
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2540%
+ground_truth_strain: -12.6984%
+RMSE: 0.05555555555555555
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2131%
+ground_truth_strain: -12.6984%
+RMSE: 0.045147020556856626
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 59
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.9379%
+ground_truth_strain: -12.5749%
+RMSE: 0.026369621006434335
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.3457%
+ground_truth_strain: -12.5749%
+RMSE: 0.002291712870555185
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.1801%
+ground_truth_strain: -12.5749%
+RMSE: 0.01394726075798712
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.0429%
+ground_truth_strain: -12.5749%
+RMSE: 0.015319055141251231
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.9756%
+ground_truth_strain: -12.5749%
+RMSE: 0.015992405433036358
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.5152%
+ground_truth_strain: -12.5749%
+RMSE: 0.01059698784249681
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.5152%
+ground_truth_strain: -12.5749%
+RMSE: 0.01059698784249681
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.0435%
+ground_truth_strain: -12.5749%
+RMSE: 0.0046862796146836805
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.5854%
+ground_truth_strain: -12.5749%
+RMSE: 0.009894844457426596
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 60
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.7568%
+ground_truth_strain: -2.0134%
+RMSE: 0.04743333937964811
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.0000%
+ground_truth_strain: -2.0134%
+RMSE: 0.039865771812080536
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.6093%
+ground_truth_strain: -2.0134%
+RMSE: 0.06595848704386861
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.9470%
+ground_truth_strain: -2.0134%
+RMSE: 0.05933597048757723
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.9470%
+ground_truth_strain: -2.0134%
+RMSE: 0.05933597048757723
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.0000%
+ground_truth_strain: -2.0134%
+RMSE: 0.05986577181208054
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.6667%
+ground_truth_strain: -2.0134%
+RMSE: 0.046532438478747204
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.7248%
+ground_truth_strain: -2.0134%
+RMSE: 0.06711409395973154
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.0000%
+ground_truth_strain: -2.0134%
+RMSE: 0.05986577181208054
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 61
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2308%
+ground_truth_strain: -19.0840%
+RMSE: 0.0014679976512037562
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8295%
+ground_truth_strain: -19.0840%
+RMSE: 0.012545121013077698
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6721%
+ground_truth_strain: -19.0840%
+RMSE: 0.00588161681892127
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -19.0840%
+RMSE: 0.003339694656488562
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -26.1538%
+ground_truth_strain: -19.0840%
+RMSE: 0.07069876688197299
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6000%
+ground_truth_strain: -19.0840%
+RMSE: 0.025160305343511435
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.2188%
+ground_truth_strain: -19.0840%
+RMSE: 0.05134780534351144
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.6154%
+ground_truth_strain: -19.0840%
+RMSE: 0.055314151497357605
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.8346%
+ground_truth_strain: -19.0840%
+RMSE: 0.037506762036424834
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 62
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.0227%
+ground_truth_strain: -20.8122%
+RMSE: 0.002105445316105209
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.0339%
+ground_truth_strain: -20.8122%
+RMSE: 0.012217155639679927
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9050%
+ground_truth_strain: -20.8122%
+RMSE: 0.02092845191844142
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2247%
+ground_truth_strain: -20.8122%
+RMSE: 0.0058746363999315765
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6704%
+ground_truth_strain: -20.8122%
+RMSE: 0.0014179167966423822
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.2644%
+ground_truth_strain: -20.8122%
+RMSE: 0.004521850749752004
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3390%
+ground_truth_strain: -20.8122%
+RMSE: 0.0047319969026929365
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8864%
+ground_truth_strain: -20.8122%
+RMSE: 0.009258191047531172
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7865%
+ground_truth_strain: -20.8122%
+RMSE: 0.00025665887184167513
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 63
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.4094%
+ground_truth_strain: -19.1667%
+RMSE: 0.05242782152230971
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7742%
+ground_truth_strain: -19.1667%
+RMSE: 0.02607526881720429
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.8346%
+ground_truth_strain: -19.1667%
+RMSE: 0.03667979002624672
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2000%
+ground_truth_strain: -19.1667%
+RMSE: 0.04033333333333333
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.0000%
+ground_truth_strain: -19.1667%
+RMSE: 0.04833333333333331
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2000%
+ground_truth_strain: -19.1667%
+RMSE: 0.04033333333333333
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6220%
+ground_truth_strain: -19.1667%
+RMSE: 0.0445538057742782
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2000%
+ground_truth_strain: -19.1667%
+RMSE: 0.04033333333333333
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.8346%
+ground_truth_strain: -19.1667%
+RMSE: 0.03667979002624672
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 64
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7545%
+ground_truth_strain: -18.0233%
+RMSE: 0.04731235204010584
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.6190%
+ground_truth_strain: -18.0233%
+RMSE: 0.04595791805094132
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2143%
+ground_truth_strain: -18.0233%
+RMSE: 0.05191029900332228
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.5569%
+ground_truth_strain: -18.0233%
+RMSE: 0.03533630413591424
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9581%
+ground_truth_strain: -18.0233%
+RMSE: 0.02934828018381841
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4819%
+ground_truth_strain: -18.0233%
+RMSE: 0.024586718968898857
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0769%
+ground_truth_strain: -18.0233%
+RMSE: 0.05053667262969591
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.3533%
+ground_truth_strain: -18.0233%
+RMSE: 0.053300375992201665
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.5569%
+ground_truth_strain: -18.0233%
+RMSE: 0.03533630413591424
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 65
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.9259%
+ground_truth_strain: -25.0000%
+RMSE: 0.009259259259259245
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.9259%
+ground_truth_strain: -25.0000%
+RMSE: 0.009259259259259245
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.7353%
+ground_truth_strain: -25.0000%
+RMSE: 0.007352941176470562
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.1852%
+ground_truth_strain: -25.0000%
+RMSE: 0.0018518518518518268
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.5639%
+ground_truth_strain: -25.0000%
+RMSE: 0.005639097744360888
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.5639%
+ground_truth_strain: -25.0000%
+RMSE: 0.005639097744360888
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.3731%
+ground_truth_strain: -25.0000%
+RMSE: 0.0037313432835821003
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -27.4074%
+ground_truth_strain: -25.0000%
+RMSE: 0.02407407407407408
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.5639%
+ground_truth_strain: -25.0000%
+RMSE: 0.005639097744360888
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 66
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.5745%
+ground_truth_strain: -8.4211%
+RMSE: 0.011534154535274357
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.1398%
+ground_truth_strain: -8.4211%
+RMSE: 0.007187323146576122
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7297%
+ground_truth_strain: -8.4211%
+RMSE: 0.013086770981507831
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6257%
+ground_truth_strain: -8.4211%
+RMSE: 0.012046158176189134
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.1398%
+ground_truth_strain: -8.4211%
+RMSE: 0.007187323146576122
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.1064%
+ground_truth_strain: -8.4211%
+RMSE: 0.016853303471444564
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6257%
+ground_truth_strain: -8.4211%
+RMSE: 0.012046158176189134
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.6952%
+ground_truth_strain: -8.4211%
+RMSE: 0.022741345341964536
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7297%
+ground_truth_strain: -8.4211%
+RMSE: 0.013086770981507831
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 67
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0141%
+ground_truth_strain: -18.6667%
+RMSE: 0.0034741784037558565
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9856%
+ground_truth_strain: -18.6667%
+RMSE: 0.006810551558753014
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1159%
+ground_truth_strain: -18.6667%
+RMSE: 0.005507246376811603
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2662%
+ground_truth_strain: -18.6667%
+RMSE: 0.014004796163069544
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8582%
+ground_truth_strain: -18.6667%
+RMSE: 0.011914893617021277
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7050%
+ground_truth_strain: -18.6667%
+RMSE: 0.00038369304556354344
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4397%
+ground_truth_strain: -18.6667%
+RMSE: 0.0022695035460993107
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5714%
+ground_truth_strain: -18.6667%
+RMSE: 0.0009523809523809545
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1489%
+ground_truth_strain: -18.6667%
+RMSE: 0.004822695035460983
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 68
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9492%
+ground_truth_strain: -15.8879%
+RMSE: 0.01061302075083162
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5217%
+ground_truth_strain: -15.8879%
+RMSE: 0.00633888663145063
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3793%
+ground_truth_strain: -15.8879%
+RMSE: 0.00491459877537867
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2393%
+ground_truth_strain: -15.8879%
+RMSE: 0.003514657720265213
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2393%
+ground_truth_strain: -15.8879%
+RMSE: 0.003514657720265213
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1034%
+ground_truth_strain: -15.8879%
+RMSE: 0.022155978085723504
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9492%
+ground_truth_strain: -15.8879%
+RMSE: 0.01061302075083162
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.6522%
+ground_truth_strain: -15.8879%
+RMSE: 0.0023567655424623912
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5439%
+ground_truth_strain: -15.8879%
+RMSE: 0.016560091818330874
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 69
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.0339%
+ground_truth_strain: -18.3206%
+RMSE: 0.037132876180618446
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -18.3206%
+RMSE: 0.016793893129771004
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1681%
+ground_truth_strain: -18.3206%
+RMSE: 0.01847456539867856
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -18.3206%
+RMSE: 0.016793893129771004
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6441%
+ground_truth_strain: -18.3206%
+RMSE: 0.0032345710958726903
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9487%
+ground_truth_strain: -18.3206%
+RMSE: 0.0037189273830495195
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3140%
+ground_truth_strain: -18.3206%
+RMSE: 0.039934388997539594
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3277%
+ground_truth_strain: -18.3206%
+RMSE: 0.010071204054140748
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3675%
+ground_truth_strain: -18.3206%
+RMSE: 0.030469106804984658
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 70
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -32.7103%
+ground_truth_strain: -22.2222%
+RMSE: 0.10488058151609553
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -33.6538%
+ground_truth_strain: -22.2222%
+RMSE: 0.11431623931623935
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -35.8491%
+ground_truth_strain: -22.2222%
+RMSE: 0.13626834381551362
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -32.7273%
+ground_truth_strain: -22.2222%
+RMSE: 0.10505050505050506
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -33.3333%
+ground_truth_strain: -22.2222%
+RMSE: 0.1111111111111111
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -33.9623%
+ground_truth_strain: -22.2222%
+RMSE: 0.11740041928721173
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -36.1905%
+ground_truth_strain: -22.2222%
+RMSE: 0.13968253968253969
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -35.5140%
+ground_truth_strain: -22.2222%
+RMSE: 0.13291796469366562
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -34.9515%
+ground_truth_strain: -22.2222%
+RMSE: 0.12729234088457392
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 71
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9310%
+ground_truth_strain: -20.9150%
+RMSE: 0.029839981969799423
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6207%
+ground_truth_strain: -20.9150%
+RMSE: 0.022943430245661478
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3099%
+ground_truth_strain: -20.9150%
+RMSE: 0.026051735248089847
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1781%
+ground_truth_strain: -20.9150%
+RMSE: 0.01736950487957742
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1781%
+ground_truth_strain: -20.9150%
+RMSE: 0.01736950487957742
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8811%
+ground_truth_strain: -20.9150%
+RMSE: 0.020339137986196826
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4082%
+ground_truth_strain: -20.9150%
+RMSE: 0.005068694144324398
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3103%
+ground_truth_strain: -20.9150%
+RMSE: 0.01604687852152356
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3103%
+ground_truth_strain: -20.9150%
+RMSE: 0.01604687852152356
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 72
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.5472%
+ground_truth_strain: -13.6905%
+RMSE: 0.061433063791554374
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.9620%
+ground_truth_strain: -13.6905%
+RMSE: 0.06728450874020496
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.8050%
+ground_truth_strain: -13.6905%
+RMSE: 0.04885444743935312
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.6433%
+ground_truth_strain: -13.6905%
+RMSE: 0.06047164088565364
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.6420%
+ground_truth_strain: -13.6905%
+RMSE: 0.05048500881834217
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.4294%
+ground_truth_strain: -13.6905%
+RMSE: 0.03261028337715456
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.1761%
+ground_truth_strain: -13.6905%
+RMSE: 0.055143755615453746
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5590%
+ground_truth_strain: -13.6905%
+RMSE: 0.03131469979296067
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.8050%
+ground_truth_strain: -13.6905%
+RMSE: 0.04885444743935312
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 73
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1622%
+ground_truth_strain: -17.2222%
+RMSE: 0.04939939939939941
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3370%
+ground_truth_strain: -17.2222%
+RMSE: 0.02114794352363414
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9945%
+ground_truth_strain: -17.2222%
+RMSE: 0.03772252915899324
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7802%
+ground_truth_strain: -17.2222%
+RMSE: 0.025579975579975572
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2826%
+ground_truth_strain: -17.2222%
+RMSE: 0.05060386473429951
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.2291%
+ground_truth_strain: -17.2222%
+RMSE: 0.04006828057107387
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0769%
+ground_truth_strain: -17.2222%
+RMSE: 0.05854700854700856
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.5531%
+ground_truth_strain: -17.2222%
+RMSE: 0.023308504034761007
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.4444%
+ground_truth_strain: -17.2222%
+RMSE: 0.022222222222222227
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 74
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -13.6054%
+RMSE: 0.04576376004947433
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2791%
+ground_truth_strain: -13.6054%
+RMSE: 0.02673627590571112
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0840%
+ground_truth_strain: -13.6054%
+RMSE: 0.05478527288778107
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2932%
+ground_truth_strain: -13.6054%
+RMSE: 0.036877909058360164
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0451%
+ground_truth_strain: -13.6054%
+RMSE: 0.04439670605084137
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3206%
+ground_truth_strain: -13.6054%
+RMSE: 0.04715168510152151
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2791%
+ground_truth_strain: -13.6054%
+RMSE: 0.02673627590571112
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2791%
+ground_truth_strain: -13.6054%
+RMSE: 0.02673627590571112
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.7939%
+ground_truth_strain: -13.6054%
+RMSE: 0.03188450952900243
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 75
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.7255%
+ground_truth_strain: -19.6078%
+RMSE: 0.05882352941176469
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -19.6078%
+RMSE: 0.04223227752639516
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1975%
+ground_truth_strain: -19.6078%
+RMSE: 0.024103909079555397
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1935%
+ground_truth_strain: -19.6078%
+RMSE: 0.05414294750158127
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1026%
+ground_truth_strain: -19.6078%
+RMSE: 0.05505279034690799
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -19.6078%
+RMSE: 0.04223227752639516
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7436%
+ground_truth_strain: -19.6078%
+RMSE: 0.04864253393665158
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8831%
+ground_truth_strain: -19.6078%
+RMSE: 0.027247262541380185
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2866%
+ground_truth_strain: -19.6078%
+RMSE: 0.04321218933433246
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 76
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7547%
+ground_truth_strain: -16.9811%
+RMSE: 0.03773584905660379
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6471%
+ground_truth_strain: -16.9811%
+RMSE: 0.006659267480577158
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -16.9811%
+RMSE: 0.03018867924528304
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0476%
+ground_truth_strain: -16.9811%
+RMSE: 0.020664869721473494
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1154%
+ground_truth_strain: -16.9811%
+RMSE: 0.051342525399129174
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2692%
+ground_truth_strain: -16.9811%
+RMSE: 0.01288098693759071
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8119%
+ground_truth_strain: -16.9811%
+RMSE: 0.018307491126471148
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2692%
+ground_truth_strain: -16.9811%
+RMSE: 0.01288098693759071
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6078%
+ground_truth_strain: -16.9811%
+RMSE: 0.026267110617832046
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 77
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -26.6667%
+ground_truth_strain: -15.4472%
+RMSE: 0.1121951219512195
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.1884%
+ground_truth_strain: -15.4472%
+RMSE: 0.07741251325556733
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4286%
+ground_truth_strain: -15.4472%
+RMSE: 0.009814169570267123
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2662%
+ground_truth_strain: -15.4472%
+RMSE: 0.01819032578814997
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.5926%
+ground_truth_strain: -15.4472%
+RMSE: 0.02854561878952125
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.7832%
+ground_truth_strain: -15.4472%
+RMSE: 0.013360623116720677
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3235%
+ground_truth_strain: -15.4472%
+RMSE: 0.05876374940219989
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9167%
+ground_truth_strain: -15.4472%
+RMSE: 0.0746951219512195
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5352%
+ground_truth_strain: -15.4472%
+RMSE: 0.07088056796060918
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 78
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8806%
+ground_truth_strain: -22.0588%
+RMSE: 0.018217734855136086
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7273%
+ground_truth_strain: -22.0588%
+RMSE: 0.006684491978609625
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.2121%
+ground_truth_strain: -22.0588%
+RMSE: 0.008467023172905513
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4545%
+ground_truth_strain: -22.0588%
+RMSE: 0.016042780748663082
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -22.0588%
+RMSE: 0.004975674480318437
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6107%
+ground_truth_strain: -22.0588%
+RMSE: 0.014481365065109997
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -22.0588%
+RMSE: 0.004975674480318437
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.3083%
+ground_truth_strain: -22.0588%
+RMSE: 0.01249447147279964
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9008%
+ground_truth_strain: -22.0588%
+RMSE: 0.008419398293668612
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 79
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2390%
+ground_truth_strain: -20.6250%
+RMSE: 0.023860062893081763
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1258%
+ground_truth_strain: -20.6250%
+RMSE: 0.004992138364779852
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1083%
+ground_truth_strain: -20.6250%
+RMSE: 0.015167197452229275
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1975%
+ground_truth_strain: -20.6250%
+RMSE: 0.03427547770700637
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9873%
+ground_truth_strain: -20.6250%
+RMSE: 0.01637658227848099
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6101%
+ground_truth_strain: -20.6250%
+RMSE: 0.03014937106918239
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9873%
+ground_truth_strain: -20.6250%
+RMSE: 0.01637658227848099
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7452%
+ground_truth_strain: -20.6250%
+RMSE: 0.00879777070063692
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -20.6250%
+RMSE: 0.01874999999999999
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 80
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.8978%
+ground_truth_strain: -19.0840%
+RMSE: 0.02813840753329247
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -19.0840%
+RMSE: 0.009160305343511449
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7407%
+ground_truth_strain: -19.0840%
+RMSE: 0.01656771275091884
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2593%
+ground_truth_strain: -19.0840%
+RMSE: 0.0017528979361040309
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3235%
+ground_truth_strain: -19.0840%
+RMSE: 0.02239559946115849
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.4030%
+ground_truth_strain: -19.0840%
+RMSE: 0.0031901560897800996
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.4815%
+ground_truth_strain: -19.0840%
+RMSE: 0.023975120158326257
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3235%
+ground_truth_strain: -19.0840%
+RMSE: 0.02239559946115849
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.0588%
+ground_truth_strain: -19.0840%
+RMSE: 0.02974854063762908
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 81
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1429%
+ground_truth_strain: -23.1293%
+RMSE: 0.009863945578231309
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.1799%
+ground_truth_strain: -23.1293%
+RMSE: 0.020506044144276397
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0216%
+ground_truth_strain: -23.1293%
+RMSE: 0.0010766896686732197
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.7410%
+ground_truth_strain: -23.1293%
+RMSE: 0.00611755493564331
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3022%
+ground_truth_strain: -23.1293%
+RMSE: 0.008270934272989777
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0216%
+ground_truth_strain: -23.1293%
+RMSE: 0.0010766896686732197
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.7410%
+ground_truth_strain: -23.1293%
+RMSE: 0.00611755493564331
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.1884%
+ground_truth_strain: -23.1293%
+RMSE: 0.0005915409642117675
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.1884%
+ground_truth_strain: -23.1293%
+RMSE: 0.0005915409642117675
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 82
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.7358%
+ground_truth_strain: -4.5918%
+RMSE: 0.0214391456064291
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.2827%
+ground_truth_strain: -4.5918%
+RMSE: 0.01690885778395127
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.8421%
+ground_truth_strain: -4.5918%
+RMSE: 0.022502685284640174
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.1371%
+ground_truth_strain: -4.5918%
+RMSE: 0.045452191028695736
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6939%
+ground_truth_strain: -4.5918%
+RMSE: 0.0510204081632653
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.7708%
+ground_truth_strain: -4.5918%
+RMSE: 0.02178996598639455
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.2827%
+ground_truth_strain: -4.5918%
+RMSE: 0.01690885778395127
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.7720%
+ground_truth_strain: -4.5918%
+RMSE: 0.03180183990694723
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.2051%
+ground_truth_strain: -4.5918%
+RMSE: 0.03613291470434327
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 83
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3008%
+ground_truth_strain: -16.1290%
+RMSE: 0.04171719621634731
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9394%
+ground_truth_strain: -16.1290%
+RMSE: 0.028103616813294235
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4545%
+ground_truth_strain: -16.1290%
+RMSE: 0.0432551319648094
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.0526%
+ground_truth_strain: -16.1290%
+RMSE: 0.049235993208828516
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3008%
+ground_truth_strain: -16.1290%
+RMSE: 0.04171719621634731
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6923%
+ground_truth_strain: -16.1290%
+RMSE: 0.015632754342431776
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3798%
+ground_truth_strain: -16.1290%
+RMSE: 0.032508127031757955
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7054%
+ground_truth_strain: -16.1290%
+RMSE: 0.05576394098524631
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.8955%
+ground_truth_strain: -16.1290%
+RMSE: 0.04766490129995185
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 84
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.9130%
+ground_truth_strain: -25.1748%
+RMSE: 0.01261781696564307
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.4444%
+ground_truth_strain: -25.1748%
+RMSE: 0.007303807303807336
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5564%
+ground_truth_strain: -25.1748%
+RMSE: 0.026184341973815695
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.5294%
+ground_truth_strain: -25.1748%
+RMSE: 0.016454134101192952
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8806%
+ground_truth_strain: -25.1748%
+RMSE: 0.012942281598998046
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.5294%
+ground_truth_strain: -25.1748%
+RMSE: 0.016454134101192952
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.7941%
+ground_truth_strain: -25.1748%
+RMSE: 0.023807075277663542
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0216%
+ground_truth_strain: -25.1748%
+RMSE: 0.021532424410122264
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6418%
+ground_truth_strain: -25.1748%
+RMSE: 0.03533034130049059
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 85
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6581%
+ground_truth_strain: -16.1017%
+RMSE: 0.035564247428654217
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9487%
+ground_truth_strain: -16.1017%
+RMSE: 0.018470230334637128
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8034%
+ground_truth_strain: -16.1017%
+RMSE: 0.027017238881645672
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0940%
+ground_truth_strain: -16.1017%
+RMSE: 0.009923221787628583
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2393%
+ground_truth_strain: -16.1017%
+RMSE: 0.001376213240620039
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9492%
+ground_truth_strain: -16.1017%
+RMSE: 0.008474576271186446
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5172%
+ground_truth_strain: -16.1017%
+RMSE: 0.005844535359438907
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0940%
+ground_truth_strain: -16.1017%
+RMSE: 0.009923221787628583
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7966%
+ground_truth_strain: -16.1017%
+RMSE: 0.01694915254237289
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 86
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.7097%
+ground_truth_strain: -12.6866%
+RMSE: 0.010231102551757326
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5691%
+ground_truth_strain: -12.6866%
+RMSE: 0.02117461473122194
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5354%
+ground_truth_strain: -12.6866%
+RMSE: 0.03848865906687038
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0000%
+ground_truth_strain: -12.6866%
+RMSE: 0.023134328358208944
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2672%
+ground_truth_strain: -12.6866%
+RMSE: 0.025806084083399794
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8862%
+ground_truth_strain: -12.6866%
+RMSE: 0.05199611697609513
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3548%
+ground_truth_strain: -12.6866%
+RMSE: 0.06668271545498314
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4848%
+ground_truth_strain: -12.6866%
+RMSE: 0.10798281320669381
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.0000%
+ground_truth_strain: -12.6866%
+RMSE: 0.03313432835820895
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 87
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8095%
+ground_truth_strain: -25.6250%
+RMSE: 0.018154761904761896
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.0769%
+ground_truth_strain: -25.6250%
+RMSE: 0.025480769230769196
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.4438%
+ground_truth_strain: -25.6250%
+RMSE: 0.001812130177514748
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2143%
+ground_truth_strain: -25.6250%
+RMSE: 0.024107142857142827
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.1176%
+ground_truth_strain: -25.6250%
+RMSE: 0.01507352941176468
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.1462%
+ground_truth_strain: -25.6250%
+RMSE: 0.0047880116959064245
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -25.1462%
+ground_truth_strain: -25.6250%
+RMSE: 0.0047880116959064245
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.6988%
+ground_truth_strain: -25.6250%
+RMSE: 0.009262048192771072
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -24.7059%
+ground_truth_strain: -25.6250%
+RMSE: 0.009191176470588203
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 88
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1875%
+ground_truth_strain: -19.8413%
+RMSE: 0.0265376984126984
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0543%
+ground_truth_strain: -19.8413%
+RMSE: 0.027870062753783675
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -19.8413%
+RMSE: 0.05555555555555555
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.1538%
+ground_truth_strain: -19.8413%
+RMSE: 0.036874236874236854
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5039%
+ground_truth_strain: -19.8413%
+RMSE: 0.04337393872277592
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0543%
+ground_truth_strain: -19.8413%
+RMSE: 0.027870062753783675
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9231%
+ground_truth_strain: -19.8413%
+RMSE: 0.02918192918192916
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6970%
+ground_truth_strain: -19.8413%
+RMSE: 0.0014430014430014404
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -19.8413%
+RMSE: 0.04456654456654455
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 89
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8788%
+ground_truth_strain: -15.4412%
+RMSE: 0.025623885918003575
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.9091%
+ground_truth_strain: -15.4412%
+RMSE: 0.004679144385026729
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2963%
+ground_truth_strain: -15.4412%
+RMSE: 0.008551198257080617
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1791%
+ground_truth_strain: -15.4412%
+RMSE: 0.012620719929762964
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1791%
+ground_truth_strain: -15.4412%
+RMSE: 0.012620719929762964
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.5263%
+ground_truth_strain: -15.4412%
+RMSE: 0.04914860681114552
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9118%
+ground_truth_strain: -15.4412%
+RMSE: 0.01470588235294118
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.1387%
+ground_truth_strain: -15.4412%
+RMSE: 0.02302490339201374
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2672%
+ground_truth_strain: -15.4412%
+RMSE: 0.0017400089806915153
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 90
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.5479%
+ground_truth_strain: -14.8387%
+RMSE: 0.05709235528060097
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.5278%
+ground_truth_strain: -14.8387%
+RMSE: 0.06689068100358425
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6486%
+ground_truth_strain: -14.8387%
+RMSE: 0.08809938971229295
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4899%
+ground_truth_strain: -14.8387%
+RMSE: 0.08651223208486686
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8630%
+ground_truth_strain: -14.8387%
+RMSE: 0.05024304021210782
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7687%
+ground_truth_strain: -14.8387%
+RMSE: 0.06929997805573843
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.0884%
+ground_truth_strain: -14.8387%
+RMSE: 0.06249725696730307
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1389%
+ground_truth_strain: -14.8387%
+RMSE: 0.053001792114695356
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.9178%
+ground_truth_strain: -14.8387%
+RMSE: 0.07079098541758727
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 91
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9814%
+ground_truth_strain: -20.8333%
+RMSE: 0.02148033126293994
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3602%
+ground_truth_strain: -20.8333%
+RMSE: 0.015269151138716353
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.1250%
+ground_truth_strain: -20.8333%
+RMSE: 0.02291666666666667
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9814%
+ground_truth_strain: -20.8333%
+RMSE: 0.02148033126293994
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.4568%
+ground_truth_strain: -20.8333%
+RMSE: 0.026234567901234546
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.7500%
+ground_truth_strain: -20.8333%
+RMSE: 0.029166666666666646
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.2704%
+ground_truth_strain: -20.8333%
+RMSE: 0.02437106918238993
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6561%
+ground_truth_strain: -20.8333%
+RMSE: 0.008227176220806792
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.0126%
+ground_truth_strain: -20.8333%
+RMSE: 0.011792452830188677
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 92
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7742%
+ground_truth_strain: -14.7541%
+RMSE: 0.0702009518773136
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4918%
+ground_truth_strain: -14.7541%
+RMSE: 0.05737704918032788
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.9512%
+ground_truth_strain: -14.7541%
+RMSE: 0.07197121151539385
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2222%
+ground_truth_strain: -14.7541%
+RMSE: 0.07468123861566484
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4000%
+ground_truth_strain: -14.7541%
+RMSE: 0.07645901639344263
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3115%
+ground_truth_strain: -14.7541%
+RMSE: 0.06557377049180327
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6349%
+ground_truth_strain: -14.7541%
+RMSE: 0.05880822274264896
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9677%
+ground_truth_strain: -14.7541%
+RMSE: 0.06213643574828134
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3115%
+ground_truth_strain: -14.7541%
+RMSE: 0.06557377049180327
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 93
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.2121%
+ground_truth_strain: -16.3522%
+RMSE: 0.04859919954259578
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3544%
+ground_truth_strain: -16.3522%
+RMSE: 0.020022291218852017
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6203%
+ground_truth_strain: -16.3522%
+RMSE: 0.03268051906695327
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1250%
+ground_truth_strain: -16.3522%
+RMSE: 0.01772798742138365
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8831%
+ground_truth_strain: -16.3522%
+RMSE: 0.005309156252552488
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8758%
+ground_truth_strain: -16.3522%
+RMSE: 0.03523575139653892
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2390%
+ground_truth_strain: -16.3522%
+RMSE: 0.018867924528301883
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.1180%
+ground_truth_strain: -16.3522%
+RMSE: 0.04765811164498615
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6101%
+ground_truth_strain: -16.3522%
+RMSE: 0.012578616352201255
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 94
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1892%
+ground_truth_strain: -12.7517%
+RMSE: 0.014375113368401943
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.3333%
+ground_truth_strain: -12.7517%
+RMSE: 0.005816554809843388
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1892%
+ground_truth_strain: -12.7517%
+RMSE: 0.014375113368401943
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0940%
+ground_truth_strain: -12.7517%
+RMSE: 0.01342281879194629
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7651%
+ground_truth_strain: -12.7517%
+RMSE: 0.020134228187919462
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7651%
+ground_truth_strain: -12.7517%
+RMSE: 0.020134228187919462
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.9252%
+ground_truth_strain: -12.7517%
+RMSE: 0.0017349221567821704
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3333%
+ground_truth_strain: -12.7517%
+RMSE: 0.02581655480984338
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8649%
+ground_truth_strain: -12.7517%
+RMSE: 0.021131870125158714
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 95
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 16.2791%
+ground_truth_strain: -14.9533%
+RMSE: 0.3123234079547924
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 9.8901%
+ground_truth_strain: -14.9533%
+RMSE: 0.24843380918147273
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 6.5217%
+ground_truth_strain: -14.9533%
+RMSE: 0.21475010158472163
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 3.9216%
+ground_truth_strain: -14.9533%
+RMSE: 0.18874839655488362
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 0.0000%
+ground_truth_strain: -14.9533%
+RMSE: 0.14953271028037382
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 2.0000%
+ground_truth_strain: -14.9533%
+RMSE: 0.1695327102803738
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -1.8868%
+ground_truth_strain: -14.9533%
+RMSE: 0.13066478575207194
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 0.0000%
+ground_truth_strain: -14.9533%
+RMSE: 0.14953271028037382
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 3.2258%
+ground_truth_strain: -14.9533%
+RMSE: 0.18179077479650285
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 96
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0124%
+ground_truth_strain: -15.3374%
+RMSE: 0.02674999047365012
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2547%
+ground_truth_strain: -15.3374%
+RMSE: 0.03917235072209732
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5897%
+ground_truth_strain: -15.3374%
+RMSE: 0.032523202768601545
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0124%
+ground_truth_strain: -15.3374%
+RMSE: 0.02674999047365012
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -15.3374%
+RMSE: 0.03412576687116564
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1250%
+ground_truth_strain: -15.3374%
+RMSE: 0.027875766871165636
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4049%
+ground_truth_strain: -15.3374%
+RMSE: 0.03067484662576686
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0184%
+ground_truth_strain: -15.3374%
+RMSE: 0.036809815950920255
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6101%
+ground_truth_strain: -15.3374%
+RMSE: 0.02272639580198324
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 97
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7949%
+ground_truth_strain: -17.5325%
+RMSE: 0.042624042624042624
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.0191%
+ground_truth_strain: -17.5325%
+RMSE: 0.03486640747787245
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.0191%
+ground_truth_strain: -17.5325%
+RMSE: 0.03486640747787245
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7097%
+ground_truth_strain: -17.5325%
+RMSE: 0.011772098868873065
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6561%
+ground_truth_strain: -17.5325%
+RMSE: 0.04123583422946481
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7949%
+ground_truth_strain: -17.5325%
+RMSE: 0.042624042624042624
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.5190%
+ground_truth_strain: -17.5325%
+RMSE: 0.0398651980930462
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7792%
+ground_truth_strain: -17.5325%
+RMSE: 0.03246753246753248
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1083%
+ground_truth_strain: -17.5325%
+RMSE: 0.015758127223095386
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 98
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7233%
+ground_truth_strain: -7.9268%
+RMSE: 0.07796441171958889
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7239%
+ground_truth_strain: -7.9268%
+RMSE: 0.06797097112075416
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.5570%
+ground_truth_strain: -7.9268%
+RMSE: 0.06630132757023773
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4321%
+ground_truth_strain: -7.9268%
+RMSE: 0.07505269497139415
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7929%
+ground_truth_strain: -7.9268%
+RMSE: 0.06866070139991341
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2927%
+ground_truth_strain: -7.9268%
+RMSE: 0.10365853658536585
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.5000%
+ground_truth_strain: -7.9268%
+RMSE: 0.09573170731707316
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.1515%
+ground_truth_strain: -7.9268%
+RMSE: 0.07224685883222469
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7879%
+ground_truth_strain: -7.9268%
+RMSE: 0.10861049519586104
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 99
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1429%
+ground_truth_strain: -17.9310%
+RMSE: 0.05788177339901478
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.7914%
+ground_truth_strain: -17.9310%
+RMSE: 0.07139667576283801
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0845%
+ground_truth_strain: -17.9310%
+RMSE: 0.038465274405050986
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.6691%
+ground_truth_strain: -17.9310%
+RMSE: 0.042619697345571805
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.6853%
+ground_truth_strain: -17.9310%
+RMSE: 0.032457197974439356
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1844%
+ground_truth_strain: -17.9310%
+RMSE: 0.03746637319638052
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7887%
+ground_truth_strain: -17.9310%
+RMSE: 0.031423020883924235
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.5714%
+ground_truth_strain: -17.9310%
+RMSE: 0.0435960591133005
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1844%
+ground_truth_strain: -17.9310%
+RMSE: 0.03746637319638052
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 100
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2414%
+ground_truth_strain: -10.7438%
+RMSE: 0.06497577657452266
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6991%
+ground_truth_strain: -10.7438%
+RMSE: 0.06955313391355225
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2609%
+ground_truth_strain: -10.7438%
+RMSE: 0.07517067912324829
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9487%
+ground_truth_strain: -10.7438%
+RMSE: 0.07204916295825387
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1034%
+ground_truth_strain: -10.7438%
+RMSE: 0.07359646622969507
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1304%
+ground_truth_strain: -10.7438%
+RMSE: 0.08386633129716134
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2414%
+ground_truth_strain: -10.7438%
+RMSE: 0.06497577657452266
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.3390%
+ground_truth_strain: -10.7438%
+RMSE: 0.09595181397954897
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2609%
+ground_truth_strain: -10.7438%
+RMSE: 0.07517067912324829
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 101
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9014%
+ground_truth_strain: -14.0845%
+RMSE: 0.028169014084507032
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3121%
+ground_truth_strain: -14.0845%
+RMSE: 0.02227549695335132
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9014%
+ground_truth_strain: -14.0845%
+RMSE: 0.028169014084507032
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4286%
+ground_truth_strain: -14.0845%
+RMSE: 0.023440643863179067
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6056%
+ground_truth_strain: -14.0845%
+RMSE: 0.035211267605633784
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9014%
+ground_truth_strain: -14.0845%
+RMSE: 0.028169014084507032
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -14.0845%
+RMSE: 0.040973111395646605
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -14.0845%
+RMSE: 0.040973111395646605
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0556%
+ground_truth_strain: -14.0845%
+RMSE: 0.039710485133020335
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 102
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -6.3725%
+ground_truth_strain: -7.4627%
+RMSE: 0.010901375475563357
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.3171%
+ground_truth_strain: -7.4627%
+RMSE: 0.0014561339643247156
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.8670%
+ground_truth_strain: -7.4627%
+RMSE: 0.014043085067274474
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.8431%
+ground_truth_strain: -7.4627%
+RMSE: 0.0038045068773778223
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.4257%
+ground_truth_strain: -7.4627%
+RMSE: 0.0003694399290675304
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.8431%
+ground_truth_strain: -7.4627%
+RMSE: 0.0038045068773778223
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.8670%
+ground_truth_strain: -7.4627%
+RMSE: 0.014043085067274474
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.0000%
+ground_truth_strain: -7.4627%
+RMSE: 0.004626865671641778
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.3171%
+ground_truth_strain: -7.4627%
+RMSE: 0.0014561339643247156
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 103
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.4118%
+ground_truth_strain: -22.4242%
+RMSE: 0.03012477718360071
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4524%
+ground_truth_strain: -22.4242%
+RMSE: 0.03971861471861471
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6829%
+ground_truth_strain: -22.4242%
+RMSE: 0.047413155949741326
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9349%
+ground_truth_strain: -22.4242%
+RMSE: 0.034893311816388745
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8537%
+ground_truth_strain: -22.4242%
+RMSE: 0.06570583887657058
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7515%
+ground_truth_strain: -22.4242%
+RMSE: 0.04672763134301597
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.1515%
+ground_truth_strain: -22.4242%
+RMSE: 0.07272727272727272
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.4699%
+ground_truth_strain: -22.4242%
+RMSE: 0.049543629061701344
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.2312%
+ground_truth_strain: -22.4242%
+RMSE: 0.021930285514100534
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 104
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4806%
+ground_truth_strain: -11.8519%
+RMSE: 0.10628768303186908
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8462%
+ground_truth_strain: -11.8519%
+RMSE: 0.11994301994301995
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.9008%
+ground_truth_strain: -11.8519%
+RMSE: 0.11048911506926773
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.3077%
+ground_truth_strain: -11.8519%
+RMSE: 0.10455840455840457
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.6641%
+ground_truth_strain: -11.8519%
+RMSE: 0.11812270285552728
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.7054%
+ground_truth_strain: -11.8519%
+RMSE: 0.09853574504737295
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.8462%
+ground_truth_strain: -11.8519%
+RMSE: 0.11994301994301995
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.4806%
+ground_truth_strain: -11.8519%
+RMSE: 0.10628768303186908
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1374%
+ground_truth_strain: -11.8519%
+RMSE: 0.1028555272830082
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 105
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.5000%
+ground_truth_strain: -17.0068%
+RMSE: 0.05493197278911566
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6561%
+ground_truth_strain: -17.0068%
+RMSE: 0.04649248234325579
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7452%
+ground_truth_strain: -17.0068%
+RMSE: 0.02738420208847872
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.7805%
+ground_truth_strain: -17.0068%
+RMSE: 0.06773685083789613
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8679%
+ground_truth_strain: -17.0068%
+RMSE: 0.018611218072134533
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.6415%
+ground_truth_strain: -17.0068%
+RMSE: 0.0563470671287383
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6203%
+ground_truth_strain: -17.0068%
+RMSE: 0.026134504434685263
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7452%
+ground_truth_strain: -17.0068%
+RMSE: 0.02738420208847872
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3548%
+ground_truth_strain: -17.0068%
+RMSE: 0.02348035988588984
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 106
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3636%
+ground_truth_strain: -12.8440%
+RMSE: 0.035195996663886564
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: -12.8440%
+RMSE: 0.038226299694189586
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.4312%
+ground_truth_strain: -12.8440%
+RMSE: 0.045871559633027525
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -12.8440%
+RMSE: 0.05337781484570475
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4545%
+ground_truth_strain: -12.8440%
+RMSE: 0.02610508757297747
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3636%
+ground_truth_strain: -12.8440%
+RMSE: 0.035195996663886564
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.5455%
+ground_truth_strain: -12.8440%
+RMSE: 0.017014178482068376
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.6789%
+ground_truth_strain: -12.8440%
+RMSE: 0.01834862385321101
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.4545%
+ground_truth_strain: -12.8440%
+RMSE: 0.02610508757297747
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 107
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4211%
+ground_truth_strain: -12.0690%
+RMSE: 0.06352087114337567
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.9292%
+ground_truth_strain: -12.0690%
+RMSE: 0.03860238022581629
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3793%
+ground_truth_strain: -12.0690%
+RMSE: 0.04310344827586206
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6441%
+ground_truth_strain: -12.0690%
+RMSE: 0.0657510227936879
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5172%
+ground_truth_strain: -12.0690%
+RMSE: 0.034482758620689655
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3333%
+ground_truth_strain: -12.0690%
+RMSE: 0.06264367816091952
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9487%
+ground_truth_strain: -12.0690%
+RMSE: 0.05879752431476569
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0940%
+ground_truth_strain: -12.0690%
+RMSE: 0.050250515767757145
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8034%
+ground_truth_strain: -12.0690%
+RMSE: 0.06734453286177423
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 108
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -2.1053%
+ground_truth_strain: -23.2143%
+RMSE: 0.21109022556390977
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -2.0619%
+ground_truth_strain: -23.2143%
+RMSE: 0.2115243004418262
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -4.0404%
+ground_truth_strain: -23.2143%
+RMSE: 0.19173881673881674
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -1.0309%
+ground_truth_strain: -23.2143%
+RMSE: 0.2218335787923417
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.0612%
+ground_truth_strain: -23.2143%
+RMSE: 0.20153061224489796
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 0.0000%
+ground_truth_strain: -23.2143%
+RMSE: 0.23214285714285715
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -1.0638%
+ground_truth_strain: -23.2143%
+RMSE: 0.22150455927051674
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: 0.0000%
+ground_truth_strain: -23.2143%
+RMSE: 0.23214285714285715
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -3.1250%
+ground_truth_strain: -23.2143%
+RMSE: 0.20089285714285715
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 109
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9189%
+ground_truth_strain: -17.0940%
+RMSE: 0.018249018249018256
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.4444%
+ground_truth_strain: -17.0940%
+RMSE: 0.023504273504273504
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0909%
+ground_truth_strain: -17.0940%
+RMSE: 0.019968919968919974
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8440%
+ground_truth_strain: -17.0940%
+RMSE: 0.04249980396769387
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6429%
+ground_truth_strain: -17.0940%
+RMSE: 0.02548840048840048
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.2222%
+ground_truth_strain: -17.0940%
+RMSE: 0.051282051282051266
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7407%
+ground_truth_strain: -17.0940%
+RMSE: 0.013532763532763531
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9643%
+ground_truth_strain: -17.0940%
+RMSE: 0.0012973137973137927
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8113%
+ground_truth_strain: -17.0940%
+RMSE: 0.02717303660699888
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 110
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1495%
+ground_truth_strain: -12.0690%
+RMSE: 0.0008056719303899396
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.4286%
+ground_truth_strain: -12.0690%
+RMSE: 0.006403940886699516
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.3333%
+ground_truth_strain: -12.0690%
+RMSE: 0.012643678160919533
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8148%
+ground_truth_strain: -12.0690%
+RMSE: 0.02745849297573434
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0187%
+ground_truth_strain: -12.0690%
+RMSE: 0.019497260715436657
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.6505%
+ground_truth_strain: -12.0690%
+RMSE: 0.004184800803481756
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2381%
+ground_truth_strain: -12.0690%
+RMSE: 0.031691297208538596
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0943%
+ground_truth_strain: -12.0690%
+RMSE: 0.03025374105400129
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.2642%
+ground_truth_strain: -12.0690%
+RMSE: 0.0019518542615484663
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 111
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0376%
+ground_truth_strain: 229.9213%
+RMSE: 2.4495885382748206
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.4328%
+ground_truth_strain: 229.9213%
+RMSE: 2.433540956634152
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8788%
+ground_truth_strain: 229.9213%
+RMSE: 2.4280004772130757
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.3939%
+ground_truth_strain: 229.9213%
+RMSE: 2.443151992364591
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.8788%
+ground_truth_strain: 229.9213%
+RMSE: 2.4280004772130757
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.0769%
+ground_truth_strain: 229.9213%
+RMSE: 2.4299818291944275
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.0625%
+ground_truth_strain: 229.9213%
+RMSE: 2.4398375984251968
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.0769%
+ground_truth_strain: 229.9213%
+RMSE: 2.4299818291944275
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.6716%
+ground_truth_strain: 229.9213%
+RMSE: 2.4559290163356446
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 112
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.4242%
+ground_truth_strain: -15.7143%
+RMSE: 0.017099567099567115
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5414%
+ground_truth_strain: -15.7143%
+RMSE: 0.008270676691729317
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8295%
+ground_truth_strain: -15.7143%
+RMSE: 0.021151716500553724
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7970%
+ground_truth_strain: -15.7143%
+RMSE: 0.030827067669172925
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0451%
+ground_truth_strain: -15.7143%
+RMSE: 0.023308270676691722
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7970%
+ground_truth_strain: -15.7143%
+RMSE: 0.030827067669172925
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.3846%
+ground_truth_strain: -15.7143%
+RMSE: 0.003296703296703285
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7287%
+ground_truth_strain: -15.7143%
+RMSE: 0.009856035437430771
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5185%
+ground_truth_strain: -15.7143%
+RMSE: 0.028042328042328035
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 113
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -18.7500%
+RMSE: 0.0
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -18.7500%
+RMSE: 0.0
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4615%
+ground_truth_strain: -18.7500%
+RMSE: 0.0028846153846153744
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2308%
+ground_truth_strain: -18.7500%
+RMSE: 0.004807692307692318
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.9688%
+ground_truth_strain: -18.7500%
+RMSE: 0.0078125
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1875%
+ground_truth_strain: -18.7500%
+RMSE: 0.015625
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1102%
+ground_truth_strain: -18.7500%
+RMSE: 0.006397637795275579
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4545%
+ground_truth_strain: -18.7500%
+RMSE: 0.017045454545454558
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.1875%
+ground_truth_strain: -18.7500%
+RMSE: 0.015625
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 114
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0141%
+ground_truth_strain: -15.7143%
+RMSE: 0.03299798792756539
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1489%
+ground_truth_strain: -15.7143%
+RMSE: 0.03434650455927052
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.5674%
+ground_truth_strain: -15.7143%
+RMSE: 0.04853090172239108
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7183%
+ground_truth_strain: -15.7143%
+RMSE: 0.04004024144869214
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4225%
+ground_truth_strain: -15.7143%
+RMSE: 0.04708249496981892
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9790%
+ground_truth_strain: -15.7143%
+RMSE: 0.05264735264735265
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -15.7143%
+RMSE: 0.04285714285714287
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7183%
+ground_truth_strain: -15.7143%
+RMSE: 0.04004024144869214
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9790%
+ground_truth_strain: -15.7143%
+RMSE: 0.05264735264735265
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 115
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0476%
+ground_truth_strain: -20.8861%
+RMSE: 0.018384569017480423
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6207%
+ground_truth_strain: -20.8861%
+RMSE: 0.02265386294194674
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0556%
+ground_truth_strain: -20.8861%
+RMSE: 0.028305203938115336
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1781%
+ground_truth_strain: -20.8861%
+RMSE: 0.01707993757586268
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4932%
+ground_truth_strain: -20.8861%
+RMSE: 0.02392925264435583
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7279%
+ground_truth_strain: -20.8861%
+RMSE: 0.011581847929045042
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1781%
+ground_truth_strain: -20.8861%
+RMSE: 0.01707993757586268
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3103%
+ground_truth_strain: -20.8861%
+RMSE: 0.015757311217808823
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3103%
+ground_truth_strain: -20.8861%
+RMSE: 0.015757311217808823
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 116
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.1290%
+ground_truth_strain: -16.5217%
+RMSE: 0.003927068723702659
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.3554%
+ground_truth_strain: -16.5217%
+RMSE: 0.008336327703916652
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6721%
+ground_truth_strain: -16.5217%
+RMSE: 0.031503920171062016
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4000%
+ground_truth_strain: -16.5217%
+RMSE: 0.01878260869565218
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0328%
+ground_truth_strain: -16.5217%
+RMSE: 0.015110477548111206
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3934%
+ground_truth_strain: -16.5217%
+RMSE: 0.0012829650748396315
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8862%
+ground_truth_strain: -16.5217%
+RMSE: 0.013644397313538364
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1667%
+ground_truth_strain: -16.5217%
+RMSE: 0.026449275362318864
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8862%
+ground_truth_strain: -16.5217%
+RMSE: 0.013644397313538364
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 117
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2775%
+ground_truth_strain: -21.4660%
+RMSE: 0.04188481675392672
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6528%
+ground_truth_strain: -21.4660%
+RMSE: 0.02813118845454793
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2292%
+ground_truth_strain: -21.4660%
+RMSE: 0.03236801919720769
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9474%
+ground_truth_strain: -21.4660%
+RMSE: 0.025186001653348028
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3246%
+ground_truth_strain: -21.4660%
+RMSE: 0.03141361256544503
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -21.4660%
+RMSE: 0.02715968586387435
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -21.4660%
+RMSE: 0.02715968586387435
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4211%
+ground_truth_strain: -21.4660%
+RMSE: 0.030449159548084886
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.3246%
+ground_truth_strain: -21.4660%
+RMSE: 0.03141361256544503
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 118
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0000%
+ground_truth_strain: -15.4545%
+RMSE: 0.03545454545454546
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.3469%
+ground_truth_strain: -15.4545%
+RMSE: 0.018923933209647498
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1818%
+ground_truth_strain: -15.4545%
+RMSE: 0.027272727272727282
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6078%
+ground_truth_strain: -15.4545%
+RMSE: 0.041532976827094475
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.5882%
+ground_truth_strain: -15.4545%
+RMSE: 0.05133689839572192
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.7921%
+ground_truth_strain: -15.4545%
+RMSE: 0.05337533753375337
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -15.4545%
+RMSE: 0.04545454545454547
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6078%
+ground_truth_strain: -15.4545%
+RMSE: 0.041532976827094475
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4948%
+ground_truth_strain: -15.4545%
+RMSE: 0.010402999062792878
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 119
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.8644%
+ground_truth_strain: -13.2812%
+RMSE: 0.014168432203389827
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.6752%
+ground_truth_strain: -13.2812%
+RMSE: 0.003939636752136766
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8333%
+ground_truth_strain: -13.2812%
+RMSE: 0.025520833333333326
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.2231%
+ground_truth_strain: -13.2812%
+RMSE: 0.0005810950413223104
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.7647%
+ground_truth_strain: -13.2812%
+RMSE: 0.01516544117647059
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -13.2812%
+RMSE: 0.01004464285714285
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.0169%
+ground_truth_strain: -13.2812%
+RMSE: 0.022643008474576273
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.0840%
+ground_truth_strain: -13.2812%
+RMSE: 0.031972163865546216
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -13.2812%
+RMSE: 0.01004464285714285
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 120
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2439%
+ground_truth_strain: -11.6279%
+RMSE: 0.03615995462280204
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1104%
+ground_truth_strain: -11.6279%
+RMSE: 0.02482522471108574
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1104%
+ground_truth_strain: -11.6279%
+RMSE: 0.02482522471108574
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8537%
+ground_truth_strain: -11.6279%
+RMSE: 0.0422575155984118
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2439%
+ground_truth_strain: -11.6279%
+RMSE: 0.03615995462280204
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.9394%
+ground_truth_strain: -11.6279%
+RMSE: 0.023114869626497545
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.5455%
+ground_truth_strain: -11.6279%
+RMSE: 0.02917547568710359
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7239%
+ground_truth_strain: -11.6279%
+RMSE: 0.030960194036239133
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2439%
+ground_truth_strain: -11.6279%
+RMSE: 0.03615995462280204
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 121
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.9236%
+ground_truth_strain: -14.1026%
+RMSE: 0.018210027764167885
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.9351%
+ground_truth_strain: -14.1026%
+RMSE: 0.00832500832500832
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2866%
+ground_truth_strain: -14.1026%
+RMSE: 0.01184060101257553
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2866%
+ground_truth_strain: -14.1026%
+RMSE: 0.01184060101257553
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8387%
+ground_truth_strain: -14.1026%
+RMSE: 0.0073614557485525145
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1026%
+ground_truth_strain: -14.1026%
+RMSE: 0.0
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2866%
+ground_truth_strain: -14.1026%
+RMSE: 0.01184060101257553
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.3791%
+ground_truth_strain: -14.1026%
+RMSE: 0.002765208647561579
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8387%
+ground_truth_strain: -14.1026%
+RMSE: 0.0073614557485525145
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 122
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.9355%
+ground_truth_strain: -22.1311%
+RMSE: 0.051956636700158654
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2131%
+ground_truth_strain: -22.1311%
+RMSE: 0.04918032786885246
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.5738%
+ground_truth_strain: -22.1311%
+RMSE: 0.06557377049180327
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.2131%
+ground_truth_strain: -22.1311%
+RMSE: 0.04918032786885246
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4000%
+ground_truth_strain: -22.1311%
+RMSE: 0.037311475409836065
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0328%
+ground_truth_strain: -22.1311%
+RMSE: 0.04098360655737704
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.5289%
+ground_truth_strain: -22.1311%
+RMSE: 0.05602221921148895
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.7419%
+ground_truth_strain: -22.1311%
+RMSE: 0.043892120571126375
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7025%
+ground_truth_strain: -22.1311%
+RMSE: 0.0642866820214063
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 123
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8571%
+ground_truth_strain: -16.3793%
+RMSE: 0.014778325123152719
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.7500%
+ground_truth_strain: -16.3793%
+RMSE: 0.023706896551724144
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.4690%
+ground_truth_strain: -16.3793%
+RMSE: 0.030897162038449805
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8571%
+ground_truth_strain: -16.3793%
+RMSE: 0.014778325123152719
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2162%
+ground_truth_strain: -16.3793%
+RMSE: 0.0016309412861136852
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6991%
+ground_truth_strain: -16.3793%
+RMSE: 0.013198046994202017
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2982%
+ground_truth_strain: -16.3793%
+RMSE: 0.02918935269207501
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.8571%
+ground_truth_strain: -16.3793%
+RMSE: 0.014778325123152719
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0180%
+ground_truth_strain: -16.3793%
+RMSE: 0.016387076731904315
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 124
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.0645%
+ground_truth_strain: -20.2381%
+RMSE: 0.021735791090629814
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8312%
+ground_truth_strain: -20.2381%
+RMSE: 0.014069264069264065
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.8312%
+ground_truth_strain: -20.2381%
+RMSE: 0.014069264069264065
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.8718%
+ground_truth_strain: -20.2381%
+RMSE: 0.0036630036630036777
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.5897%
+ground_truth_strain: -20.2381%
+RMSE: 0.01648351648351648
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2308%
+ground_truth_strain: -20.2381%
+RMSE: 0.010073260073260065
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.2308%
+ground_truth_strain: -20.2381%
+RMSE: 0.010073260073260065
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.5128%
+ground_truth_strain: -20.2381%
+RMSE: 0.0027472527472527375
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.1083%
+ground_truth_strain: -20.2381%
+RMSE: 0.01129814983318167
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 125
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1342%
+ground_truth_strain: -14.3885%
+RMSE: 0.05745738979286369
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6207%
+ground_truth_strain: -14.3885%
+RMSE: 0.04232200446539322
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.6897%
+ground_truth_strain: -14.3885%
+RMSE: 0.063011659637807
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.3103%
+ground_truth_strain: -14.3885%
+RMSE: 0.04921855618953114
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4082%
+ground_truth_strain: -14.3885%
+RMSE: 0.0601967405667303
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4082%
+ground_truth_strain: -14.3885%
+RMSE: 0.0601967405667303
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.7279%
+ground_truth_strain: -14.3885%
+RMSE: 0.05339401947829492
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3333%
+ground_truth_strain: -14.3885%
+RMSE: 0.06944844124700242
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.0690%
+ground_truth_strain: -14.3885%
+RMSE: 0.07680476308608286
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 126
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0685%
+ground_truth_strain: -14.3836%
+RMSE: 0.00684931506849315
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.5833%
+ground_truth_strain: -14.3836%
+RMSE: 0.001997716894977186
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8621%
+ground_truth_strain: -14.3836%
+RMSE: 0.014785073216816269
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8621%
+ground_truth_strain: -14.3836%
+RMSE: 0.014785073216816269
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.4828%
+ground_truth_strain: -14.3836%
+RMSE: 0.0009919697685404072
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.1724%
+ground_truth_strain: -14.3836%
+RMSE: 0.007888521492678324
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.7534%
+ground_truth_strain: -14.3836%
+RMSE: 0.0136986301369863
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.8889%
+ground_truth_strain: -14.3836%
+RMSE: 0.004946727549467261
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4384%
+ground_truth_strain: -14.3836%
+RMSE: 0.02054794520547945
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 127
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.3077%
+ground_truth_strain: 92.5234%
+RMSE: 1.0983105679367362
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4466%
+ground_truth_strain: 92.5234%
+RMSE: 1.1096996642772887
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4466%
+ground_truth_strain: 92.5234%
+RMSE: 1.1096996642772887
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.6667%
+ground_truth_strain: 92.5234%
+RMSE: 1.0919003115264798
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.3592%
+ground_truth_strain: 92.5234%
+RMSE: 1.1388258778695217
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8317%
+ground_truth_strain: 92.5234%
+RMSE: 1.0935504765429813
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: 92.5234%
+RMSE: 1.125233644859813
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2692%
+ground_truth_strain: 92.5234%
+RMSE: 1.1079259525521208
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6275%
+ground_truth_strain: 92.5234%
+RMSE: 1.1115081546637346
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 128
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6774%
+ground_truth_strain: -9.6491%
+RMSE: 0.00028296547821166085
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.3175%
+ground_truth_strain: -9.6491%
+RMSE: 0.006683375104427736
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1951%
+ground_truth_strain: -9.6491%
+RMSE: 0.025459991442019686
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.1951%
+ground_truth_strain: -9.6491%
+RMSE: 0.025459991442019686
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.0236%
+ground_truth_strain: -9.6491%
+RMSE: 0.01374499240226551
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.2903%
+ground_truth_strain: -9.6491%
+RMSE: 0.016411997736276177
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.2903%
+ground_truth_strain: -9.6491%
+RMSE: 0.016411997736276177
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.7188%
+ground_truth_strain: -9.6491%
+RMSE: 0.020696271929824567
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7561%
+ground_truth_strain: -9.6491%
+RMSE: 0.0010697475395806677
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 129
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -8.1301%
+ground_truth_strain: -5.0000%
+RMSE: 0.03130081300813008
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7561%
+ground_truth_strain: -5.0000%
+RMSE: 0.0475609756097561
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.2903%
+ground_truth_strain: -5.0000%
+RMSE: 0.06290322580645161
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.4921%
+ground_truth_strain: -5.0000%
+RMSE: 0.08492063492063491
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6774%
+ground_truth_strain: -5.0000%
+RMSE: 0.04677419354838709
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.0968%
+ground_truth_strain: -5.0000%
+RMSE: 0.07096774193548387
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.6774%
+ground_truth_strain: -5.0000%
+RMSE: 0.04677419354838709
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.7561%
+ground_truth_strain: -5.0000%
+RMSE: 0.0475609756097561
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.2903%
+ground_truth_strain: -5.0000%
+RMSE: 0.06290322580645161
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 130
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4678%
+ground_truth_strain: -15.8824%
+RMSE: 0.04585483316133471
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.6047%
+ground_truth_strain: -15.8824%
+RMSE: 0.027222982216142277
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9302%
+ground_truth_strain: -15.8824%
+RMSE: 0.05047879616963066
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.6471%
+ground_truth_strain: -15.8824%
+RMSE: 0.017647058823529432
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.9655%
+ground_truth_strain: -15.8824%
+RMSE: 0.030831643002028397
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.6374%
+ground_truth_strain: -15.8824%
+RMSE: 0.057550739594083244
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0751%
+ground_truth_strain: -15.8824%
+RMSE: 0.031927915674940494
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.6532%
+ground_truth_strain: -15.8824%
+RMSE: 0.03770826249574977
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.2353%
+ground_truth_strain: -15.8824%
+RMSE: 0.023529411764705882
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 131
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8228%
+ground_truth_strain: -18.0124%
+RMSE: 0.021896375501218646
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4557%
+ground_truth_strain: -18.0124%
+RMSE: 0.015567261577168034
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4557%
+ground_truth_strain: -18.0124%
+RMSE: 0.015567261577168034
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4557%
+ground_truth_strain: -18.0124%
+RMSE: 0.015567261577168034
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8750%
+ground_truth_strain: -18.0124%
+RMSE: 0.011374223602484468
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2500%
+ground_truth_strain: -18.0124%
+RMSE: 0.017624223602484473
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.8750%
+ground_truth_strain: -18.0124%
+RMSE: 0.011374223602484468
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3522%
+ground_truth_strain: -18.0124%
+RMSE: 0.016602211023868135
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.9236%
+ground_truth_strain: -18.0124%
+RMSE: 0.02088855481267557
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 132
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -20.8000%
+RMSE: 0.00799999999999998
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.0476%
+ground_truth_strain: -20.8000%
+RMSE: 0.017523809523809525
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4724%
+ground_truth_strain: -20.8000%
+RMSE: 0.0032755905511810957
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.0000%
+ground_truth_strain: -20.8000%
+RMSE: 0.00799999999999998
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -19.5312%
+ground_truth_strain: -20.8000%
+RMSE: 0.01268749999999999
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.9302%
+ground_truth_strain: -20.8000%
+RMSE: 0.0013023255813953694
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.1102%
+ground_truth_strain: -20.8000%
+RMSE: 0.02689763779527557
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -18.4000%
+ground_truth_strain: -20.8000%
+RMSE: 0.023999999999999994
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1550%
+ground_truth_strain: -20.8000%
+RMSE: 0.0064496124031007684
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 133
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0370%
+ground_truth_strain: -13.3333%
+RMSE: 0.037037037037037035
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -17.0370%
+ground_truth_strain: -13.3333%
+RMSE: 0.037037037037037035
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.4179%
+ground_truth_strain: -13.3333%
+RMSE: 0.03084577114427861
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.8148%
+ground_truth_strain: -13.3333%
+RMSE: 0.014814814814814808
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.2963%
+ground_truth_strain: -13.3333%
+RMSE: 0.029629629629629645
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.4328%
+ground_truth_strain: -13.3333%
+RMSE: 0.0009950248756218916
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.7059%
+ground_truth_strain: -13.3333%
+RMSE: 0.013725490196078438
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.8273%
+ground_truth_strain: -13.3333%
+RMSE: 0.024940047961630685
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.0305%
+ground_truth_strain: -13.3333%
+RMSE: 0.02697201017811704
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 134
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -12.7389%
+ground_truth_strain: -15.2439%
+RMSE: 0.025050489358396766
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.1899%
+ground_truth_strain: -15.2439%
+RMSE: 0.0005402902130287046
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.2857%
+ground_truth_strain: -15.2439%
+RMSE: 0.00958188153310105
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.5570%
+ground_truth_strain: -15.2439%
+RMSE: 0.0068694041370793435
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.0943%
+ground_truth_strain: -15.2439%
+RMSE: 0.0014956281638288105
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -14.1935%
+ground_truth_strain: -15.2439%
+RMSE: 0.010503540519276156
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -16.3522%
+ground_truth_strain: -15.2439%
+RMSE: 0.011082988188372445
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -15.2866%
+ground_truth_strain: -15.2439%
+RMSE: 0.00042721764797265527
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -13.4615%
+ground_truth_strain: -15.2439%
+RMSE: 0.01782363977485929
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 135
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -7.5758%
+ground_truth_strain: -13.3333%
+RMSE: 0.05757575757575757
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.8485%
+ground_truth_strain: -13.3333%
+RMSE: 0.03484848484848485
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.9237%
+ground_truth_strain: -13.3333%
+RMSE: 0.03409669211195929
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.1603%
+ground_truth_strain: -13.3333%
+RMSE: 0.04173027989821883
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -10.4478%
+ground_truth_strain: -13.3333%
+RMSE: 0.028855721393034828
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.1940%
+ground_truth_strain: -13.3333%
+RMSE: 0.02139303482587064
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -11.9403%
+ground_truth_strain: -13.3333%
+RMSE: 0.013930348258706468
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.0909%
+ground_truth_strain: -13.3333%
+RMSE: 0.04242424242424242
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -9.1603%
+ground_truth_strain: -13.3333%
+RMSE: 0.04173027989821883
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 136
+
+Original_Pretrained_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.8346%
+ground_truth_strain: -16.6667%
+RMSE: 0.06167979002624674
+
+retrain_original_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4918%
+ground_truth_strain: -16.6667%
+RMSE: 0.038251366120218594
+
+dropout_v2_0_00_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.4918%
+ground_truth_strain: -16.6667%
+RMSE: 0.038251366120218594
+
+dropout_v2_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.4286%
+ground_truth_strain: -16.6667%
+RMSE: 0.047619047619047616
+
+dropout_v2_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1311%
+ground_truth_strain: -16.6667%
+RMSE: 0.054644808743169404
+
+dropout_v2_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -20.1613%
+ground_truth_strain: -16.6667%
+RMSE: 0.03494623655913978
+
+dropout_0_10_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -22.1311%
+ground_truth_strain: -16.6667%
+RMSE: 0.054644808743169404
+
+dropout_0_25_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -23.3871%
+ground_truth_strain: -16.6667%
+RMSE: 0.06720430107526881
+
+dropout_0_50_R2plus1DMotionSegNet_model.pth
+seg_out_strain: -21.1382%
+ground_truth_strain: -16.6667%
+RMSE: 0.044715447154471566
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+video number: 137
+

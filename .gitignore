@@ -1,0 +1,10 @@
+.ipynb_checkpoints
+*.pth
+*.gif
+*.pyc
+*.pkl
+*.pickle
+*.svg
+*.swp
+a4c-video-dir
+dynamic_data

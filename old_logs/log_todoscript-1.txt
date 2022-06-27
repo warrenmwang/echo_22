@@ -1,0 +1,57 @@
+start train v3 00
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:04,  3.65it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:01, 10.60it/s] 56%|████████████████████████████████████████████████████████▊                                            | 9/16 [00:00<00:00, 12.16it/s] 81%|█████████████████████████████████████████████████████████████████████████████████▎                  | 13/16 [00:01<00:00, 13.26it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.26it/s]
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:04,  3.03it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:01, 10.21it/s] 56%|████████████████████████████████████████████████████████▊                                            | 9/16 [00:00<00:00, 13.77it/s] 81%|█████████████████████████████████████████████████████████████████████████████████▎                  | 13/16 [00:00<00:00, 15.47it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 17.36it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.16it/s]
+Traceback (most recent call last):
+  File "./warren-random/train_new_models/train_new_model.py", line 210, in <module>
+    train_new_model(new_model_to_train, log_file)
+  File "./warren-random/train_new_models/train_new_model.py", line 187, in train_new_model
+    valid_loss = test_with_log(epoch, test_loader=valid_dataloader, model=model, optimizer=optimizer, log_file = log_file)
+  File "/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking/src/train_test.py", line 130, in test_with_log
+    segmentation_output, motion_output = model(video_clips)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 155, in forward
+    outputs = self.parallel_apply(replicas, inputs, kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 165, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 85, in parallel_apply
+    output.reraise()
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/_utils.py", line 395, in reraise
+    raise self.exc_type(msg)
+RuntimeError: Caught RuntimeError in replica 0 on device 0.
+Original Traceback (most recent call last):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/parallel_apply.py", line 60, in _worker
+    output = module(*input, **kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking/src/model/dropout_v3_0_00_R2plus1D_18_MotionNet.py", line 62, in forward
+    cat_output = torch.cat([up_stem, up_layer_1, up_layer_2, up_layer_3, up_layer_4], 1)
+RuntimeError: CUDA out of memory. Tried to allocate 3.06 GiB (GPU 0; 23.65 GiB total capacity; 11.34 GiB already allocated; 2.12 GiB free; 12.24 GiB reserved in total by PyTorch)
+
+start calculating ED/ES LV Dice & EF
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:04,  3.15it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:01, 10.99it/s] 56%|████████████████████████████████████████████████████████▊                                            | 9/16 [00:00<00:00, 13.42it/s] 81%|█████████████████████████████████████████████████████████████████████████████████▎                  | 13/16 [00:00<00:00, 15.76it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.87it/s]
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:04,  3.00it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:01,  9.92it/s] 56%|████████████████████████████████████████████████████████▊                                            | 9/16 [00:00<00:00, 12.74it/s] 69%|████████████████████████████████████████████████████████████████████▊                               | 11/16 [00:00<00:00, 14.19it/s] 81%|█████████████████████████████████████████████████████████████████████████████████▎                  | 13/16 [00:01<00:00, 14.18it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 17.62it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.62it/s]
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:04,  3.26it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:00, 11.10it/s] 50%|██████████████████████████████████████████████████▌                                                  | 8/16 [00:00<00:00, 15.73it/s] 69%|████████████████████████████████████████████████████████████████████▊                               | 11/16 [00:00<00:00, 14.19it/s] 88%|███████████████████████████████████████████████████████████████████████████████████████▌            | 14/16 [00:01<00:00, 15.33it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.16it/s]
+Traceback (most recent call last):
+  File "./warren-random/quantifying-performance/calc_dice_and_ef.py", line 208, in <module>
+    model.load_state_dict(torch.load(model_save_path)["model"])
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 584, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 234, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 215, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'save_models/dropout_v3_0_00_R2plus1D_18_MotionNet.pth'
+start calculating strain
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:03,  3.90it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:00, 11.98it/s] 50%|██████████████████████████████████████████████████▌                                                  | 8/16 [00:00<00:00, 16.19it/s] 62%|██████████████████████████████████████████████████████████████▌                                     | 10/16 [00:00<00:00, 14.33it/s] 88%|███████████████████████████████████████████████████████████████████████████████████████▌            | 14/16 [00:00<00:00, 15.52it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 15.24it/s]
+  0%|                                                                                                             | 0/16 [00:00<?, ?it/s]  6%|██████▎                                                                                              | 1/16 [00:00<00:04,  3.24it/s] 31%|███████████████████████████████▌                                                                     | 5/16 [00:00<00:01, 10.34it/s] 56%|████████████████████████████████████████████████████████▊                                            | 9/16 [00:00<00:00, 13.15it/s] 81%|█████████████████████████████████████████████████████████████████████████████████▎                  | 13/16 [00:01<00:00, 14.14it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.78it/s]
+Traceback (most recent call last):
+  File "./warren-random/longitudinal_strain/calc_strain.py", line 305, in <module>
+    model.load_state_dict(torch.load(model_save_path)["model"])
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 584, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 234, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 215, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'save_models/dropout_v3_0_00_R2plus1D_18_MotionNet.pth'

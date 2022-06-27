@@ -1,0 +1,38 @@
+start dropout v3 0.25
+  0%|                                                                      | 0/16 [00:00<?, ?it/s]  6%|███▉                                                          | 1/16 [00:00<00:05,  2.88it/s] 31%|███████████████████▍                                          | 5/16 [00:00<00:01,  9.43it/s] 56%|██████████████████████████████████▉                           | 9/16 [00:00<00:00, 10.30it/s] 81%|█████████████████████████████████████████████████▌           | 13/16 [00:01<00:00, 13.52it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.63it/s]
+  0%|                                                                      | 0/16 [00:00<?, ?it/s]  6%|███▉                                                          | 1/16 [00:00<00:04,  3.43it/s] 31%|███████████████████▍                                          | 5/16 [00:00<00:01, 10.37it/s] 56%|██████████████████████████████████▉                           | 9/16 [00:00<00:00, 11.71it/s] 81%|█████████████████████████████████████████████████▌           | 13/16 [00:01<00:00, 14.12it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.60it/s]dropout_v3_0_25_R2plus1D_18_MotionNet.pth has 31575731 parameters.
+
+Traceback (most recent call last):
+  File "./warren-random/train_new_models/train_new_model_2.py", line 183, in <module>
+    train_loss = train_with_log(epoch, train_loader=train_dataloader, model=model, optimizer=optimizer, log_file = log_file)
+  File "/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking/src/train_test.py", line 91, in train_with_log
+    optimizer.step()
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 15, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/optim/adam.py", line 107, in step
+    denom = (exp_avg_sq.sqrt() / math.sqrt(bias_correction2)).add_(group['eps'])
+RuntimeError: CUDA error: an illegal memory access was encountered
+
+real	20m27.237s
+user	43m3.580s
+sys	6m22.929s
+training models done...now try to create create csv data from them...
+start creating csv for dropout v3 0.25
+  0%|                                                                      | 0/16 [00:00<?, ?it/s]  6%|███▉                                                          | 1/16 [00:00<00:04,  3.37it/s] 31%|███████████████████▍                                          | 5/16 [00:00<00:01, 10.70it/s] 50%|███████████████████████████████                               | 8/16 [00:00<00:00, 14.36it/s] 62%|██████████████████████████████████████▏                      | 10/16 [00:00<00:00, 13.69it/s] 81%|█████████████████████████████████████████████████▌           | 13/16 [00:01<00:00, 12.90it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.16it/s]
+  0%|                                                                      | 0/16 [00:00<?, ?it/s]  6%|███▉                                                          | 1/16 [00:00<00:05,  2.86it/s] 25%|███████████████▌                                              | 4/16 [00:00<00:01, 10.12it/s] 38%|███████████████████████▎                                      | 6/16 [00:00<00:00, 12.73it/s] 56%|██████████████████████████████████▉                           | 9/16 [00:00<00:00, 13.45it/s] 81%|█████████████████████████████████████████████████▌           | 13/16 [00:00<00:00, 16.60it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 19.48it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.73it/s]
+  0%|                                                                      | 0/16 [00:00<?, ?it/s]  6%|███▉                                                          | 1/16 [00:00<00:05,  2.99it/s] 31%|███████████████████▍                                          | 5/16 [00:00<00:00, 11.02it/s] 44%|███████████████████████████▏                                  | 7/16 [00:00<00:00, 13.17it/s] 56%|██████████████████████████████████▉                           | 9/16 [00:00<00:00, 14.41it/s] 69%|█████████████████████████████████████████▉                   | 11/16 [00:00<00:00, 13.62it/s] 88%|█████████████████████████████████████████████████████▍       | 14/16 [00:01<00:00, 17.48it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 16.61it/s]100%|█████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.70it/s]
+Traceback (most recent call last):
+  File "./warren-random/quantifying-performance/create_csv.py", line 209, in <module>
+    model.load_state_dict(torch.load(model_save_path)["model"])
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 584, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 234, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/serialization.py", line 215, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'save_models/dropout_v3_0_25_R2plus1D_18_MotionNet.pth'
+
+real	0m12.825s
+user	0m41.153s
+sys	0m3.226s
+runme.sh script finished

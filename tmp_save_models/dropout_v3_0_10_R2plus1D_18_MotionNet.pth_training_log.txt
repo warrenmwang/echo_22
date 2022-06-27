@@ -1,0 +1,571 @@
+-------------------------------- Epoch 1 --------------------------------
+
+Train Epoch: 1 [1120/7332 (15%)]	Loss: 0.837375
+ED LV: 0.820
+ES LV: 0.738
+On a particular batch:
+Deform loss: 0.009152514860033989
+Segmentation loss: 0.2707037925720215
+Seg Motion loss: (tensor(0.2619, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0213, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 1 [2240/7332 (31%)]	Loss: 0.644828
+ED LV: 0.867
+ES LV: 0.807
+On a particular batch:
+Deform loss: 0.008015134371817112
+Segmentation loss: 0.170611172914505
+Seg Motion loss: (tensor(0.1653, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0195, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 1 [3360/7332 (46%)]	Loss: 0.527831
+ED LV: 0.885
+ES LV: 0.836
+On a particular batch:
+Deform loss: 0.007350781932473183
+Segmentation loss: 0.11040572822093964
+Seg Motion loss: (tensor(0.1126, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0160, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 1 [4480/7332 (61%)]	Loss: 0.447210
+ED LV: 0.896
+ES LV: 0.853
+On a particular batch:
+Deform loss: 0.008297426626086235
+Segmentation loss: 0.0738607794046402
+Seg Motion loss: (tensor(0.0750, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0158, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 1 [5600/7332 (76%)]	Loss: 0.390427
+ED LV: 0.902
+ES LV: 0.862
+On a particular batch:
+Deform loss: 0.006731060799211264
+Segmentation loss: 0.06586135178804398
+Seg Motion loss: (tensor(0.0549, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0162, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 1 [6720/7332 (92%)]	Loss: 0.347156
+ED LV: 0.907
+ES LV: 0.869
+On a particular batch:
+Deform loss: 0.005794615019112825
+Segmentation loss: 0.05821578949689865
+Seg Motion loss: (tensor(0.0422, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0143, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2152.10314512 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.933
+ES LV: 0.909
+
+Valid set: Average loss: 0.1095
+
+-------------------------------- Epoch 2 --------------------------------
+
+Train Epoch: 2 [1120/7332 (15%)]	Loss: 0.105340
+ED LV: 0.933
+ES LV: 0.909
+On a particular batch:
+Deform loss: 0.005909424740821123
+Segmentation loss: 0.04031446576118469
+Seg Motion loss: (tensor(0.0294, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0118, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 2 [2240/7332 (31%)]	Loss: 0.100896
+ED LV: 0.932
+ES LV: 0.908
+On a particular batch:
+Deform loss: 0.005005893763154745
+Segmentation loss: 0.0413639098405838
+Seg Motion loss: (tensor(0.0253, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0131, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 2 [3360/7332 (46%)]	Loss: 0.096654
+ED LV: 0.932
+ES LV: 0.908
+On a particular batch:
+Deform loss: 0.006600501947104931
+Segmentation loss: 0.066936194896698
+Seg Motion loss: (tensor(0.0266, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0223, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 2 [4480/7332 (61%)]	Loss: 0.093330
+ED LV: 0.932
+ES LV: 0.908
+On a particular batch:
+Deform loss: 0.004528898745775223
+Segmentation loss: 0.0389181412756443
+Seg Motion loss: (tensor(0.0202, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0142, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 2 [5600/7332 (76%)]	Loss: 0.091546
+ED LV: 0.932
+ES LV: 0.908
+On a particular batch:
+Deform loss: 0.006303549278527498
+Segmentation loss: 0.03495551273226738
+Seg Motion loss: (tensor(0.0189, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0123, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 2 [6720/7332 (92%)]	Loss: 0.088924
+ED LV: 0.932
+ES LV: 0.909
+On a particular batch:
+Deform loss: 0.004645084030926228
+Segmentation loss: 0.029149875044822693
+Seg Motion loss: (tensor(0.0158, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0101, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2166.36671400 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.934
+ES LV: 0.911
+
+Valid set: Average loss: 0.0728
+
+-------------------------------- Epoch 3 --------------------------------
+
+Train Epoch: 3 [1120/7332 (15%)]	Loss: 0.073614
+ED LV: 0.935
+ES LV: 0.912
+On a particular batch:
+Deform loss: 0.0051953792572021484
+Segmentation loss: 0.032036200165748596
+Seg Motion loss: (tensor(0.0155, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0128, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 3 [2240/7332 (31%)]	Loss: 0.072953
+ED LV: 0.935
+ES LV: 0.913
+On a particular batch:
+Deform loss: 0.004828550852835178
+Segmentation loss: 0.029008174315094948
+Seg Motion loss: (tensor(0.0132, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0111, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 3 [3360/7332 (46%)]	Loss: 0.071494
+ED LV: 0.935
+ES LV: 0.913
+On a particular batch:
+Deform loss: 0.004431205801665783
+Segmentation loss: 0.02453528717160225
+Seg Motion loss: (tensor(0.0125, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0092, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 3 [4480/7332 (61%)]	Loss: 0.070649
+ED LV: 0.935
+ES LV: 0.913
+On a particular batch:
+Deform loss: 0.005720958113670349
+Segmentation loss: 0.046778738498687744
+Seg Motion loss: (tensor(0.0192, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0189, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 3 [5600/7332 (76%)]	Loss: 0.069220
+ED LV: 0.935
+ES LV: 0.914
+On a particular batch:
+Deform loss: 0.005277541000396013
+Segmentation loss: 0.03377123177051544
+Seg Motion loss: (tensor(0.0144, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0141, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 3 [6720/7332 (92%)]	Loss: 0.068683
+ED LV: 0.936
+ES LV: 0.914
+On a particular batch:
+Deform loss: 0.004904351197183132
+Segmentation loss: 0.029150500893592834
+Seg Motion loss: (tensor(0.0115, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0119, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2165.48669600 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.933
+ES LV: 0.908
+
+Valid set: Average loss: 0.0675
+
+-------------------------------- Epoch 4 --------------------------------
+
+Train Epoch: 4 [1120/7332 (15%)]	Loss: 0.059561
+ED LV: 0.941
+ES LV: 0.920
+On a particular batch:
+Deform loss: 0.0039674811996519566
+Segmentation loss: 0.027896568179130554
+Seg Motion loss: (tensor(0.0095, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0111, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 4 [2240/7332 (31%)]	Loss: 0.059368
+ED LV: 0.940
+ES LV: 0.921
+On a particular batch:
+Deform loss: 0.003951289691030979
+Segmentation loss: 0.0193411186337471
+Seg Motion loss: (tensor(0.0086, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0079, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 4 [3360/7332 (46%)]	Loss: 0.058731
+ED LV: 0.940
+ES LV: 0.922
+On a particular batch:
+Deform loss: 0.003947503864765167
+Segmentation loss: 0.03234291076660156
+Seg Motion loss: (tensor(0.0110, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0130, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 4 [4480/7332 (61%)]	Loss: 0.058177
+ED LV: 0.941
+ES LV: 0.922
+On a particular batch:
+Deform loss: 0.004067575559020042
+Segmentation loss: 0.030377155169844627
+Seg Motion loss: (tensor(0.0112, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0132, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 4 [5600/7332 (76%)]	Loss: 0.058038
+ED LV: 0.941
+ES LV: 0.923
+On a particular batch:
+Deform loss: 0.004102062899619341
+Segmentation loss: 0.021232951432466507
+Seg Motion loss: (tensor(0.0081, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0088, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 4 [6720/7332 (92%)]	Loss: 0.058267
+ED LV: 0.941
+ES LV: 0.922
+On a particular batch:
+Deform loss: 0.0035241893492639065
+Segmentation loss: 0.017673557624220848
+Seg Motion loss: (tensor(0.0075, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0069, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2165.04503083 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.939
+ES LV: 0.917
+
+Valid set: Average loss: 0.0598
+
+-------------------------------- Epoch 5 --------------------------------
+
+Train Epoch: 5 [1120/7332 (15%)]	Loss: 0.055473
+ED LV: 0.944
+ES LV: 0.925
+On a particular batch:
+Deform loss: 0.004750186577439308
+Segmentation loss: 0.04362787306308746
+Seg Motion loss: (tensor(0.0100, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0155, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 5 [2240/7332 (31%)]	Loss: 0.055717
+ED LV: 0.943
+ES LV: 0.924
+On a particular batch:
+Deform loss: 0.003980657551437616
+Segmentation loss: 0.032626837491989136
+Seg Motion loss: (tensor(0.0091, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0117, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 5 [3360/7332 (46%)]	Loss: 0.055806
+ED LV: 0.943
+ES LV: 0.924
+On a particular batch:
+Deform loss: 0.004416430369019508
+Segmentation loss: 0.027848362922668457
+Seg Motion loss: (tensor(0.0100, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0120, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 5 [4480/7332 (61%)]	Loss: 0.055673
+ED LV: 0.942
+ES LV: 0.924
+On a particular batch:
+Deform loss: 0.0038222428411245346
+Segmentation loss: 0.021883733570575714
+Seg Motion loss: (tensor(0.0087, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0099, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 5 [5600/7332 (76%)]	Loss: 0.055730
+ED LV: 0.942
+ES LV: 0.924
+On a particular batch:
+Deform loss: 0.0045090364292263985
+Segmentation loss: 0.021495644003152847
+Seg Motion loss: (tensor(0.0085, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0093, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 5 [6720/7332 (92%)]	Loss: 0.055730
+ED LV: 0.942
+ES LV: 0.924
+On a particular batch:
+Deform loss: 0.0037591797299683094
+Segmentation loss: 0.02678246609866619
+Seg Motion loss: (tensor(0.0088, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0107, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2165.59259152 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.939
+ES LV: 0.917
+
+Valid set: Average loss: 0.0590
+
+-------------------------------- Epoch 6 --------------------------------
+
+Train Epoch: 6 [1120/7332 (15%)]	Loss: 0.052882
+ED LV: 0.944
+ES LV: 0.928
+On a particular batch:
+Deform loss: 0.004208267666399479
+Segmentation loss: 0.020748455077409744
+Seg Motion loss: (tensor(0.0085, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0085, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 6 [2240/7332 (31%)]	Loss: 0.054447
+ED LV: 0.943
+ES LV: 0.926
+On a particular batch:
+Deform loss: 0.004691005684435368
+Segmentation loss: 0.02615560218691826
+Seg Motion loss: (tensor(0.0091, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0111, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 6 [3360/7332 (46%)]	Loss: 0.054626
+ED LV: 0.943
+ES LV: 0.925
+On a particular batch:
+Deform loss: 0.003543054684996605
+Segmentation loss: 0.02493963949382305
+Seg Motion loss: (tensor(0.0084, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0099, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 6 [4480/7332 (61%)]	Loss: 0.054042
+ED LV: 0.944
+ES LV: 0.926
+On a particular batch:
+Deform loss: 0.004103350918740034
+Segmentation loss: 0.026494933292269707
+Seg Motion loss: (tensor(0.0090, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0108, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 6 [5600/7332 (76%)]	Loss: 0.053911
+ED LV: 0.944
+ES LV: 0.926
+On a particular batch:
+Deform loss: 0.0035113291814923286
+Segmentation loss: 0.02563898265361786
+Seg Motion loss: (tensor(0.0081, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0101, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 6 [6720/7332 (92%)]	Loss: 0.053653
+ED LV: 0.944
+ES LV: 0.926
+On a particular batch:
+Deform loss: 0.0036019410472363234
+Segmentation loss: 0.038505714386701584
+Seg Motion loss: (tensor(0.0113, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0150, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2165.21211314 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.939
+ES LV: 0.917
+
+Valid set: Average loss: 0.0586
+
+-------------------------------- Epoch 7 --------------------------------
+
+Train Epoch: 7 [1120/7332 (15%)]	Loss: 0.051613
+ED LV: 0.946
+ES LV: 0.929
+On a particular batch:
+Deform loss: 0.0040370505303144455
+Segmentation loss: 0.02162369340658188
+Seg Motion loss: (tensor(0.0079, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0092, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 7 [2240/7332 (31%)]	Loss: 0.051706
+ED LV: 0.946
+ES LV: 0.928
+On a particular batch:
+Deform loss: 0.0031793678645044565
+Segmentation loss: 0.024424785748124123
+Seg Motion loss: (tensor(0.0089, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0096, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 7 [3360/7332 (46%)]	Loss: 0.052028
+ED LV: 0.946
+ES LV: 0.928
+On a particular batch:
+Deform loss: 0.003496000077575445
+Segmentation loss: 0.024990469217300415
+Seg Motion loss: (tensor(0.0077, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0097, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 7 [4480/7332 (61%)]	Loss: 0.052033
+ED LV: 0.945
+ES LV: 0.928
+On a particular batch:
+Deform loss: 0.0035569043830037117
+Segmentation loss: 0.025613106787204742
+Seg Motion loss: (tensor(0.0091, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0109, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 7 [5600/7332 (76%)]	Loss: 0.052075
+ED LV: 0.945
+ES LV: 0.927
+On a particular batch:
+Deform loss: 0.003296589944511652
+Segmentation loss: 0.022767310962080956
+Seg Motion loss: (tensor(0.0096, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0095, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 7 [6720/7332 (92%)]	Loss: 0.052165
+ED LV: 0.945
+ES LV: 0.927
+On a particular batch:
+Deform loss: 0.004363954067230225
+Segmentation loss: 0.02221033349633217
+Seg Motion loss: (tensor(0.0080, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0093, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2162.70455241 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.939
+ES LV: 0.917
+
+Valid set: Average loss: 0.0586
+
+-------------------------------- Epoch 8 --------------------------------
+
+Train Epoch: 8 [1120/7332 (15%)]	Loss: 0.051290
+ED LV: 0.946
+ES LV: 0.930
+On a particular batch:
+Deform loss: 0.0037157058250159025
+Segmentation loss: 0.025794075801968575
+Seg Motion loss: (tensor(0.0083, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0108, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 8 [2240/7332 (31%)]	Loss: 0.051133
+ED LV: 0.946
+ES LV: 0.930
+On a particular batch:
+Deform loss: 0.0048289913684129715
+Segmentation loss: 0.040993060916662216
+Seg Motion loss: (tensor(0.0163, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0167, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 8 [3360/7332 (46%)]	Loss: 0.051000
+ED LV: 0.946
+ES LV: 0.929
+On a particular batch:
+Deform loss: 0.003920974675565958
+Segmentation loss: 0.022443149238824844
+Seg Motion loss: (tensor(0.0101, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0097, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 8 [4480/7332 (61%)]	Loss: 0.050861
+ED LV: 0.946
+ES LV: 0.929
+On a particular batch:
+Deform loss: 0.003154836827889085
+Segmentation loss: 0.029573315754532814
+Seg Motion loss: (tensor(0.0095, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0126, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 8 [5600/7332 (76%)]	Loss: 0.050622
+ED LV: 0.946
+ES LV: 0.929
+On a particular batch:
+Deform loss: 0.0032986493315547705
+Segmentation loss: 0.02165227383375168
+Seg Motion loss: (tensor(0.0073, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0090, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 8 [6720/7332 (92%)]	Loss: 0.050527
+ED LV: 0.946
+ES LV: 0.929
+On a particular batch:
+Deform loss: 0.00424246396869421
+Segmentation loss: 0.03282786160707474
+Seg Motion loss: (tensor(0.0089, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0125, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2161.37394953 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.938
+ES LV: 0.917
+
+Valid set: Average loss: 0.0587
+
+-------------------------------- Epoch 9 --------------------------------
+
+Train Epoch: 9 [1120/7332 (15%)]	Loss: 0.048327
+ED LV: 0.949
+ES LV: 0.931
+On a particular batch:
+Deform loss: 0.004158062860369682
+Segmentation loss: 0.026837490499019623
+Seg Motion loss: (tensor(0.0087, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0114, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 9 [2240/7332 (31%)]	Loss: 0.049218
+ED LV: 0.948
+ES LV: 0.930
+On a particular batch:
+Deform loss: 0.0029588304460048676
+Segmentation loss: 0.02017856016755104
+Seg Motion loss: (tensor(0.0089, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0084, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 9 [3360/7332 (46%)]	Loss: 0.048797
+ED LV: 0.948
+ES LV: 0.930
+On a particular batch:
+Deform loss: 0.003382642287760973
+Segmentation loss: 0.023461846634745598
+Seg Motion loss: (tensor(0.0078, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0100, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 9 [4480/7332 (61%)]	Loss: 0.049111
+ED LV: 0.948
+ES LV: 0.931
+On a particular batch:
+Deform loss: 0.003670047502964735
+Segmentation loss: 0.02144838497042656
+Seg Motion loss: (tensor(0.0071, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0094, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 9 [5600/7332 (76%)]	Loss: 0.049053
+ED LV: 0.948
+ES LV: 0.930
+On a particular batch:
+Deform loss: 0.0038855879101902246
+Segmentation loss: 0.02518811635673046
+Seg Motion loss: (tensor(0.0073, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0107, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 9 [6720/7332 (92%)]	Loss: 0.048907
+ED LV: 0.948
+ES LV: 0.930
+On a particular batch:
+Deform loss: 0.003916529007256031
+Segmentation loss: 0.020978817716240883
+Seg Motion loss: (tensor(0.0075, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0091, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2163.37523508 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.939
+ES LV: 0.917
+
+Valid set: Average loss: 0.0585
+
+-------------------------------- Epoch 10 --------------------------------
+
+Train Epoch: 10 [1120/7332 (15%)]	Loss: 0.049442
+ED LV: 0.948
+ES LV: 0.931
+On a particular batch:
+Deform loss: 0.00406997324898839
+Segmentation loss: 0.02284393087029457
+Seg Motion loss: (tensor(0.0082, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0098, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 10 [2240/7332 (31%)]	Loss: 0.048442
+ED LV: 0.949
+ES LV: 0.931
+On a particular batch:
+Deform loss: 0.0037800625432282686
+Segmentation loss: 0.03390156477689743
+Seg Motion loss: (tensor(0.0092, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0127, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 10 [3360/7332 (46%)]	Loss: 0.048270
+ED LV: 0.949
+ES LV: 0.932
+On a particular batch:
+Deform loss: 0.0033400864340364933
+Segmentation loss: 0.02055252157151699
+Seg Motion loss: (tensor(0.0067, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0088, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 10 [4480/7332 (61%)]	Loss: 0.047903
+ED LV: 0.949
+ES LV: 0.932
+On a particular batch:
+Deform loss: 0.00349828670732677
+Segmentation loss: 0.026230232790112495
+Seg Motion loss: (tensor(0.0090, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0109, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 10 [5600/7332 (76%)]	Loss: 0.047565
+ED LV: 0.950
+ES LV: 0.933
+On a particular batch:
+Deform loss: 0.003862174693495035
+Segmentation loss: 0.020843159407377243
+Seg Motion loss: (tensor(0.0065, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0082, device='cuda:0', grad_fn=<DivBackward0>))
+
+Train Epoch: 10 [6720/7332 (92%)]	Loss: 0.047547
+ED LV: 0.950
+ES LV: 0.933
+On a particular batch:
+Deform loss: 0.004074932541698217
+Segmentation loss: 0.026842037215828896
+Seg Motion loss: (tensor(0.0079, device='cuda:0', grad_fn=<DivBackward0>), tensor(0.0117, device='cuda:0', grad_fn=<DivBackward0>))
+training took 2172.69048142 seconds
+------------------------------Validation------------------------------
+
+ED LV: 0.937
+ES LV: 0.916
+
+Valid set: Average loss: 0.0596
+
+total training took: 360.0 m 39.95s
