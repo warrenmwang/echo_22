@@ -176,27 +176,27 @@ total_train_time = 0
 n_epoch = 10
 min_loss = 1e5
 
-with open(f"./tmp_save_models/{model_name}_training_log.txt", "a") as log_file:
-    for epoch in range(1, n_epoch + 1):
-        log_file.write(f"{'-' * 32} Epoch {epoch} {'-' * 32}\n")
-        start = time.time()
-        train_loss = train_with_log(epoch, train_loader=train_dataloader, model=model, optimizer=optimizer, log_file = log_file)
-        train_loss_list.append(np.mean(train_loss))
-        end = time.time()
-        log_file.write("training took {:.8f} seconds\n".format(end-start))
-        total_train_time += (end - start)
-        valid_loss = test_with_log(epoch, test_loader=valid_dataloader, model=model, optimizer=optimizer, log_file = log_file)
-        valid_loss_list.append(np.mean(valid_loss))
+# with open(f"./tmp_save_models/{model_name}_training_log.txt", "a") as log_file:
+for epoch in range(1, n_epoch + 1):
+    print(f"{'-' * 32} Epoch {epoch} {'-' * 32}\n")
+    start = time.time()
+    train_loss = train(epoch, train_loader=train_dataloader, model=model, optimizer=optimizer)
+    train_loss_list.append(np.mean(train_loss))
+    end = time.time()
+    print("training took {:.8f} seconds\n".format(end-start))
+    total_train_time += (end - start)
+    valid_loss = test(epoch, test_loader=valid_dataloader, model=model, optimizer=optimizer)
+    valid_loss_list.append(np.mean(valid_loss))
 
-        if (np.mean(valid_loss) < min_loss) and (epoch > 0):
-            min_loss = np.mean(valid_loss)
-            torch.save({"model": model.state_dict(), "optimizer": optimizer.state_dict()}, model_save_path)
+    if (np.mean(valid_loss) < min_loss) and (epoch > 0):
+        min_loss = np.mean(valid_loss)
+        torch.save({"model": model.state_dict(), "optimizer": optimizer.state_dict()}, model_save_path)
 
-        if epoch == 3:
-            lr_T = 1e-5
-            optimizer = optim.Adam(model.parameters(), lr=lr_T)
-            
-        # try to get rid of runtime cuda errors (illegal mem access)
-        torch.cuda.empty_cache()
+    if epoch == 3:
+        lr_T = 1e-5
+        optimizer = optim.Adam(model.parameters(), lr=lr_T)
 
-    log_file.write(f'total training took: {total_train_time // 60} m {total_train_time % 60:.2f}s\n')
+    # try to get rid of runtime cuda errors (illegal mem access)
+    # torch.cuda.empty_cache()
+
+    # log_file.write(f'total training took: {total_train_time // 60} m {total_train_time % 60:.2f}s\n')
