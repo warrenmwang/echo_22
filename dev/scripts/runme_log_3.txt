@@ -1,0 +1,60 @@
+orig
+  0%|                                                                   | 0/16 [00:00<?, ?it/s]  6%|███▋                                                       | 1/16 [00:00<00:04,  3.58it/s] 31%|██████████████████▍                                        | 5/16 [00:00<00:01, 10.71it/s] 56%|█████████████████████████████████▏                         | 9/16 [00:00<00:00, 13.53it/s] 81%|███████████████████████████████████████████████▏          | 13/16 [00:01<00:00, 14.61it/s]100%|██████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.86it/s]
+  0%|                                                                   | 0/16 [00:00<?, ?it/s]  6%|███▋                                                       | 1/16 [00:00<00:04,  3.40it/s] 31%|██████████████████▍                                        | 5/16 [00:00<00:01,  9.75it/s] 56%|█████████████████████████████████▏                         | 9/16 [00:00<00:00, 12.78it/s] 75%|███████████████████████████████████████████▌              | 12/16 [00:00<00:00, 15.80it/s] 88%|██████████████████████████████████████████████████▊       | 14/16 [00:01<00:00, 15.66it/s]100%|██████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 16.48it/s]100%|██████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.68it/s]
+  0%|                                                                   | 0/16 [00:00<?, ?it/s]  6%|███▋                                                       | 1/16 [00:00<00:05,  2.78it/s] 31%|██████████████████▍                                        | 5/16 [00:00<00:01,  9.20it/s] 56%|█████████████████████████████████▏                         | 9/16 [00:00<00:00, 12.30it/s] 81%|███████████████████████████████████████████████▏          | 13/16 [00:01<00:00, 13.97it/s]100%|██████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.15it/s]
+../quantifying-performance/create_csv_ver_3.py:282: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  all_consecutive_clips = np.array(all_consecutive_clips)
+Original_Pretrained_R2plus1DMotionSegNet.pth has 31575731 parameters.
+1
+Got "'NoneType' object has no attribute 'shape'" at index: 1161
+Traceback (most recent call last):
+  File "../quantifying-performance/create_csv_ver_3.py", line 572, in <module>
+    model = model)
+  File "/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking/src/strain.py", line 658, in get_warped_ed_es_frames
+    motion_outputs = np.concatenate([motion_outputs, motion_output.cpu().detach().numpy()])
+  File "<__array_function__ internals>", line 6, in concatenate
+KeyboardInterrupt
+
+real	1m29.851s
+user	6m35.274s
+sys	0m22.825s
+drop v3
+Traceback (most recent call last):
+  File "../quantifying-performance/create_csv_ver_3.py", line 23, in <module>
+    from LabelFusion.wrapper import fuse_images
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/LabelFusion/__init__.py", line 1, in <module>
+    import pkg_resources
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3242, in <module>
+    @_call_aside
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3226, in _call_aside
+    f(*args, **kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3278, in _initialize_master_working_set
+    list(map(working_set.add_entry, sys.path))
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 608, in add_entry
+    for dist in find_distributions(entry, True):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2063, in find_on_path
+    for dist in factory(fullpath):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2129, in distributions_from_metadata
+    root, entry, metadata, precedence=DEVELOP_DIST,
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2590, in from_location
+    py_version=py_version, platform=platform, **kw
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2989, in _reload_version
+    md_version = self._get_version()
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2770, in _get_version
+    version = _version_from_file(lines)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2554, in _version_from_file
+    line = next(iter(version_lines), '')
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2765, in _get_metadata
+    for line in self.get_metadata_lines(name):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1417, in get_metadata_lines
+    return yield_lines(self.get_metadata(name))
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1407, in get_metadata
+    value = self._get(path)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/pkg_resources/__init__.py", line 1612, in _get
+    return stream.read()
+KeyboardInterrupt
+
+real	0m0.257s
+user	0m0.212s
+sys	0m0.040s
+runme.sh script finished

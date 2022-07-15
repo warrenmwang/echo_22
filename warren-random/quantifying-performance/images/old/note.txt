@@ -1,3 +1,0 @@
-the ground truth ones grouped by GT EF and used GT GLS
-
-predicted ones grouped by predicted EF and used the segmentation out ED/ES frames to compute GLS

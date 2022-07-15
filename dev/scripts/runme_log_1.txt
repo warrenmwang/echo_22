@@ -1,0 +1,85 @@
+orig
+  0%|                                                                                                                       | 0/16 [00:00<?, ?it/s]  6%|██████▉                                                                                                        | 1/16 [00:00<00:04,  3.30it/s] 31%|██████████████████████████████████▋                                                                            | 5/16 [00:00<00:01,  9.81it/s] 56%|██████████████████████████████████████████████████████████████▍                                                | 9/16 [00:00<00:00, 12.53it/s] 81%|█████████████████████████████████████████████████████████████████████████████████████████▍                    | 13/16 [00:01<00:00, 14.64it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 15.15it/s]
+  0%|                                                                                                                       | 0/16 [00:00<?, ?it/s]  6%|██████▉                                                                                                        | 1/16 [00:00<00:05,  2.93it/s] 31%|██████████████████████████████████▋                                                                            | 5/16 [00:00<00:01, 10.42it/s] 56%|██████████████████████████████████████████████████████████████▍                                                | 9/16 [00:00<00:00, 13.93it/s] 81%|█████████████████████████████████████████████████████████████████████████████████████████▍                    | 13/16 [00:00<00:00, 16.83it/s] 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████▏      | 15/16 [00:01<00:00, 14.94it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.09it/s]
+  0%|                                                                                                                       | 0/16 [00:00<?, ?it/s]  6%|██████▉                                                                                                        | 1/16 [00:00<00:04,  3.11it/s] 31%|██████████████████████████████████▋                                                                            | 5/16 [00:00<00:00, 11.04it/s] 56%|██████████████████████████████████████████████████████████████▍                                                | 9/16 [00:00<00:00, 14.62it/s] 69%|███████████████████████████████████████████████████████████████████████████▋                                  | 11/16 [00:00<00:00, 14.99it/s] 88%|████████████████████████████████████████████████████████████████████████████████████████████████▎             | 14/16 [00:01<00:00, 14.13it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.49it/s]
+../dev/quantifying-performance/create_csv_ver_3.py:282: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+Original_Pretrained_R2plus1DMotionSegNet.pth has 31575731 parameters.
+1
+Got "name 'device' is not defined" at index: 1158
+Got "name 'device' is not defined" at index: 1159
+Got "name 'device' is not defined" at index: 1160
+Got "name 'device' is not defined" at index: 1161
+Got "name 'device' is not defined" at index: 1162
+Got "name 'device' is not defined" at index: 1163
+Got "name 'device' is not defined" at index: 1164
+Got "name 'device' is not defined" at index: 1165
+Got "name 'device' is not defined" at index: 1166
+Got "name 'device' is not defined" at index: 1167
+Got "name 'device' is not defined" at index: 1168
+Got "name 'device' is not defined" at index: 1169
+Got "name 'device' is not defined" at index: 1170
+Got "name 'device' is not defined" at index: 1171
+Got "name 'device' is not defined" at index: 1172
+Got "name 'device' is not defined" at index: 1173
+Got "name 'device' is not defined" at index: 1174
+Got "name 'device' is not defined" at index: 1175
+Got "name 'device' is not defined" at index: 1176
+Got "name 'device' is not defined" at index: 1177
+Got "name 'device' is not defined" at index: 1178
+Got "name 'device' is not defined" at index: 1179
+Got "name 'device' is not defined" at index: 1180
+Got "name 'device' is not defined" at index: 1181
+Got "name 'device' is not defined" at index: 1182
+Got "name 'device' is not defined" at index: 1183
+Got "name 'device' is not defined" at index: 1184
+Got "name 'device' is not defined" at index: 1185
+Got "name 'device' is not defined" at index: 1186
+Got "name 'device' is not defined" at index: 1187
+Got "name 'device' is not defined" at index: 1188
+Got "name 'device' is not defined" at index: 1189
+Got "name 'device' is not defined" at index: 1190
+Got "name 'device' is not defined" at index: 1191
+Got "name 'device' is not defined" at index: 1192
+Got "name 'device' is not defined" at index: 1193
+Got "name 'device' is not defined" at index: 1194
+Got "name 'device' is not defined" at index: 1195
+Got "name 'device' is not defined" at index: 1196
+Got "name 'device' is not defined" at index: 1197
+Traceback (most recent call last):
+  File "../dev/quantifying-performance/create_csv_ver_3.py", line 551, in <module>
+    fuse_method=fuse_method, class_list=class_list)
+  File "../dev/quantifying-performance/create_csv_ver_3.py", line 299, in segment_a_video_with_fusion_custom
+    segmentation_output, motion_output = curr_model(torch.Tensor(one_clip))
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 154, in forward
+    replicas = self.replicate(self.module, self.device_ids[:len(inputs)])
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 159, in replicate
+    return replicate(module, device_ids, not torch.is_grad_enabled())
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/replicate.py", line 78, in replicate
+    if not _replicatable_module(network):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/replicate.py", line 58, in _replicatable_module
+    if not _replicatable_module(child, memo):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/replicate.py", line 58, in _replicatable_module
+    if not _replicatable_module(child, memo):
+  File "/opt/anaconda3/envs/dynamic37-wang/lib/python3.7/site-packages/torch/nn/parallel/replicate.py", line 53, in _replicatable_module
+    for child in module.children():
+KeyboardInterrupt
+
+real	3m39.775s
+user	17m17.704s
+sys	0m53.244s
+drop v3
+Traceback (most recent call last):
+  File "../dev/quantifying-performance/create_csv_ver_3.py", line 135, in <module>
+    full_dataset = EchoNetDynamicDataset(split='val', clip_length="full", subset_indices=valid_mask, period=1)
+  File "/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking/src/echonet_dataset.py", line 74, in __init__
+    mean, std = echonet.utils.get_mean_and_std(echonet.datasets.Echo(split=split))
+  File "/home/wang/.local/lib/python3.7/site-packages/echonet/datasets/echo.py", line 126, in __init__
+    if frame not in self.trace[filename]:
+KeyboardInterrupt
+
+real	0m2.160s
+user	0m1.993s
+sys	0m0.148s
+runme.sh script finished

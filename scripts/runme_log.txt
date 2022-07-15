@@ -1,183 +1,0 @@
-  0%|                                                                                                                                                | 0/16 [00:00<?, ?it/s]  6%|████████▌                                                                                                                               | 1/16 [00:00<00:04,  3.41it/s] 31%|██████████████████████████████████████████▌                                                                                             | 5/16 [00:00<00:01, 10.45it/s] 56%|████████████████████████████████████████████████████████████████████████████▌                                                           | 9/16 [00:00<00:00, 12.76it/s] 81%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                         | 13/16 [00:01<00:00, 14.36it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 15.06it/s]
-  0%|                                                                                                                                                | 0/16 [00:00<?, ?it/s]  6%|████████▌                                                                                                                               | 1/16 [00:00<00:04,  3.25it/s] 31%|██████████████████████████████████████████▌                                                                                             | 5/16 [00:00<00:01,  9.93it/s] 56%|████████████████████████████████████████████████████████████████████████████▌                                                           | 9/16 [00:00<00:00, 13.45it/s] 75%|█████████████████████████████████████████████████████████████████████████████████████████████████████▎                                 | 12/16 [00:00<00:00, 16.27it/s] 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                | 14/16 [00:01<00:00, 15.99it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 15.65it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.61it/s]
-  0%|                                                                                                                                                | 0/16 [00:00<?, ?it/s]  6%|████████▌                                                                                                                               | 1/16 [00:00<00:04,  3.07it/s] 31%|██████████████████████████████████████████▌                                                                                             | 5/16 [00:00<00:01,  9.68it/s] 56%|████████████████████████████████████████████████████████████████████████████▌                                                           | 9/16 [00:00<00:00, 12.77it/s] 75%|█████████████████████████████████████████████████████████████████████████████████████████████████████▎                                 | 12/16 [00:00<00:00, 15.64it/s] 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                | 14/16 [00:01<00:00, 15.37it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.02it/s]Original_Pretrained_R2plus1DMotionSegNet.pth has 31575731 parameters.
-1
-Got "'NoneType' object has no attribute 'shape'" at index: 7
-Got "'NoneType' object has no attribute 'shape'" at index: 23
-Got "'NoneType' object has no attribute 'shape'" at index: 27
-Got "'NoneType' object has no attribute 'shape'" at index: 33
-Got "'NoneType' object has no attribute 'shape'" at index: 58
-Got "'NoneType' object has no attribute 'shape'" at index: 59
-Got "'NoneType' object has no attribute 'shape'" at index: 71
-Got "'NoneType' object has no attribute 'shape'" at index: 84
-Got "'NoneType' object has no attribute 'shape'" at index: 95
-Got "'NoneType' object has no attribute 'shape'" at index: 98
-Got "'NoneType' object has no attribute 'shape'" at index: 108
-Got "'NoneType' object has no attribute 'shape'" at index: 110
-Got "'NoneType' object has no attribute 'shape'" at index: 111
-Got "'NoneType' object has no attribute 'shape'" at index: 119
-Got "'NoneType' object has no attribute 'shape'" at index: 134
-Got "'NoneType' object has no attribute 'shape'" at index: 137
-Got "not a ED to ES clip pair" at index: 138
-Got "'NoneType' object has no attribute 'shape'" at index: 152
-Got "'NoneType' object has no attribute 'shape'" at index: 181
-Got "'NoneType' object has no attribute 'shape'" at index: 186
-Got "'NoneType' object has no attribute 'shape'" at index: 190
-Got "'NoneType' object has no attribute 'shape'" at index: 192
-Got "'NoneType' object has no attribute 'shape'" at index: 195
-Got "'NoneType' object has no attribute 'shape'" at index: 204
-Got "index -69 is out of bounds for axis 1 with size 32" at index: 206
-Got "'NoneType' object has no attribute 'shape'" at index: 211
-Got "'NoneType' object has no attribute 'shape'" at index: 214
-Got "'NoneType' object has no attribute 'shape'" at index: 217
-Got "'NoneType' object has no attribute 'shape'" at index: 218
-Got "'NoneType' object has no attribute 'shape'" at index: 221
-Got "'NoneType' object has no attribute 'shape'" at index: 243
-Got "not a ED to ES clip pair" at index: 245
-Got "'NoneType' object has no attribute 'shape'" at index: 263
-Got "'NoneType' object has no attribute 'shape'" at index: 268
-Got "'NoneType' object has no attribute 'shape'" at index: 274
-Got "'NoneType' object has no attribute 'shape'" at index: 278
-Got "'NoneType' object has no attribute 'shape'" at index: 279
-Got "'NoneType' object has no attribute 'shape'" at index: 283
-Got "not a ED to ES clip pair" at index: 305
-Got "'NoneType' object has no attribute 'shape'" at index: 323
-Got "'NoneType' object has no attribute 'shape'" at index: 334
-Got "'NoneType' object has no attribute 'shape'" at index: 337
-Got "'NoneType' object has no attribute 'shape'" at index: 354
-Got "'NoneType' object has no attribute 'shape'" at index: 362
-Got "'NoneType' object has no attribute 'shape'" at index: 363
-Got "'NoneType' object has no attribute 'shape'" at index: 367
-Got "'NoneType' object has no attribute 'shape'" at index: 384
-Got "'NoneType' object has no attribute 'shape'" at index: 401
-Got "'NoneType' object has no attribute 'shape'" at index: 409
-Got "'NoneType' object has no attribute 'shape'" at index: 411
-Got "'NoneType' object has no attribute 'shape'" at index: 412
-Got "not a ED to ES clip pair" at index: 421
-Got "'NoneType' object has no attribute 'shape'" at index: 436
-Got "'NoneType' object has no attribute 'shape'" at index: 440
-Got "'NoneType' object has no attribute 'shape'" at index: 480
-Got "'NoneType' object has no attribute 'shape'" at index: 486
-Got "'NoneType' object has no attribute 'shape'" at index: 504
-Got "'NoneType' object has no attribute 'shape'" at index: 509
-Got "'NoneType' object has no attribute 'shape'" at index: 511
-Got "'NoneType' object has no attribute 'shape'" at index: 512
-Got "'NoneType' object has no attribute 'shape'" at index: 522
-Got "'NoneType' object has no attribute 'shape'" at index: 528
-Got "'NoneType' object has no attribute 'shape'" at index: 533
-Got "'NoneType' object has no attribute 'shape'" at index: 563
-Got "'NoneType' object has no attribute 'shape'" at index: 567
-Got "'NoneType' object has no attribute 'shape'" at index: 583
-Got "'NoneType' object has no attribute 'shape'" at index: 586
-Got "not a ED to ES clip pair" at index: 587
-Got "'NoneType' object has no attribute 'shape'" at index: 591
-Got "'NoneType' object has no attribute 'shape'" at index: 597
-Got "'NoneType' object has no attribute 'shape'" at index: 605
-Got "'NoneType' object has no attribute 'shape'" at index: 611
-Got "'NoneType' object has no attribute 'shape'" at index: 613
-Got "not a ED to ES clip pair" at index: 615
-Got "not a ED to ES clip pair" at index: 636
-Got "'NoneType' object has no attribute 'shape'" at index: 637
-Got "'NoneType' object has no attribute 'shape'" at index: 638
-Got "'NoneType' object has no attribute 'shape'" at index: 640
-Got "'NoneType' object has no attribute 'shape'" at index: 646
-Got "not a ED to ES clip pair" at index: 651
-Got "'NoneType' object has no attribute 'shape'" at index: 657
-Got "'NoneType' object has no attribute 'shape'" at index: 662
-Got "'NoneType' object has no attribute 'shape'" at index: 686
-Got "'NoneType' object has no attribute 'shape'" at index: 690
-Got "'NoneType' object has no attribute 'shape'" at index: 691
-Got "'NoneType' object has no attribute 'shape'" at index: 693
-Got "'NoneType' object has no attribute 'shape'" at index: 722
-Got "'NoneType' object has no attribute 'shape'" at index: 743
-Got "'NoneType' object has no attribute 'shape'" at index: 744
-Got "'NoneType' object has no attribute 'shape'" at index: 746
-Got "'NoneType' object has no attribute 'shape'" at index: 750
-Got "'NoneType' object has no attribute 'shape'" at index: 758
-Got "'NoneType' object has no attribute 'shape'" at index: 761
-Got "not a ED to ES clip pair" at index: 773
-Got "'NoneType' object has no attribute 'shape'" at index: 775
-Got "'NoneType' object has no attribute 'shape'" at index: 784
-Got "'NoneType' object has no attribute 'shape'" at index: 793
-Got "'NoneType' object has no attribute 'shape'" at index: 801
-Got "'NoneType' object has no attribute 'shape'" at index: 803
-Got "'NoneType' object has no attribute 'shape'" at index: 808
-Got "'NoneType' object has no attribute 'shape'" at index: 811
-Got "'NoneType' object has no attribute 'shape'" at index: 820
-Got "'NoneType' object has no attribute 'shape'" at index: 823
-Got "'NoneType' object has no attribute 'shape'" at index: 835
-Got "not a ED to ES clip pair" at index: 842
-Got "'NoneType' object has no attribute 'shape'" at index: 865
-Got "'NoneType' object has no attribute 'shape'" at index: 870
-Got "'NoneType' object has no attribute 'shape'" at index: 880
-Got "'NoneType' object has no attribute 'shape'" at index: 895
-Got "index -60 is out of bounds for axis 1 with size 32" at index: 900
-Got "'NoneType' object has no attribute 'shape'" at index: 908
-Got "'NoneType' object has no attribute 'shape'" at index: 909
-Got "'NoneType' object has no attribute 'shape'" at index: 917
-Got "'NoneType' object has no attribute 'shape'" at index: 918
-Got "'NoneType' object has no attribute 'shape'" at index: 929
-Got "'NoneType' object has no attribute 'shape'" at index: 933
-Got "'NoneType' object has no attribute 'shape'" at index: 936
-Got "'NoneType' object has no attribute 'shape'" at index: 941
-Got "not a ED to ES clip pair" at index: 945
-Got "'NoneType' object has no attribute 'shape'" at index: 949
-Got "'NoneType' object has no attribute 'shape'" at index: 957
-Got "'NoneType' object has no attribute 'shape'" at index: 962
-Got "'NoneType' object has no attribute 'shape'" at index: 964
-Got "'NoneType' object has no attribute 'shape'" at index: 986
-Got "'NoneType' object has no attribute 'shape'" at index: 995
-Got "'NoneType' object has no attribute 'shape'" at index: 1023
-Got "'NoneType' object has no attribute 'shape'" at index: 1033
-Got "'NoneType' object has no attribute 'shape'" at index: 1048
-Got "'NoneType' object has no attribute 'shape'" at index: 1050
-Got "'NoneType' object has no attribute 'shape'" at index: 1051
-Got "'NoneType' object has no attribute 'shape'" at index: 1052
-Got "'NoneType' object has no attribute 'shape'" at index: 1054
-./warren-random/quantifying-performance/create_csv_ver_2.py:281: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
-  all_consecutive_clips = np.array(all_consecutive_clips)
-
-Got "'NoneType' object has no attribute 'shape'" at index: 1059
-Got "'NoneType' object has no attribute 'shape'" at index: 1065
-Got "'NoneType' object has no attribute 'shape'" at index: 1103
-Got "'NoneType' object has no attribute 'shape'" at index: 1122
-Got "'NoneType' object has no attribute 'shape'" at index: 1146
-Got "'NoneType' object has no attribute 'shape'" at index: 1148
-Got "'NoneType' object has no attribute 'shape'" at index: 1156
-Traceback (most recent call last):
-  File "./warren-random/quantifying-performance/create_csv_ver_2.py", line 790, in <module>
-    fuse_method=fuse_method, class_list=class_list)
-  File "./warren-random/quantifying-performance/create_csv_ver_2.py", line 308, in segment_a_video_with_fusion_custom
-    segmentation_outputs = np.concatenate([segmentation_outputs, segmentation_output.cpu().detach().numpy()])
-KeyboardInterrupt
-
-real	98m25.641s
-user	489m13.086s
-sys	23m28.553s
-runme.sh script finished
-  0%|                                                                                                                                 | 0/16 [00:00<?, ?it/s]  6%|███████▌                                                                                                                 | 1/16 [00:00<00:04,  3.58it/s] 31%|█████████████████████████████████████▊                                                                                   | 5/16 [00:00<00:01, 10.43it/s] 44%|████████████████████████████████████████████████████▉                                                                    | 7/16 [00:00<00:00, 12.14it/s] 56%|████████████████████████████████████████████████████████████████████                                                     | 9/16 [00:00<00:00, 13.18it/s] 69%|██████████████████████████████████████████████████████████████████████████████████▌                                     | 11/16 [00:00<00:00, 12.85it/s] 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌       | 15/16 [00:01<00:00, 15.28it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.61it/s]
-  0%|                                                                                                                                 | 0/16 [00:00<?, ?it/s]  6%|███████▌                                                                                                                 | 1/16 [00:00<00:04,  3.05it/s] 31%|█████████████████████████████████████▊                                                                                   | 5/16 [00:00<00:01, 10.13it/s] 50%|████████████████████████████████████████████████████████████▌                                                            | 8/16 [00:00<00:00, 14.68it/s] 62%|███████████████████████████████████████████████████████████████████████████                                             | 10/16 [00:00<00:00, 13.53it/s] 81%|█████████████████████████████████████████████████████████████████████████████████████████████████▌                      | 13/16 [00:01<00:00, 13.33it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 15.94it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 13.22it/s]
-  0%|                                                                                                                                 | 0/16 [00:00<?, ?it/s]  6%|███████▌                                                                                                                 | 1/16 [00:00<00:04,  3.16it/s] 31%|█████████████████████████████████████▊                                                                                   | 5/16 [00:00<00:01,  9.69it/s] 56%|████████████████████████████████████████████████████████████████████                                                     | 9/16 [00:00<00:00, 12.65it/s] 81%|█████████████████████████████████████████████████████████████████████████████████████████████████▌                      | 13/16 [00:01<00:00, 13.92it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16/16 [00:01<00:00, 14.45it/s]
-./warren-random/quantifying-performance/create_csv_ver_2.py:281: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
-  all_consecutive_clips = np.array(all_consecutive_clips)
-Original_Pretrained_R2plus1DMotionSegNet.pth has 31575731 parameters.
-1
-Got "'NoneType' object has no attribute 'shape'" at index: 1161
-Got "'NoneType' object has no attribute 'shape'" at index: 1181
-Got "'NoneType' object has no attribute 'shape'" at index: 1198
-Got "'NoneType' object has no attribute 'shape'" at index: 1230
-Got "not a ED to ES clip pair" at index: 1236
-Got "'NoneType' object has no attribute 'shape'" at index: 1239
-Got "'NoneType' object has no attribute 'shape'" at index: 1247
-Got "'NoneType' object has no attribute 'shape'" at index: 1252
-Got "'NoneType' object has no attribute 'shape'" at index: 1255
-Got "'NoneType' object has no attribute 'shape'" at index: 1260
-Got "'NoneType' object has no attribute 'shape'" at index: 1266
-Got "'NoneType' object has no attribute 'shape'" at index: 1272
-Used time = 9 mins 47 secs
-
-
-real	10m0.406s
-user	48m18.114s
-sys	2m21.705s
-runme.sh script finished
