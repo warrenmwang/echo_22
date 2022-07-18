@@ -306,6 +306,13 @@ def cut_basal_plane_out(I):
     return blot_out_given_rect(rectangle_corners, I)
 
 
+def give_boundary_no_basal_plane(I):
+    '''
+    input: I (H, W) expected to have unique values of (0,1)
+    output: I_new (H, W) with unique vals of (0,1) -- with boundary pixels only and with basal plane cut out
+    '''
+    return cut_basal_plane_out(give_boundary(I))
+
 def get_seg_and_warp_data(model, test_dataset, test_pat_index):
     '''
     input: 
