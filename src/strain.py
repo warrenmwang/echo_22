@@ -5,9 +5,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import cv2 as cv
 from src.visualization_utils import categorical_dice
+# for get2dpucks
+from skimage.transform import (resize, 
+                               rescale)
+from skimage.segmentation import find_boundaries
 
 
-
+#########################################################################################
 # taken from stough's dip vis_utils.py
 def vis_pair(I, J, figsize = (8,3), shared = True, 
              first_title = 'Original', second_title = 'New',
@@ -55,7 +59,7 @@ def vis_single(I, title='title', **kwargs):
     ax.set_title(title)
     ax.imshow(I, **kwargs)
 
-
+#########################################################################################
 
 def rmse(x, y):
     ''' return root mean square error difference between the two values passed in'''
@@ -313,6 +317,127 @@ def give_boundary_no_basal_plane(I):
     '''
     return cut_basal_plane_out(give_boundary(I))
 
+#########################################################################################
+
+def one_hot(I):
+    '''
+    input: I - shape (2, 112, 112)
+    convert a raw segmentation output into a one_hot_encoded image
+    '''
+    import copy
+    I_copy = copy.deepcopy(I)
+    return np.argmax(I_copy, 0)
+
+
+def get_dice(prediction, truth):
+    '''
+    assume both images are one_hot_encoded
+    '''
+    k = 1
+    return categorical_dice(prediction, truth, k, epsilon=1e-5)
+
+def generate_2dmotion_field_custom(x, offset):
+    # Qin's code for joint_motion_seg learning works fine on our purpose too
+    # Same idea https://discuss.pytorch.org/t/warp-video-frame-from-optical-flow/6013/5
+    x_shape = x.shape
+    # print(f'x_shape: {x_shape}')
+
+    grid_w, grid_h = torch.meshgrid([torch.linspace(-1, 1, x_shape[2]), torch.linspace(-1, 1, x_shape[3])])  # (h, w)
+
+    # this should just be moving the vars to gpu mem and doing some data type conversion to some
+    # floating point precision
+    grid_w = grid_w.cuda().float()
+    grid_h = grid_h.cuda().float()
+
+    grid_w = nn.Parameter(grid_w, requires_grad=False)
+    grid_h = nn.Parameter(grid_h, requires_grad=False)
+
+    # OLD 
+    # offset_h, offset_w = torch.split(offset, 1, 1)
+    # NEW , TESTING
+    offset_h, offset_w = torch.split(offset, 1)
+
+    offset_w = offset_w.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
+    offset_h = offset_h.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
+
+    offset_w = grid_w + offset_w
+    offset_h = grid_h + offset_h
+
+    offsets = torch.stack((offset_h, offset_w), 3)
+    return offsets
+
+   
+
+# def top_bottom_index(I):
+#     '''
+#     input:
+#         I - shape (112, 112), unique vals (0,1)
+#     output:
+#         top, bot -- index vals of highest pixel with val 1 and lowest pixel with val 1
+#                     i.e. range of the heart
+                    
+#                     top inclusive
+#                     bot exclusive
+#                         Dijkstra would like me decision ;)
+#     '''
+#     # make sure values in image are only 0 and 1
+#     check_unique_vals = np.unique(I)
+#     if check_unique_vals[0] == 0 and check_unique_vals[1] == 255:
+#         I = I / 255
+#     elif check_unique_vals[0] == 0 and check_unique_vals[1] != 1:
+#         print('incorrect values in Image')
+#         return
+    
+#     top = 0
+#     bottom = 0
+#     delta = 0
+    
+#     found_top = False
+#     found_bottom = False
+    
+#     for row in I:
+#         # find the top
+#         if not found_top:
+#             if 1 in row:
+#                 found_top = True
+#                 top = delta
+            
+#         # find bottom
+#         if not found_bottom and found_top:
+#             if 1 not in row:
+#                 found_bottom = True
+#                 bottom = delta
+                
+#         # leave when found both
+#         if found_top and found_bottom:
+#             break
+            
+#         # increment row index
+#         delta += 1
+            
+#     return top, bottom
+
+# def get_split_points(I, N, inds):
+#     '''
+#     input: 
+#         I - shape (112, 112), unique vals (0,1)
+#         N - int
+#         inds - list/iterable containing top and bottom index of heart (top, bot)
+#     output:
+#         list of N points where we divide the image
+#     '''
+#     top = inds[0]
+#     bot = inds[1]
+    
+#     lv_vert_len = bot - top
+#     deltas = lv_vert_len // N
+#     divide_points = [top + (deltas * i) for i in range(N)]
+#     divide_points.append(bot)
+    
+#     return divide_points
+
+#########################################################################################
+
 def get_seg_and_warp_data(model, test_dataset, test_pat_index):
     '''
     input: 
@@ -409,237 +534,6 @@ def get_seg_and_warp_data(model, test_dataset, test_pat_index):
     
     return curr_clip_segmentations, curr_clip_motions, delta_ed_es, clip_index, ed_label, es_label
 
-
-def one_hot(I):
-    '''
-    input: I - shape (2, 112, 112)
-    convert a raw segmentation output into a one_hot_encoded image
-    '''
-    import copy
-    I_copy = copy.deepcopy(I)
-    return np.argmax(I_copy, 0)
-
-
-def get_dice(prediction, truth):
-    '''
-    assume both images are one_hot_encoded
-    '''
-    k = 1
-    return categorical_dice(prediction, truth, k, epsilon=1e-5)
-
-def generate_2dmotion_field_custom(x, offset):
-        # Qin's code for joint_motion_seg learning works fine on our purpose too
-        # Same idea https://discuss.pytorch.org/t/warp-video-frame-from-optical-flow/6013/5
-        x_shape = x.shape
-        # print(f'x_shape: {x_shape}')
-
-        grid_w, grid_h = torch.meshgrid([torch.linspace(-1, 1, x_shape[2]), torch.linspace(-1, 1, x_shape[3])])  # (h, w)
-
-        # this should just be moving the vars to gpu mem and doing some data type conversion to some
-        # floating point precision
-        grid_w = grid_w.cuda().float()
-        grid_h = grid_h.cuda().float()
-
-        grid_w = nn.Parameter(grid_w, requires_grad=False)
-        grid_h = nn.Parameter(grid_h, requires_grad=False)
-
-        # OLD 
-        # offset_h, offset_w = torch.split(offset, 1, 1)
-        # NEW , TESTING
-        offset_h, offset_w = torch.split(offset, 1)
-
-        offset_w = offset_w.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
-        offset_h = offset_h.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
-
-        offset_w = grid_w + offset_w
-        offset_h = grid_h + offset_h
-
-        offsets = torch.stack((offset_h, offset_w), 3)
-        return offsets
-
-def warp_forward(I, motions, delta_ed_es, clip_index, debug=False):
-    '''
-    input:
-        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
-        motions - shape ()
-        delta_ed_es - integer defining how many forward iterations to take (max 31)
-                        we are only interested in warping to/from ED/ES
-    output:
-        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
-        
-    for now, try to do things all on the cpu
-    '''
-    
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    
-    
-    # convert numpy ndarrays into tensor objects moved onto device
-    flow_source = torch.from_numpy(I).to(device).float()
-    motions = torch.from_numpy(motions).to(device).float()
-
-    # warping FORWARD from ED -> ES
-    # python range is [x, y), inclusive start and exclusive end
-    for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
-        # grab forward motion
-        forward_motion = motions[:2, frame_index,...]
-
-        # # grab the ED seg out frame to warp
-        # if frame_index == 0:
-        #     # flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-        #     flow_source = I
-        #     print(f'type(flow_source): {type(flow_source)}')
-        #     # flow_source = torch.from_numpy(flow_source).to(device).float()
-        # else:
-        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
-
-        # convert to tensors and move to gpu with float dtype
-        # forward_motion = torch.from_numpy(forward_motion).to(device).float()
-        # generate motion field for forward motion
-        motion_field = generate_2dmotion_field_custom(flow_source, forward_motion)
-        # create frame i+1 relative to curr frame i 
-        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-        # use i+1 frame as next loop iter's i frame
-        flow_source = next_label
-        
-        
-        # DEBUGGING
-        if debug:
-            tmp = flow_source.cpu().detach().numpy()
-            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
-            print(f'flow_source unique vals: {np.unique(tmp)}')
-            print(f'flow_source.shape: {flow_source.shape}')
-            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
-            tmp_1 = one_hot(tmp[0])
-            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
-
-    flow_source = flow_source.cpu().detach().numpy()
-    
-    return flow_source
-
-def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
-    '''
-    input:
-        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
-        motions - shape ()
-        delta_ed_es - integer defining how many forward iterations to take (max 31)
-                        we are only interested in warping to/from ED/ES
-    output:
-        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
-        
-    for now, try to do things all on the cpu
-
-    '''
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
-    # convert numpy ndarrays into tensor objects moved onto device
-    flow_source = torch.from_numpy(I).to(device).float()
-    motions = torch.from_numpy(motions).to(device).float()
-    
-    # warping BACKWARD from ED <- ES
-    for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
-        # grab backward motion
-        backward_motion = motions[2:, frame_index,...]
-
-        # # grab the ES seg out frame to start
-        # if frame_index == delta_ed_es:
-        #     flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-        #     flow_source = torch.from_numpy(flow_source).to(device).float()
-        # else:
-        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
-
-        # convert to tensors and move to gpu with float dtype
-        # backward_motion = torch.from_numpy(backward_motion).to(device).float()
-        # generate motion field for backward motion
-        motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
-        # create frame i-1 relative to curr frame i 
-        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-        # use i-1 frame as next loop iter's i frame
-        flow_source = next_label
-        
-        # DEBUGGING
-        if debug:
-            tmp = flow_source.cpu().detach().numpy()
-            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
-            print(f'flow_source unique vals: {np.unique(tmp)}')
-            print(f'flow_source.shape: {flow_source.shape}')
-            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
-            tmp_1 = one_hot(tmp[0])
-            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
-
-
-    flow_source = flow_source.cpu().detach().numpy()
-    
-    return flow_source    
-
-def top_bottom_index(I):
-    '''
-    input:
-        I - shape (112, 112), unique vals (0,1)
-    output:
-        top, bot -- index vals of highest pixel with val 1 and lowest pixel with val 1
-                    i.e. range of the heart
-                    
-                    top inclusive
-                    bot exclusive
-                        Dijkstra would like me decision ;)
-    '''
-    # make sure values in image are only 0 and 1
-    check_unique_vals = np.unique(I)
-    if check_unique_vals[0] == 0 and check_unique_vals[1] == 255:
-        I = I / 255
-    elif check_unique_vals[0] == 0 and check_unique_vals[1] != 1:
-        print('incorrect values in Image')
-        return
-    
-    top = 0
-    bottom = 0
-    delta = 0
-    
-    found_top = False
-    found_bottom = False
-    
-    for row in I:
-        # find the top
-        if not found_top:
-            if 1 in row:
-                found_top = True
-                top = delta
-            
-        # find bottom
-        if not found_bottom and found_top:
-            if 1 not in row:
-                found_bottom = True
-                bottom = delta
-                
-        # leave when found both
-        if found_top and found_bottom:
-            break
-            
-        # increment row index
-        delta += 1
-            
-    return top, bottom
-
-def get_split_points(I, N, inds):
-    '''
-    input: 
-        I - shape (112, 112), unique vals (0,1)
-        N - int
-        inds - list/iterable containing top and bottom index of heart (top, bot)
-    output:
-        list of N points where we divide the image
-    '''
-    top = inds[0]
-    bot = inds[1]
-    
-    lv_vert_len = bot - top
-    deltas = lv_vert_len // N
-    divide_points = [top + (deltas * i) for i in range(N)]
-    divide_points.append(bot)
-    
-    return divide_points
-
-######################
 
 def get_warped_ed_es_frames(test_pat_index, test_dataset, model):
     '''
@@ -808,3 +702,346 @@ def get_warped_ed_es_frames(test_pat_index, test_dataset, model):
 
     
     return es_created_from_warping_ed, ed_created_from_warping_es
+
+
+def warp_forward(I, motions, delta_ed_es, clip_index, debug=False):
+    '''
+    input:
+        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
+        motions - shape ()
+        delta_ed_es - integer defining how many forward iterations to take (max 31)
+                        we are only interested in warping to/from ED/ES
+    output:
+        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
+        
+    for now, try to do things all on the cpu
+    '''
+    
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    
+    
+    # convert numpy ndarrays into tensor objects moved onto device
+    flow_source = torch.from_numpy(I).to(device).float()
+    motions = torch.from_numpy(motions).to(device).float()
+
+    # warping FORWARD from ED -> ES
+    # python range is [x, y), inclusive start and exclusive end
+    for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
+        # grab forward motion
+        forward_motion = motions[:2, frame_index,...]
+
+        # # grab the ED seg out frame to warp
+        # if frame_index == 0:
+        #     # flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+        #     flow_source = I
+        #     print(f'type(flow_source): {type(flow_source)}')
+        #     # flow_source = torch.from_numpy(flow_source).to(device).float()
+        # else:
+        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+
+        # convert to tensors and move to gpu with float dtype
+        # forward_motion = torch.from_numpy(forward_motion).to(device).float()
+        # generate motion field for forward motion
+        motion_field = generate_2dmotion_field_custom(flow_source, forward_motion)
+        # create frame i+1 relative to curr frame i 
+        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+        # use i+1 frame as next loop iter's i frame
+        flow_source = next_label
+        
+        
+        # DEBUGGING
+        if debug:
+            tmp = flow_source.cpu().detach().numpy()
+            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
+            print(f'flow_source unique vals: {np.unique(tmp)}')
+            print(f'flow_source.shape: {flow_source.shape}')
+            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
+            tmp_1 = one_hot(tmp[0])
+            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
+
+    flow_source = flow_source.cpu().detach().numpy()
+    
+    return flow_source
+
+def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
+    '''
+    input:
+        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
+        motions - shape ()
+        delta_ed_es - integer defining how many forward iterations to take (max 31)
+                        we are only interested in warping to/from ED/ES
+    output:
+        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
+        
+    for now, try to do things all on the cpu
+
+    '''
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+    # convert numpy ndarrays into tensor objects moved onto device
+    flow_source = torch.from_numpy(I).to(device).float()
+    motions = torch.from_numpy(motions).to(device).float()
+    
+    # warping BACKWARD from ED <- ES
+    for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
+        # grab backward motion
+        backward_motion = motions[2:, frame_index,...]
+
+        # # grab the ES seg out frame to start
+        # if frame_index == delta_ed_es:
+        #     flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+        #     flow_source = torch.from_numpy(flow_source).to(device).float()
+        # else:
+        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+
+        # convert to tensors and move to gpu with float dtype
+        # backward_motion = torch.from_numpy(backward_motion).to(device).float()
+        # generate motion field for backward motion
+        motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
+        # create frame i-1 relative to curr frame i 
+        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+        # use i-1 frame as next loop iter's i frame
+        flow_source = next_label
+        
+        # DEBUGGING
+        if debug:
+            tmp = flow_source.cpu().detach().numpy()
+            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
+            print(f'flow_source unique vals: {np.unique(tmp)}')
+            print(f'flow_source.shape: {flow_source.shape}')
+            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
+            tmp_1 = one_hot(tmp[0])
+            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
+
+
+    flow_source = flow_source.cpu().detach().numpy()
+    
+    return flow_source 
+
+#########################################################################################
+
+# let's try to use 9 pucks, if we divide into N=3 sections, we define each section to be 3 pucks
+def get2dPuckEndpoints(abin, apix, npucks=9):
+    '''
+    Originally:
+        get2dPucks(abin, apix): Return the linear extent of the binary structure,
+        as well as a sequence of radii about that extent.
+    Now just used to return the endpoints of the pucks representing the endpoints of the individual
+    radii parallel to the minor axis
+    '''
+    
+    all_puck_endpoints = []
+    
+    # Empty bin?
+    if ~np.any(abin):
+        return 1.0, np.zeros((npucks,))
+    
+    x,y = np.where(abin>0)
+    X = np.stack([x,y]) # Coords of all non-zero pixels., 2 x N
+    if X.shape[1] < 1: # no pixels, doesn't seem to be a problem usually. 
+        return (0.0, np.zeros((npucks,)))
+    # Scale dimensions
+    X = np.multiply(X, np.array(apix)[:, None]) # Need a broadcastable shape, here 2 x 1
+    try:
+        val, vec = np.linalg.eig(np.cov(X, rowvar=True))
+    except:
+        return (0.0, np.zeros((npucks,)))
+    
+    # Make sure we're in decreasing order of importance.
+    eigorder = np.argsort(val)[-1::-1]
+    vec = vec[:, eigorder]
+    val = val[eigorder]
+    
+    # Negate the eigenvectors for consistency. Let's say y should be positive eig0,
+    # and x should be positive for eig1. I'm not sure if that's what I'm doing here,
+    # but just trying to be consistent.
+    if vec[0,0] < 0:
+        vec[:,0] = -1.0*vec[:,0]
+    if vec[1,1] < 0:
+        vec[:,1] = -1.0*vec[:,1]
+    
+    mu = np.expand_dims(np.mean(X, axis=1), axis=1)
+    
+    # Now mu is 2 x 1 mean pixel coord 
+    # val is eigenvalues, vec is 2 x 2 right eigvectors (by column), all in matrix ij format
+    
+    # Use the boundary to get the radii.
+    # Project the boundary pixel coords into the eigenspace.
+    B = find_boundaries(abin, mode='thick')
+    Xb = np.stack(np.where(B))
+    Xb = np.multiply(Xb, np.array(apix)[:, None]) # space coords again.
+    proj = np.dot((Xb-mu).T,vec) 
+    # proj is M x 2, the projections onto 0 and 1 eigs of the M boundary coords.
+    
+    # Now get min max in the first principal direction. That's L! Just L[0] here.
+    L_min, L_max = np.min(proj, axis=0), np.max(proj, axis=0)
+    L = L_max - L_min
+    
+    # Partition along the principal axis. The secondary axis represents the radii.
+    L_partition = np.linspace(L_min[0], L_max[0], npucks+1)
+    
+    R = []
+    A = np.copy(proj)
+    for i in range(len(L_partition)-1):
+        # Select those boundary points whose projection on the major axis
+        # is within the thresholds. 
+        which = np.logical_and(A[:,0] >= L_partition[i],
+                               A[:,0] < L_partition[i+1])
+        # here which could be empty, if there are multiple components to the binary,
+        # which will happen without cleaning for the largest connected component and 
+        # such. r will be nan, here I replace with zero.
+        # In fact, this math really only works well with nice convex objects.
+        if len(which) == 0:
+            r = 0
+        else:
+            r = np.median(np.abs(A[:,1][which]))
+        R.append(r)
+    
+    # Some visualization code I didn't know where else to put!
+    # B is still in image coords, while mu and the vec and L's are in mm? Use extent.
+    # extent = (-0.5, apix[1]*B.shape[1]-0.5, -0.5, apix[0]*B.shape[0]-0.5)# (left, right, bottom, top)
+
+    # This got me pretty confused. The issue is that if apix is something other than (1,1), then 
+    # B needs to be scaled accordingly. 
+    # If apix is significantly less than 1,1, then the 0 order and no anti-aliasing could
+    # leave little of the boundary left. Though it would only affect the vis, as the calculation
+    # above scaled the boundary points to double, instead of this which returns pixels.
+    abin_scaled = rescale(abin, apix, order=0, 
+                          preserve_range=True, 
+                          anti_aliasing=False, 
+                          multichannel=False)
+    Bscaled = find_boundaries(abin_scaled, mode='thick')
+
+
+    # Plot the mean and principal projections. But plot needs xy (euclid) instead of ij (matrix)!!!
+    # Stupid, keeping the sliced out dimension with None here.
+    pca0 = np.array([mu + L_min[0]*vec[:,0, None], mu + L_max[0]*vec[:,0, None]])
+    pca1 = np.array([mu + L_min[1]*vec[:,1, None], mu + L_max[1]*vec[:,1, None]])
+
+    # Notice the x and y coord reversed. 
+
+    # these are only the end points of the major and minor axes I think ? 
+    # plt.scatter(x=mu[1], y=mu[0], s=30, marker='*') # what is this one? ?? -- hard to tell, no visual difference?
+
+
+    # this plots all of the points of the individual lines of the npucks 
+    for i in range(len(L_partition)-1):
+
+        extent = (L_partition[i]+L_partition[i+1])/2
+        points = np.array([mu + extent*vec[:,0, None] - R[i]*vec[:,1, None], # negative radius
+                           mu + extent*vec[:,0, None] + R[i]*vec[:,1, None]]) # positive radius
+
+        all_puck_endpoints.append(np.transpose(points))
+    
+    # return L[0], np.array(R), np.array(all_puck_endpoints)
+    return np.array(all_puck_endpoints)
+
+
+def is_point_above_below_line(p1, p2, p3):
+    '''
+    input: p1, p2, p3 -- iterables containing (x,y)
+        p1 and p2 represent line and p3 is point to be checked
+        note that this is supposed to be in euclidean space (x,y) 
+        if points are in (i,j) please convert them first into (x,y)
+        x = j, y = i
+    output:
+        +1 for above line
+        -1 for below line
+        0 for on the line
+    '''
+    a = (p2[0] - p1[0])*(p3[1] - p1[1]) - (p2[1] - p1[1])*(p3[0] - p1[0])
+    if a > 0:
+        return 1
+    elif a < 0:
+        return -1
+    else:
+        return 0
+    
+def ij_to_xy(p):
+    '''
+    input: p - (i,j)
+    output: p - (x,y)
+    x = j, y = i
+    '''
+    return np.array([p[1], p[0]])
+
+def image_to_regional_point_sets(I, N=3):
+    '''
+    input:
+        I - image (112, 112) unique vals of (0,1) -- should be the full segmentation!!!
+        N - number of regions to slice
+            note if this should be changed get2dPuckEndpoints npucks param needs to be divisible by N
+    '''
+    
+    radiiEndpoints_I = get2dPuckEndpoints((I == 1).astype('int'), (1.0, 1.0), npucks=9)
+    # after get points from segmentation, now transform into boundary points with mitral valve removed
+    I = give_boundary_no_basal_plane(I)
+    
+    # get the indeces of where we'll slice
+    indeces_for_slice_points = []
+    for i in range(len(radiiEndpoints_I)-1, 0, -N):
+        indeces_for_slice_points.append(i)
+    indeces_for_slice_points.sort()
+
+    # get the actual points of where we'll slice
+    slice_points = []
+    for i in indeces_for_slice_points:
+        slice_points.append(radiiEndpoints_I[i, 0, ...])
+    slice_points = np.array(slice_points)
+
+    # reorganize our points to be stored as (i,j)
+    divide_points = [] # (i,j)
+    for a in slice_points:
+        divide_points.append([ [a[0][0], a[1][0]] , [a[0][1], a[1][1]] ])
+        
+    # convert input image into points
+    I_point_set = []
+    for i in range(I.shape[0]):
+        for j in range(I.shape[1]):
+            if I[i][j] == 1:
+                I_point_set.append([i,j])
+
+                
+    # split input image point set into the regional point sets
+    I_regional_point_sets = [0 for i in range(N)]
+    for i in range(N):
+        curr_region_point_set = []
+
+        # first region
+        if i == 0:
+            p1 = ij_to_xy(divide_points[i][0])
+            p2 = ij_to_xy(divide_points[i][1])
+
+            for point in I_point_set:
+                p3 = ij_to_xy(point)
+
+                if is_point_above_below_line(p1, p2, p3) == -1:
+                    curr_region_point_set.append(point)
+
+
+        # 2nd and + regions
+        else:
+            start_p1 = ij_to_xy(divide_points[i-1][0])
+            start_p2 = ij_to_xy(divide_points[i-1][1])
+
+            end_p1 = ij_to_xy(divide_points[i][0])
+            end_p2 = ij_to_xy(divide_points[i][1])
+
+            # look at the entire point set representing the entire lv
+            for point in I_point_set:
+                p3 = ij_to_xy(point)
+
+                check_1 = is_point_above_below_line(start_p1, start_p2, p3)
+                check_2 = is_point_above_below_line(end_p1, end_p2, p3)
+
+                # above the first line and below the second line
+                # save point in (i,j) format
+                if check_1 == 1 and check_2 == -1:
+                    curr_region_point_set.append(point)
+
+        # save curr region point set
+        I_regional_point_sets[i] = np.array(curr_region_point_set)
+
+    I_regional_point_sets = np.array(I_regional_point_sets)
+    
+    return I_regional_point_sets
