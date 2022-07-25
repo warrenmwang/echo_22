@@ -9,9 +9,12 @@ from src.visualization_utils import categorical_dice
 from skimage.transform import (resize, 
                                rescale)
 from skimage.segmentation import find_boundaries
+import copy
 
 
 #########################################################################################
+# VISUALIZATION FUNCS
+
 # taken from stough's dip vis_utils.py
 def vis_pair(I, J, figsize = (8,3), shared = True, 
              first_title = 'Original', second_title = 'New',
@@ -59,6 +62,103 @@ def vis_single(I, title='title', **kwargs):
     ax.set_title(title)
     ax.imshow(I, **kwargs)
 
+def vis_one_point_set(ps):
+    f, ax = plt.subplots(1,1,figsize=(4,3), sharex=True, sharey=True)
+    ax.scatter(ps[:, 1], ps[:,  0], marker='.', color='b')
+    ax.invert_yaxis()
+    
+def vis_two_point_sets(ps_1, ps_2):
+    f, ax = plt.subplots(1,2,figsize=(10,7), sharex=True, sharey=True)
+    ax[0].scatter(ps_1[:, 1], ps_1[:,  0], marker='.', color='b')
+    ax[0].invert_yaxis()
+    
+    ax[1].scatter(ps_2[:, 1], ps_2[:,  0], marker='.', color='b')
+    ax[1].invert_yaxis()
+    
+    
+def vis_three_point_sets(I_regional_point_sets):
+    # this assumes we stored in i,j
+    fig, ax = plt.subplots(1,3, figsize=(10,7), sharex = True, sharey = True)
+    ax[0].scatter(I_regional_point_sets[0][:, 1], I_regional_point_sets[0][:, 0], marker='.', color='b')
+    ax[0].invert_yaxis()
+
+    ax[1].scatter(I_regional_point_sets[1][:, 1], I_regional_point_sets[1][:, 0], marker='.', color='b')
+    ax[1].invert_yaxis()
+
+    ax[2].scatter(I_regional_point_sets[2][:, 1], I_regional_point_sets[2][:, 0], marker='.', color='b')
+    ax[2].invert_yaxis()
+    
+def vis_double_three_point_sets(I_regional_point_sets, new_regional_point_sets, title='title'):
+    '''
+    I_regional_point_sets -- stored in (i,j)
+    
+    new_point_set -- stored in (x, y)
+    
+    :-) im sorry
+    '''
+    fig, ax = plt.subplots(1,3, figsize=(10,7), sharex = True, sharey = True)
+    ax[0].scatter(I_regional_point_sets[0][:, 1], I_regional_point_sets[0][:, 0], marker='.', color='b', zorder=1)
+    ax[0].scatter(new_regional_point_sets[0][:, 0], new_regional_point_sets[0][:, 1], marker='.', color='r', zorder=2)
+    ax[0].invert_yaxis()
+    ax[0].set_title('Apical')
+
+    ax[1].scatter(I_regional_point_sets[1][:, 1], I_regional_point_sets[1][:, 0], marker='.', color='b', zorder=1)
+    ax[1].scatter(new_regional_point_sets[1][:, 0], new_regional_point_sets[1][:, 1], marker='.', color='r', zorder=2)
+    ax[1].invert_yaxis()
+    ax[1].set_title('Mid')
+
+    ax[2].scatter(I_regional_point_sets[2][:, 1], I_regional_point_sets[2][:, 0], marker='.', color='b', zorder=1)
+    ax[2].scatter(new_regional_point_sets[2][:, 0], new_regional_point_sets[2][:, 1], marker='.', color='r', zorder=2)
+    ax[2].invert_yaxis()
+    ax[2].set_title('Basal')
+    
+    fig.suptitle(title)
+    
+    
+def view_4_vectors_and_interped_vector(vectors, new_vector):
+    x_tails = []
+    y_tails = []
+    x_mags = []
+    y_mags = []
+
+    for v in vectors:
+        x_tails.append(v.tail_x)
+        y_tails.append(v.tail_y)
+
+        x_mags.append(v.mag_x)
+        y_mags.append(v.mag_y)
+        
+    plt.figure()
+    plt.quiver(x_tails, y_tails, x_mags, y_mags, color='k', linewidth=0.7)
+    plt.quiver(new_vector.tail_x, new_vector.tail_y, new_vector.mag_x, new_vector.mag_y, color='b', linewidth=0.7)    
+
+def vis_one_vec_multiple_frames(all_vectors):
+    '''
+    input: all_vectors - python list of Vector ADTs
+    
+    '''
+    
+    x_tails = []
+    y_tails = []
+    x_mags = []
+    y_mags = []
+
+    for v in all_vectors:
+        x_tails.append(v.tail_x)
+        y_tails.append(v.tail_y)
+
+        x_mags.append(v.mag_x)
+        y_mags.append(v.mag_y)
+
+    # vector field
+    plt.figure()
+    plt.quiver(x_tails, y_tails, x_mags, y_mags, color='k', linewidth=0.7)
+    plt.show()
+    
+    # scatter plot, color gradient points
+    plt.figure()
+    plt.scatter(x_tails, y_tails, c=np.linspace(0,1,len(x_tails)))
+    plt.show()
 #########################################################################################
 
 def rmse(x, y):
@@ -819,6 +919,7 @@ def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
     return flow_source 
 
 #########################################################################################
+# FOR SLICING A SEGMENTATION INTO THE BOUNDARY POINT SETS
 
 # let's try to use 9 pucks, if we divide into N=3 sections, we define each section to be 3 pucks
 def get2dPuckEndpoints(abin, apix, npucks=9):
@@ -1045,3 +1146,190 @@ def image_to_regional_point_sets(I, N=3):
     I_regional_point_sets = np.array(I_regional_point_sets)
     
     return I_regional_point_sets
+
+#########################################################################################
+# DOING SPHERICAL BILINEAR INTERPOLATION
+# ( BILINEAR INTERP ON (RHO, THETA) REPRESENTING VECTOR MAGNITUDE ) WHERE (RHO, THETA) ARE POLAR COORDS
+def cart2pol(x, y):
+    rho = np.sqrt(x**2 + y**2)
+    phi = np.arctan2(y, x)
+    return rho, phi
+
+def pol2cart(rho, theta):
+    x = rho * np.cos(theta)
+    y = rho * np.sin(theta)
+    return x, y
+
+class Vector:
+    def __init__(self, tail_x, tail_y, mag_x, mag_y):
+        self.tail_x = tail_x
+        self.tail_y = tail_y
+        
+        self.mag_x = mag_x
+        self.mag_y = mag_y
+        
+        # for if need convert vector's magnitude into polar coords
+        self.rho = None
+        self.theta = None
+        
+    def polar(self):
+        self.rho, self.theta = cart2pol(self.mag_x, self.mag_y)
+        
+    def cart(self):
+        self.mag_x, self.mag_y = pol2cart(self.rho, self.theta)
+        
+def vector_bilinear_interpolation(vectors, new_vector):
+    '''
+    input: 
+        vectors - list of 4 Vectors (our class def)
+        new_vector - single Vector which is just a point with 0 x and y magnitude
+    
+    output:
+        new_vector - same input Vector, except with bilinearly interpolated in polar and then converted 
+            back into cartesian x and y magnitudes of direction using the 4 vectors 
+            were surrounding this vector at integer values, essentially making up a unit square
+            around this vector
+    '''
+    
+    
+    # convert magnitudes to polar
+    for v in vectors:
+        v.polar()
+        
+    # linearly interpolate top two points
+    # linearly interpoalte bottom two points
+    # then linearly interpolate with the two new points
+    top_vectors = []
+    bottom_vectors = []
+
+    for v in vectors:
+        if v.tail_y == int(new_vector.tail_y):
+            bottom_vectors.append(v)
+        else:
+            top_vectors.append(v)
+            
+    # for first two linearly interps
+    weight_1 = new_vector.tail_x - top_vectors[0].tail_x
+    # print(f'weights: {(weight_1, weight_2)}')
+
+    # horizontal top
+    rho_1 = (weight_1 * top_vectors[1].rho) + ((1.0 - weight_1) * top_vectors[0].rho)
+    theta_1 = (weight_1 * top_vectors[1].theta) + ((1.0 - weight_1) * top_vectors[0].theta)
+
+    # horizontal bottom
+    rho_2 = (weight_1 * bottom_vectors[1].rho) + ((1.0 - weight_1) * bottom_vectors[0].rho)
+    theta_2 = (weight_1 * bottom_vectors[1].theta) + ((1.0 - weight_1) * bottom_vectors[0].theta)
+
+    # final interp
+    weight_2 = new_vector.tail_y - bottom_vectors[0].tail_y
+    # vertial
+    rho_3 = (weight_2 * rho_1) + ((1.0 - weight_2) * rho_2)
+    theta_3 = (weight_2 * theta_1) + ((1.0 - weight_2) * theta_2)       
+    
+    new_vector.rho = rho_3
+    new_vector.theta = theta_3
+    new_vector.cart()
+    
+    return new_vector
+
+
+    
+    
+##### 
+def preliminary_warp_one_vector_forward(coords_multiple_frames, curr_clip_motions):
+    '''
+    input:
+        coords_multiple_frames - (1, N, 2)
+            contains the points of a regional point set in ij
+            axis=0 , first dim at ED frame, second dim at ED+1 frame got from directly applying motion tracking info (x+delta_x_0, y+delta_y_0)
+        curr_clip_motions - (4, 32, 112, 112)
+    output:
+        an updated coords_multiple_frames - (2, N, 2)
+            with the second dim at ax=0 being the new points warped from the ED by one frame
+    '''
+    frame = 0
+
+    # warp forward all the current points
+    coords_1 = []
+    for _ in range(coords_multiple_frames.shape[1]):
+        pair = coords_multiple_frames[0][_]
+
+        i_0,j_0 = int(pair[0]), int(pair[1])
+
+        # forward change in y
+        delta_i = curr_clip_motions[1][frame][i_0][j_0]
+
+        # forward change in x
+        delta_j = curr_clip_motions[0][frame][i_0][j_0]
+
+        i_1, j_1 = i_0 + delta_i , j_0 + delta_j
+
+        coords_1.append([i_1, j_1])
+
+    coords_1 = np.array(coords_1)
+
+    coords_multiple_frames = np.insert(coords_multiple_frames, 1, coords_1, axis=0)
+
+    return coords_multiple_frames
+
+def warp_one_vector_forward_till_ES(coords_multiple_frames, ind_of_point_to_warp, delta_ed_es, curr_clip_motions):
+    # the first vector from frame 0 -> 1 (don't be confused, storing the (i,j) and motion tracking (forward x,y) that gets us from ED to ED+1
+    # we already applied that information in the preliminary warp, so this is just redundantly storing that information
+    all_new_vectors = []
+
+    point_0 = coords_multiple_frames[0][ind_of_point_to_warp]
+    point_0_i = int(point_0[0])
+    point_0_j = int(point_0[1])
+
+    mag_x = curr_clip_motions[0][0][point_0_i][point_0_j]
+    mag_y = curr_clip_motions[1][0][point_0_i][point_0_j]
+    thing = Vector(point_0_j, point_0_i, mag_x, mag_y)
+    all_new_vectors.append(copy.deepcopy(thing))
+    
+    # the next vector from frame 1 -> 2 (BUT, now we need to do interp to get correct magnitudes!)
+
+    point_1 = coords_multiple_frames[1][ind_of_point_to_warp] # one point at frame 1, need to now warp using frame 1 vectors
+    new_vector = Vector(point_1[1], point_1[0], 0, 0)
+    all_new_vectors.append(copy.deepcopy(new_vector))
+    
+    # we already warped 1 frame, so let's warp from frame=1 to delta_ed_es - 1
+    for frame in range(1, delta_ed_es - 1):
+
+        inted_i, inted_j = int(new_vector.tail_y), int(new_vector.tail_x)
+        surr_vec_tails = [ [inted_i, inted_j],
+                             [inted_i, inted_j+1],
+                             [inted_i+1, inted_j],
+                             [inted_i+1, inted_j+1] ]
+
+        surround_vectors = []
+
+        for _ in surr_vec_tails:
+            i,j = _[0], _[1]
+            x = j
+            y = i
+
+            mag_i = curr_clip_motions[1][frame][i][j]
+            mag_j = curr_clip_motions[0][frame][i][j]
+
+            mag_x = mag_j
+            mag_y = mag_i
+
+            surround_vectors.append(Vector(x, y, mag_x, mag_y))
+
+        new_vector = vector_bilinear_interpolation(surround_vectors, new_vector)
+
+        new_vector.tail_x += new_vector.mag_x
+        new_vector.tail_y += new_vector.mag_y
+
+        all_new_vectors.append(copy.deepcopy(new_vector))
+
+        new_vector.mag_x = None
+        new_vector.mag_y = None
+    
+    # now we have delta_ed_es vectors, we do the final warp from ES-1 -> ES
+    # vector at ES frame will not have magnitudes, since we don't need to interpolate to warp to the next frame.
+    ES_minus_one_vect = all_new_vectors[-1]
+    tmp = Vector(ES_minus_one_vect.tail_x + ES_minus_one_vect.mag_x, ES_minus_one_vect.tail_y + ES_minus_one_vect.mag_y, 0, 0)
+    all_new_vectors.append(tmp)
+        
+    return all_new_vectors
