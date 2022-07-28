@@ -88,34 +88,38 @@ def vis_three_point_sets(I_regional_point_sets):
     ax[2].scatter(I_regional_point_sets[2][:, 1], I_regional_point_sets[2][:, 0], marker='.', color='b')
     ax[2].invert_yaxis()
     
-def vis_double_three_point_sets(I_regional_point_sets, new_regional_point_sets, title='title'):
-    '''
-    I_regional_point_sets -- stored in (i,j)
+# def vis_double_three_point_sets(I_regional_point_sets, new_regional_point_sets, title='title'):
+#     '''
+#     I_regional_point_sets -- stored in (i,j)
     
-    new_point_set -- stored in (x, y)
+#     new_point_set -- stored in (x, y)
     
-    :-) im sorry
-    '''
-    fig, ax = plt.subplots(1,3, figsize=(10,7), sharex = True, sharey = True)
-    ax[0].scatter(I_regional_point_sets[0][:, 1], I_regional_point_sets[0][:, 0], marker='.', color='b', zorder=1)
-    ax[0].scatter(new_regional_point_sets[0][:, 0], new_regional_point_sets[0][:, 1], marker='.', color='r', zorder=2)
-    ax[0].invert_yaxis()
-    ax[0].set_title('Apical')
+#     :-) im sorry
+#     '''
+#     fig, ax = plt.subplots(1,3, figsize=(10,7), sharex = True, sharey = True)
+#     ax[0].scatter(I_regional_point_sets[0][:, 1], I_regional_point_sets[0][:, 0], marker='.', color='b', zorder=1)
+#     ax[0].scatter(new_regional_point_sets[0][:, 0], new_regional_point_sets[0][:, 1], marker='.', color='r', zorder=2)
+#     ax[0].invert_yaxis()
+#     ax[0].set_title('Apical')
 
-    ax[1].scatter(I_regional_point_sets[1][:, 1], I_regional_point_sets[1][:, 0], marker='.', color='b', zorder=1)
-    ax[1].scatter(new_regional_point_sets[1][:, 0], new_regional_point_sets[1][:, 1], marker='.', color='r', zorder=2)
-    ax[1].invert_yaxis()
-    ax[1].set_title('Mid')
+#     ax[1].scatter(I_regional_point_sets[1][:, 1], I_regional_point_sets[1][:, 0], marker='.', color='b', zorder=1)
+#     ax[1].scatter(new_regional_point_sets[1][:, 0], new_regional_point_sets[1][:, 1], marker='.', color='r', zorder=2)
+#     ax[1].invert_yaxis()
+#     ax[1].set_title('Mid')
 
-    ax[2].scatter(I_regional_point_sets[2][:, 1], I_regional_point_sets[2][:, 0], marker='.', color='b', zorder=1)
-    ax[2].scatter(new_regional_point_sets[2][:, 0], new_regional_point_sets[2][:, 1], marker='.', color='r', zorder=2)
-    ax[2].invert_yaxis()
-    ax[2].set_title('Basal')
+#     ax[2].scatter(I_regional_point_sets[2][:, 1], I_regional_point_sets[2][:, 0], marker='.', color='b', zorder=1)
+#     ax[2].scatter(new_regional_point_sets[2][:, 0], new_regional_point_sets[2][:, 1], marker='.', color='r', zorder=2)
+#     ax[2].invert_yaxis()
+#     ax[2].set_title('Basal')
     
-    fig.suptitle(title)
+#     fig.suptitle(title)
     
     
 def view_4_vectors_and_interped_vector(vectors, new_vector):
+    '''
+    view 4 vectors at a unit square with a new interpolated vector (all vectors given)
+    all vectors are Vector ADT
+    '''
     x_tails = []
     y_tails = []
     x_mags = []
@@ -1072,9 +1076,13 @@ def image_to_regional_point_sets(I, N=3):
         I - image (112, 112) unique vals of (0,1) -- should be the full segmentation!!!
         N - number of regions to slice
             note if this should be changed get2dPuckEndpoints npucks param needs to be divisible by N
+    output:
+        I_regional_point_sets - (N, X, 2) - stored in (i,j) format
+            X is not the same for different index at axis=0
+            .shape on ths object will show (N, )
     '''
     
-    radiiEndpoints_I = get2dPuckEndpoints((I == 1).astype('int'), (1.0, 1.0), npucks=9)
+    radiiEndpoints_I = get2dPuckEndpoints((I == 1).astype('int'), (1.0, 1.0), npucks=3 * N)
     # after get points from segmentation, now transform into boundary points with mitral valve removed
     I = give_boundary_no_basal_plane(I)
     
@@ -1168,30 +1176,61 @@ class Vector:
         self.mag_x = mag_x
         self.mag_y = mag_y
         
-        # for if need convert vector's magnitude into polar coords
-        self.rho = None
-        self.theta = None
+        # for converting vector's magnitude between polar
+        # and cartesian
+        self.conversion_mag_rho = 0
+        self.conversion_mag_theta = 0
+        
+        self.conversion_mag_x = 0
+        self.conversion_mag_y = 0
+        
+    def __str__(self):
+        return f'tail_x: {self.tail_x}\ntail_y: {self.tail_y}\nmag_x: {self.mag_x}\nmag_y: {self.mag_y}\n'
         
     def polar(self):
-        self.rho, self.theta = cart2pol(self.mag_x, self.mag_y)
+        self.conversion_mag_rho, self.conversion_mag_theta = cart2pol(self.mag_x, self.mag_y)
         
     def cart(self):
-        self.mag_x, self.mag_y = pol2cart(self.rho, self.theta)
+        self.conversion_mag_x, self.conversion_mag_y = pol2cart(self.conversion_mag_rho, self.conversion_mag_theta)
+    
+        
+    def update_mag_xy_from_conversion(self):
+        self.mag_x = self.conversion_mag_x
+        self.mag_y = self.conversion_mag_y
+        
+    def update_tails_from_mags(self):
+        self.tail_x += self.mag_x
+        self.tail_y += self.mag_y 
+        
+    def clear_magnitudes(self):
+        self.mag_x = 0
+        self.mag_y = 0
+        
+    def clear_conversion_mags_xy(self):
+        self.conversion_mag_x = 0
+        self.conversion_mag_y = 0
+        
+    def clear_conversion_mags_rhotheta(self):
+        self.conversion_mag_rho = 0
+        self.conversion_mag_theta = 0
+        
+
         
 def vector_bilinear_interpolation(vectors, new_vector):
     '''
     input: 
         vectors - list of 4 Vectors (our class def)
+            base values (x_i, y_i, delta_x_i, delta_y_i)
         new_vector - single Vector which is just a point with 0 x and y magnitude
+            base values (x_i, y_i, 0, 0)
     
     output:
         new_vector - same input Vector, except with bilinearly interpolated in polar and then converted 
             back into cartesian x and y magnitudes of direction using the 4 vectors 
             were surrounding this vector at integer values, essentially making up a unit square
             around this vector
+                base values (x_i, y_i, delta_x, delta_y)
     '''
-    
-    
     # convert magnitudes to polar
     for v in vectors:
         v.polar()
@@ -1213,12 +1252,12 @@ def vector_bilinear_interpolation(vectors, new_vector):
     # print(f'weights: {(weight_1, weight_2)}')
 
     # horizontal top
-    rho_1 = (weight_1 * top_vectors[1].rho) + ((1.0 - weight_1) * top_vectors[0].rho)
-    theta_1 = (weight_1 * top_vectors[1].theta) + ((1.0 - weight_1) * top_vectors[0].theta)
+    rho_1 = (weight_1 * top_vectors[1].conversion_mag_rho) + ((1.0 - weight_1) * top_vectors[0].conversion_mag_rho)
+    theta_1 = (weight_1 * top_vectors[1].conversion_mag_theta) + ((1.0 - weight_1) * top_vectors[0].conversion_mag_theta)
 
     # horizontal bottom
-    rho_2 = (weight_1 * bottom_vectors[1].rho) + ((1.0 - weight_1) * bottom_vectors[0].rho)
-    theta_2 = (weight_1 * bottom_vectors[1].theta) + ((1.0 - weight_1) * bottom_vectors[0].theta)
+    rho_2 = (weight_1 * bottom_vectors[1].conversion_mag_rho) + ((1.0 - weight_1) * bottom_vectors[0].conversion_mag_rho)
+    theta_2 = (weight_1 * bottom_vectors[1].conversion_mag_theta) + ((1.0 - weight_1) * bottom_vectors[0].conversion_mag_theta)
 
     # final interp
     weight_2 = new_vector.tail_y - bottom_vectors[0].tail_y
@@ -1226,16 +1265,16 @@ def vector_bilinear_interpolation(vectors, new_vector):
     rho_3 = (weight_2 * rho_1) + ((1.0 - weight_2) * rho_2)
     theta_3 = (weight_2 * theta_1) + ((1.0 - weight_2) * theta_2)       
     
-    new_vector.rho = rho_3
-    new_vector.theta = theta_3
+    new_vector.conversion_mag_rho = rho_3
+    new_vector.conversion_mag_theta = theta_3
     new_vector.cart()
     
     return new_vector
 
 
-    
-    
 ##### 
+
+
 def preliminary_warp_one_vector_forward(coords_multiple_frames, curr_clip_motions):
     '''
     input:
@@ -1318,13 +1357,13 @@ def warp_one_vector_forward_till_ES(coords_multiple_frames, ind_of_point_to_warp
 
         new_vector = vector_bilinear_interpolation(surround_vectors, new_vector)
 
-        new_vector.tail_x += new_vector.mag_x
-        new_vector.tail_y += new_vector.mag_y
+        new_vector.tail_x += new_vector.conversion_mag_x
+        new_vector.tail_y += new_vector.conversion_mag_y
 
         all_new_vectors.append(copy.deepcopy(new_vector))
 
-        new_vector.mag_x = None
-        new_vector.mag_y = None
+        new_vector.conversion_mag_x = None
+        new_vector.conversion_mag_y = None
     
     # now we have delta_ed_es vectors, we do the final warp from ES-1 -> ES
     # vector at ES frame will not have magnitudes, since we don't need to interpolate to warp to the next frame.
