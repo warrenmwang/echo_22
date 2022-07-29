@@ -1274,101 +1274,102 @@ def vector_bilinear_interpolation(vectors, new_vector):
 
 ##### 
 
+# OLD warping with vector functions
+# def preliminary_warp_one_vector_forward(coords_multiple_frames, curr_clip_motions):
+#     '''
+#     input:
+#         coords_multiple_frames - (1, N, 2)
+#             contains the points of a regional point set in ij
+#             axis=0 , first dim at ED frame, second dim at ED+1 frame got from directly applying motion tracking info (x+delta_x_0, y+delta_y_0)
+#         curr_clip_motions - (4, 32, 112, 112)
+#     output:
+#         an updated coords_multiple_frames - (2, N, 2)
+#             with the second dim at ax=0 being the new points warped from the ED by one frame
+#     '''
+#     frame = 0
 
-def preliminary_warp_one_vector_forward(coords_multiple_frames, curr_clip_motions):
-    '''
-    input:
-        coords_multiple_frames - (1, N, 2)
-            contains the points of a regional point set in ij
-            axis=0 , first dim at ED frame, second dim at ED+1 frame got from directly applying motion tracking info (x+delta_x_0, y+delta_y_0)
-        curr_clip_motions - (4, 32, 112, 112)
-    output:
-        an updated coords_multiple_frames - (2, N, 2)
-            with the second dim at ax=0 being the new points warped from the ED by one frame
-    '''
-    frame = 0
+#     # warp forward all the current points
+#     coords_1 = []
+#     for _ in range(coords_multiple_frames.shape[1]):
+#         pair = coords_multiple_frames[0][_]
 
-    # warp forward all the current points
-    coords_1 = []
-    for _ in range(coords_multiple_frames.shape[1]):
-        pair = coords_multiple_frames[0][_]
+#         i_0,j_0 = int(pair[0]), int(pair[1])
 
-        i_0,j_0 = int(pair[0]), int(pair[1])
+#         # forward change in y
+#         delta_i = curr_clip_motions[1][frame][i_0][j_0]
 
-        # forward change in y
-        delta_i = curr_clip_motions[1][frame][i_0][j_0]
+#         # forward change in x
+#         delta_j = curr_clip_motions[0][frame][i_0][j_0]
 
-        # forward change in x
-        delta_j = curr_clip_motions[0][frame][i_0][j_0]
+#         i_1, j_1 = i_0 + delta_i , j_0 + delta_j
 
-        i_1, j_1 = i_0 + delta_i , j_0 + delta_j
+#         coords_1.append([i_1, j_1])
 
-        coords_1.append([i_1, j_1])
+#     coords_1 = np.array(coords_1)
 
-    coords_1 = np.array(coords_1)
+#     coords_multiple_frames = np.insert(coords_multiple_frames, 1, coords_1, axis=0)
 
-    coords_multiple_frames = np.insert(coords_multiple_frames, 1, coords_1, axis=0)
+#     return coords_multiple_frames
 
-    return coords_multiple_frames
+# def warp_one_vector_forward_till_ES(coords_multiple_frames, ind_of_point_to_warp, delta_ed_es, curr_clip_motions):
+#     # the first vector from frame 0 -> 1 (don't be confused, storing the (i,j) and motion tracking (forward x,y) that gets us from ED to ED+1
+#     # we already applied that information in the preliminary warp, so this is just redundantly storing that information
+#     all_new_vectors = []
 
-def warp_one_vector_forward_till_ES(coords_multiple_frames, ind_of_point_to_warp, delta_ed_es, curr_clip_motions):
-    # the first vector from frame 0 -> 1 (don't be confused, storing the (i,j) and motion tracking (forward x,y) that gets us from ED to ED+1
-    # we already applied that information in the preliminary warp, so this is just redundantly storing that information
-    all_new_vectors = []
+#     point_0 = coords_multiple_frames[0][ind_of_point_to_warp]
+#     point_0_i = int(point_0[0])
+#     point_0_j = int(point_0[1])
 
-    point_0 = coords_multiple_frames[0][ind_of_point_to_warp]
-    point_0_i = int(point_0[0])
-    point_0_j = int(point_0[1])
-
-    mag_x = curr_clip_motions[0][0][point_0_i][point_0_j]
-    mag_y = curr_clip_motions[1][0][point_0_i][point_0_j]
-    thing = Vector(point_0_j, point_0_i, mag_x, mag_y)
-    all_new_vectors.append(copy.deepcopy(thing))
+#     mag_x = curr_clip_motions[0][0][point_0_i][point_0_j]
+#     mag_y = curr_clip_motions[1][0][point_0_i][point_0_j]
+#     thing = Vector(point_0_j, point_0_i, mag_x, mag_y)
+#     all_new_vectors.append(copy.deepcopy(thing))
     
-    # the next vector from frame 1 -> 2 (BUT, now we need to do interp to get correct magnitudes!)
+#     # the next vector from frame 1 -> 2 (BUT, now we need to do interp to get correct magnitudes!)
 
-    point_1 = coords_multiple_frames[1][ind_of_point_to_warp] # one point at frame 1, need to now warp using frame 1 vectors
-    new_vector = Vector(point_1[1], point_1[0], 0, 0)
-    all_new_vectors.append(copy.deepcopy(new_vector))
+#     point_1 = coords_multiple_frames[1][ind_of_point_to_warp] # one point at frame 1, need to now warp using frame 1 vectors
+#     new_vector = Vector(point_1[1], point_1[0], 0, 0)
+#     all_new_vectors.append(copy.deepcopy(new_vector))
     
-    # we already warped 1 frame, so let's warp from frame=1 to delta_ed_es - 1
-    for frame in range(1, delta_ed_es - 1):
+#     # we already warped 1 frame, so let's warp from frame=1 to delta_ed_es - 1
+#     for frame in range(1, delta_ed_es - 1):
 
-        inted_i, inted_j = int(new_vector.tail_y), int(new_vector.tail_x)
-        surr_vec_tails = [ [inted_i, inted_j],
-                             [inted_i, inted_j+1],
-                             [inted_i+1, inted_j],
-                             [inted_i+1, inted_j+1] ]
+#         inted_i, inted_j = int(new_vector.tail_y), int(new_vector.tail_x)
+#         surr_vec_tails = [ [inted_i, inted_j],
+#                              [inted_i, inted_j+1],
+#                              [inted_i+1, inted_j],
+#                              [inted_i+1, inted_j+1] ]
 
-        surround_vectors = []
+#         surround_vectors = []
 
-        for _ in surr_vec_tails:
-            i,j = _[0], _[1]
-            x = j
-            y = i
+#         for _ in surr_vec_tails:
+#             i,j = _[0], _[1]
+#             x = j
+#             y = i
 
-            mag_i = curr_clip_motions[1][frame][i][j]
-            mag_j = curr_clip_motions[0][frame][i][j]
+#             mag_i = curr_clip_motions[1][frame][i][j]
+#             mag_j = curr_clip_motions[0][frame][i][j]
 
-            mag_x = mag_j
-            mag_y = mag_i
+#             mag_x = mag_j
+#             mag_y = mag_i
 
-            surround_vectors.append(Vector(x, y, mag_x, mag_y))
+#             surround_vectors.append(Vector(x, y, mag_x, mag_y))
 
-        new_vector = vector_bilinear_interpolation(surround_vectors, new_vector)
+#         new_vector = vector_bilinear_interpolation(surround_vectors, new_vector)
 
-        new_vector.tail_x += new_vector.conversion_mag_x
-        new_vector.tail_y += new_vector.conversion_mag_y
+#         new_vector.tail_x += new_vector.conversion_mag_x
+#         new_vector.tail_y += new_vector.conversion_mag_y
 
-        all_new_vectors.append(copy.deepcopy(new_vector))
+#         all_new_vectors.append(copy.deepcopy(new_vector))
 
-        new_vector.conversion_mag_x = None
-        new_vector.conversion_mag_y = None
+#         new_vector.conversion_mag_x = None
+#         new_vector.conversion_mag_y = None
     
-    # now we have delta_ed_es vectors, we do the final warp from ES-1 -> ES
-    # vector at ES frame will not have magnitudes, since we don't need to interpolate to warp to the next frame.
-    ES_minus_one_vect = all_new_vectors[-1]
-    tmp = Vector(ES_minus_one_vect.tail_x + ES_minus_one_vect.mag_x, ES_minus_one_vect.tail_y + ES_minus_one_vect.mag_y, 0, 0)
-    all_new_vectors.append(tmp)
+#     # now we have delta_ed_es vectors, we do the final warp from ES-1 -> ES
+#     # vector at ES frame will not have magnitudes, since we don't need to interpolate to warp to the next frame.
+#     ES_minus_one_vect = all_new_vectors[-1]
+#     tmp = Vector(ES_minus_one_vect.tail_x + ES_minus_one_vect.mag_x, ES_minus_one_vect.tail_y + ES_minus_one_vect.mag_y, 0, 0)
+#     all_new_vectors.append(tmp)
         
-    return all_new_vectors
+#     return all_new_vectors
+
