@@ -156,7 +156,7 @@ def vis_one_vec_multiple_frames(all_vectors):
 
     # vector field
     plt.figure()
-    plt.quiver(x_tails, y_tails, x_mags, y_mags, color='k', linewidth=0.7)
+    plt.quiver(x_tails, y_tails, x_mags, y_mags, color='k', linewidth=0.7, angles='xy', scale_units='xy', units='xy', scale = 1)
     plt.show()
     
     # scatter plot, color gradient points
@@ -608,6 +608,8 @@ def get_seg_and_warp_data(model, test_dataset, test_pat_index):
         return 2 * np.sum(A * B) / (np.sum(A) + np.sum(B) + epsilon)
     
     ########################################################################
+    model.eval()
+    
     # initial grabbing of the data that we'll use
     video, (filename, EF, es_clip_index, ed_clip_index, es_index, ed_index, es_frame, ed_frame, es_label, ed_label) = test_dataset[test_pat_index]
     
@@ -639,288 +641,288 @@ def get_seg_and_warp_data(model, test_dataset, test_pat_index):
     return curr_clip_segmentations, curr_clip_motions, delta_ed_es, clip_index, ed_label, es_label
 
 
-def get_warped_ed_es_frames(test_pat_index, test_dataset, model):
-    '''
-    INPUT: 
-    test_pat_index and test_dataset to be used like the following:
-        video, (filename, EF, es_clip_index, ed_clip_index, es_index, ed_index, es_frame, ed_frame, es_label, ed_label) = test_dataset[test_pat_index]
-    model
-        model to be used, one model at a time
-    clip_index
-        the clip we should use, determines the position of the ED and ES frame in the 32 frame clip
-        the difference in frames from ED to ES is always the same
+# def get_warped_ed_es_frames(test_pat_index, test_dataset, model):
+#     '''
+#     INPUT: 
+#     test_pat_index and test_dataset to be used like the following:
+#         video, (filename, EF, es_clip_index, ed_clip_index, es_index, ed_index, es_frame, ed_frame, es_label, ed_label) = test_dataset[test_pat_index]
+#     model
+#         model to be used, one model at a time
+#     clip_index
+#         the clip we should use, determines the position of the ED and ES frame in the 32 frame clip
+#         the difference in frames from ED to ES is always the same
 
-    OUTPUT:
-    es_created_from_warping_ed, ed_created_from_warping_es
-        both with shape: (1, 2, 112, 112)
-        you should double check the shape.
-    and other vars 
-    '''
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+#     OUTPUT:
+#     es_created_from_warping_ed, ed_created_from_warping_es
+#         both with shape: (1, 2, 112, 112)
+#         you should double check the shape.
+#     and other vars 
+#     '''
+#     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     
-    ########################### Helper functions ###########################
-    # goes thru a video and annotates where we can start clips given video length, clip length, etc.
-    def get_all_possible_start_points(ed_index, es_index, video_length, clip_length):
-        assert es_index - ed_index > 0, "not a ED to ES clip pair"
-        possible_shift = clip_length - (es_index - ed_index)
-        allowed_right = video_length - es_index
-        if allowed_right < possible_shift:
-            return np.arange(ed_index - possible_shift + 1, video_length - clip_length + 1)
-        if possible_shift < 0:
-            return np.array([ed_index])
-        elif ed_index < possible_shift:
-            return np.arange(ed_index + 1)
-        else:
-            return np.arange(ed_index - possible_shift + 1, ed_index + 1)
+#     ########################### Helper functions ###########################
+#     # goes thru a video and annotates where we can start clips given video length, clip length, etc.
+#     def get_all_possible_start_points(ed_index, es_index, video_length, clip_length):
+#         assert es_index - ed_index > 0, "not a ED to ES clip pair"
+#         possible_shift = clip_length - (es_index - ed_index)
+#         allowed_right = video_length - es_index
+#         if allowed_right < possible_shift:
+#             return np.arange(ed_index - possible_shift + 1, video_length - clip_length + 1)
+#         if possible_shift < 0:
+#             return np.array([ed_index])
+#         elif ed_index < possible_shift:
+#             return np.arange(ed_index + 1)
+#         else:
+#             return np.arange(ed_index - possible_shift + 1, ed_index + 1)
         
-    def generate_2dmotion_field_PLAY(x, offset):
-        # Qin's code for joint_motion_seg learning works fine on our purpose too
-        # Same idea https://discuss.pytorch.org/t/warp-video-frame-from-optical-flow/6013/5
-        x_shape = x.shape
-        # print(f'x_shape: {x_shape}')
+#     def generate_2dmotion_field_PLAY(x, offset):
+#         # Qin's code for joint_motion_seg learning works fine on our purpose too
+#         # Same idea https://discuss.pytorch.org/t/warp-video-frame-from-optical-flow/6013/5
+#         x_shape = x.shape
+#         # print(f'x_shape: {x_shape}')
 
-        grid_w, grid_h = torch.meshgrid([torch.linspace(-1, 1, x_shape[2]), torch.linspace(-1, 1, x_shape[3])])  # (h, w)
+#         grid_w, grid_h = torch.meshgrid([torch.linspace(-1, 1, x_shape[2]), torch.linspace(-1, 1, x_shape[3])])  # (h, w)
 
-        # this should just be moving the vars to gpu mem and doing some data type conversion to some
-        # floating point precision
-        grid_w = grid_w.cuda().float()
-        grid_h = grid_h.cuda().float()
+#         # this should just be moving the vars to gpu mem and doing some data type conversion to some
+#         # floating point precision
+#         grid_w = grid_w.cuda().float()
+#         grid_h = grid_h.cuda().float()
 
-        grid_w = nn.Parameter(grid_w, requires_grad=False)
-        grid_h = nn.Parameter(grid_h, requires_grad=False)
+#         grid_w = nn.Parameter(grid_w, requires_grad=False)
+#         grid_h = nn.Parameter(grid_h, requires_grad=False)
 
-        # OLD 
-        # offset_h, offset_w = torch.split(offset, 1, 1)
-        # NEW , TESTING
-        offset_h, offset_w = torch.split(offset, 1)
+#         # OLD 
+#         # offset_h, offset_w = torch.split(offset, 1, 1)
+#         # NEW , TESTING
+#         offset_h, offset_w = torch.split(offset, 1)
 
-        offset_w = offset_w.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
-        offset_h = offset_h.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
+#         offset_w = offset_w.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
+#         offset_h = offset_h.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
 
-        offset_w = grid_w + offset_w
-        offset_h = grid_h + offset_h
+#         offset_w = grid_w + offset_w
+#         offset_h = grid_h + offset_h
 
-        offsets = torch.stack((offset_h, offset_w), 3)
-        return offsets
+#         offsets = torch.stack((offset_h, offset_w), 3)
+#         return offsets
 
-    def categorical_dice(prediction, truth, k, epsilon=1e-5):
-        """
-            Compute the dice overlap between the predicted labels and truth
-            Not a loss
-        """
-        # Dice overlap metric for label value k
-        A = (prediction == k)
-        B = (truth == k)
-        return 2 * np.sum(A * B) / (np.sum(A) + np.sum(B) + epsilon)
+#     def categorical_dice(prediction, truth, k, epsilon=1e-5):
+#         """
+#             Compute the dice overlap between the predicted labels and truth
+#             Not a loss
+#         """
+#         # Dice overlap metric for label value k
+#         A = (prediction == k)
+#         B = (truth == k)
+#         return 2 * np.sum(A * B) / (np.sum(A) + np.sum(B) + epsilon)
     
-    ########################################################################
-    # initial grabbing of the data that we'll use
-    video, (filename, EF, es_clip_index, ed_clip_index, es_index, ed_index, es_frame, ed_frame, es_label, ed_label) = test_dataset[test_pat_index]
+#     ########################################################################
+#     # initial grabbing of the data that we'll use
+#     video, (filename, EF, es_clip_index, ed_clip_index, es_index, ed_index, es_frame, ed_frame, es_label, ed_label) = test_dataset[test_pat_index]
     
-    # get all possible start indices for 32 frame clip with ed/es in right order
-    possible_starts = get_all_possible_start_points(ed_index, es_index, video.shape[1], clip_length=32)
+#     # get all possible start indices for 32 frame clip with ed/es in right order
+#     possible_starts = get_all_possible_start_points(ed_index, es_index, video.shape[1], clip_length=32)
     
-    # for now, let's use the last clip from our set of all possible clips to use
-    clip_index = len(possible_starts) - 1
-    # print(f'clip_index: {clip_index}')
+#     # for now, let's use the last clip from our set of all possible clips to use
+#     clip_index = len(possible_starts) - 1
+#     # print(f'clip_index: {clip_index}')
 
-    # get the diff in frame len from ed to es
-    delta_ed_es = es_index - ed_index
+#     # get the diff in frame len from ed to es
+#     delta_ed_es = es_index - ed_index
     
-    # use model to segment frames
-    segmentation_outputs = np.empty(shape=(1, 2, 32, 112, 112))
-    motion_outputs = np.empty(shape=(1, 4, 32, 112, 112))
-    for start in possible_starts:
-        one_clip = np.expand_dims(video[:, start: start + 32], 0)
-        segmentation_output, motion_output = model(torch.Tensor(one_clip))
-        segmentation_outputs = np.concatenate([segmentation_outputs, segmentation_output.cpu().detach().numpy()])
-        motion_outputs = np.concatenate([motion_outputs, motion_output.cpu().detach().numpy()])
-    segmentation_outputs = segmentation_outputs[1:]
-    motion_outputs = motion_outputs[1:]
+#     # use model to segment frames
+#     segmentation_outputs = np.empty(shape=(1, 2, 32, 112, 112))
+#     motion_outputs = np.empty(shape=(1, 4, 32, 112, 112))
+#     for start in possible_starts:
+#         one_clip = np.expand_dims(video[:, start: start + 32], 0)
+#         segmentation_output, motion_output = model(torch.Tensor(one_clip))
+#         segmentation_outputs = np.concatenate([segmentation_outputs, segmentation_output.cpu().detach().numpy()])
+#         motion_outputs = np.concatenate([motion_outputs, motion_output.cpu().detach().numpy()])
+#     segmentation_outputs = segmentation_outputs[1:]
+#     motion_outputs = motion_outputs[1:]
 
-    # grab whatever clip we want
-    curr_clip_segmentations = segmentation_outputs[clip_index]
-    curr_clip_motions = motion_outputs[clip_index]
+#     # grab whatever clip we want
+#     curr_clip_segmentations = segmentation_outputs[clip_index]
+#     curr_clip_motions = motion_outputs[clip_index]
     
-    # print(f'curr_clip_segmentations: {curr_clip_segmentations.shape}')
-    # print(f'curr_clip_motions: {curr_clip_motions.shape}')
+#     # print(f'curr_clip_segmentations: {curr_clip_segmentations.shape}')
+#     # print(f'curr_clip_motions: {curr_clip_motions.shape}')
     
-    ######################## Warp from ED -> ES and ED <- ES ########################
+#     ######################## Warp from ED -> ES and ED <- ES ########################
     
-    # remember, we will want to continuously warp the previous frame that has been warped forward in time
-    # only the first frame that we start with will be the actual seg out frame
-    flow_source = None
+#     # remember, we will want to continuously warp the previous frame that has been warped forward in time
+#     # only the first frame that we start with will be the actual seg out frame
+#     flow_source = None
 
-    # warping FORWARD from ED -> ES
-    # python range is [x, y), inclusive start and exclusive end
-    for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
-        # grab forward motion
-        forward_motion = curr_clip_motions[:2, frame_index,...]
+#     # warping FORWARD from ED -> ES
+#     # python range is [x, y), inclusive start and exclusive end
+#     for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
+#         # grab forward motion
+#         forward_motion = curr_clip_motions[:2, frame_index,...]
 
-        # grab the ED seg out frame to warp
-        if frame_index == 0:
-            flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-            flow_source = torch.from_numpy(flow_source).to(device).float()
-        else:
-            pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+#         # grab the ED seg out frame to warp
+#         if frame_index == 0:
+#             flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+#             flow_source = torch.from_numpy(flow_source).to(device).float()
+#         else:
+#             pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
 
-        # convert to tensors and move to gpu with float dtype
-        forward_motion = torch.from_numpy(forward_motion).to(device).float()
-        # generate motion field for forward motion
-        motion_field = generate_2dmotion_field_PLAY(flow_source, forward_motion)
-        # create frame i+1 relative to curr frame i 
-        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-        # use i+1 frame as next loop iter's i frame
-        flow_source = next_label
+#         # convert to tensors and move to gpu with float dtype
+#         forward_motion = torch.from_numpy(forward_motion).to(device).float()
+#         # generate motion field for forward motion
+#         motion_field = generate_2dmotion_field_PLAY(flow_source, forward_motion)
+#         # create frame i+1 relative to curr frame i 
+#         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+#         # use i+1 frame as next loop iter's i frame
+#         flow_source = next_label
 
-    es_created_from_warping_ed = flow_source.cpu().detach().numpy()
+#     es_created_from_warping_ed = flow_source.cpu().detach().numpy()
 
-    # warping BACKWARD from ED <- ES
-    for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
-        # grab backward motion
-        backward_motion = curr_clip_motions[2:, frame_index,...]
+#     # warping BACKWARD from ED <- ES
+#     for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
+#         # grab backward motion
+#         backward_motion = curr_clip_motions[2:, frame_index,...]
 
-        # grab the ES seg out frame to start
-        if frame_index == delta_ed_es:
-            flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-            flow_source = torch.from_numpy(flow_source).to(device).float()
-        else:
-            pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+#         # grab the ES seg out frame to start
+#         if frame_index == delta_ed_es:
+#             flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+#             flow_source = torch.from_numpy(flow_source).to(device).float()
+#         else:
+#             pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
 
-        # convert to tensors and move to gpu with float dtype
-        backward_motion = torch.from_numpy(backward_motion).to(device).float()
-        # generate motion field for backward motion
-        motion_field = generate_2dmotion_field_PLAY(flow_source, backward_motion)
-        # create frame i-1 relative to curr frame i 
-        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-        # use i-1 frame as next loop iter's i frame
-        flow_source = next_label
+#         # convert to tensors and move to gpu with float dtype
+#         backward_motion = torch.from_numpy(backward_motion).to(device).float()
+#         # generate motion field for backward motion
+#         motion_field = generate_2dmotion_field_PLAY(flow_source, backward_motion)
+#         # create frame i-1 relative to curr frame i 
+#         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+#         # use i-1 frame as next loop iter's i frame
+#         flow_source = next_label
 
-    ed_created_from_warping_es = flow_source.cpu().detach().numpy()
+#     ed_created_from_warping_es = flow_source.cpu().detach().numpy()
     
-    ######################## ######################## ########################
+#     ######################## ######################## ########################
     
-    ed_created_from_warping_es = np.argmax(ed_created_from_warping_es, 1)[0]
+#     ed_created_from_warping_es = np.argmax(ed_created_from_warping_es, 1)[0]
 
-    es_created_from_warping_ed = np.argmax(es_created_from_warping_ed, 1)[0]
+#     es_created_from_warping_ed = np.argmax(es_created_from_warping_ed, 1)[0]
 
     
-    return es_created_from_warping_ed, ed_created_from_warping_es
+#     return es_created_from_warping_ed, ed_created_from_warping_es
 
 
-def warp_forward(I, motions, delta_ed_es, clip_index, debug=False):
-    '''
-    input:
-        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
-        motions - shape ()
-        delta_ed_es - integer defining how many forward iterations to take (max 31)
-                        we are only interested in warping to/from ED/ES
-    output:
-        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
+# def warp_forward(I, motions, delta_ed_es, clip_index, debug=False):
+#     '''
+#     input:
+#         I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
+#         motions - shape ()
+#         delta_ed_es - integer defining how many forward iterations to take (max 31)
+#                         we are only interested in warping to/from ED/ES
+#     output:
+#         I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
         
-    for now, try to do things all on the cpu
-    '''
+#     for now, try to do things all on the cpu
+#     '''
     
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+#     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     
     
-    # convert numpy ndarrays into tensor objects moved onto device
-    flow_source = torch.from_numpy(I).to(device).float()
-    motions = torch.from_numpy(motions).to(device).float()
+#     # convert numpy ndarrays into tensor objects moved onto device
+#     flow_source = torch.from_numpy(I).to(device).float()
+#     motions = torch.from_numpy(motions).to(device).float()
 
-    # warping FORWARD from ED -> ES
-    # python range is [x, y), inclusive start and exclusive end
-    for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
-        # grab forward motion
-        forward_motion = motions[:2, frame_index,...]
+#     # warping FORWARD from ED -> ES
+#     # python range is [x, y), inclusive start and exclusive end
+#     for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
+#         # grab forward motion
+#         forward_motion = motions[:2, frame_index,...]
 
-        # # grab the ED seg out frame to warp
-        # if frame_index == 0:
-        #     # flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-        #     flow_source = I
-        #     print(f'type(flow_source): {type(flow_source)}')
-        #     # flow_source = torch.from_numpy(flow_source).to(device).float()
-        # else:
-        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+#         # # grab the ED seg out frame to warp
+#         # if frame_index == 0:
+#         #     # flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+#         #     flow_source = I
+#         #     print(f'type(flow_source): {type(flow_source)}')
+#         #     # flow_source = torch.from_numpy(flow_source).to(device).float()
+#         # else:
+#         #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
 
-        # convert to tensors and move to gpu with float dtype
-        # forward_motion = torch.from_numpy(forward_motion).to(device).float()
-        # generate motion field for forward motion
-        motion_field = generate_2dmotion_field_custom(flow_source, forward_motion)
-        # create frame i+1 relative to curr frame i 
-        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-        # use i+1 frame as next loop iter's i frame
-        flow_source = next_label
+#         # convert to tensors and move to gpu with float dtype
+#         # forward_motion = torch.from_numpy(forward_motion).to(device).float()
+#         # generate motion field for forward motion
+#         motion_field = generate_2dmotion_field_custom(flow_source, forward_motion)
+#         # create frame i+1 relative to curr frame i 
+#         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+#         # use i+1 frame as next loop iter's i frame
+#         flow_source = next_label
         
         
-        # DEBUGGING
-        if debug:
-            tmp = flow_source.cpu().detach().numpy()
-            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
-            print(f'flow_source unique vals: {np.unique(tmp)}')
-            print(f'flow_source.shape: {flow_source.shape}')
-            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
-            tmp_1 = one_hot(tmp[0])
-            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
+#         # DEBUGGING
+#         if debug:
+#             tmp = flow_source.cpu().detach().numpy()
+#             #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
+#             print(f'flow_source unique vals: {np.unique(tmp)}')
+#             print(f'flow_source.shape: {flow_source.shape}')
+#             # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
+#             tmp_1 = one_hot(tmp[0])
+#             vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
 
-    flow_source = flow_source.cpu().detach().numpy()
+#     flow_source = flow_source.cpu().detach().numpy()
     
-    return flow_source
+#     return flow_source
 
-def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
-    '''
-    input:
-        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
-        motions - shape ()
-        delta_ed_es - integer defining how many forward iterations to take (max 31)
-                        we are only interested in warping to/from ED/ES
-    output:
-        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
+# def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
+#     '''
+#     input:
+#         I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
+#         motions - shape ()
+#         delta_ed_es - integer defining how many forward iterations to take (max 31)
+#                         we are only interested in warping to/from ED/ES
+#     output:
+#         I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
         
-    for now, try to do things all on the cpu
+#     for now, try to do things all on the cpu
 
-    '''
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+#     '''
+#     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    # convert numpy ndarrays into tensor objects moved onto device
-    flow_source = torch.from_numpy(I).to(device).float()
-    motions = torch.from_numpy(motions).to(device).float()
+#     # convert numpy ndarrays into tensor objects moved onto device
+#     flow_source = torch.from_numpy(I).to(device).float()
+#     motions = torch.from_numpy(motions).to(device).float()
     
-    # warping BACKWARD from ED <- ES
-    for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
-        # grab backward motion
-        backward_motion = motions[2:, frame_index,...]
+#     # warping BACKWARD from ED <- ES
+#     for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
+#         # grab backward motion
+#         backward_motion = motions[2:, frame_index,...]
 
-        # # grab the ES seg out frame to start
-        # if frame_index == delta_ed_es:
-        #     flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-        #     flow_source = torch.from_numpy(flow_source).to(device).float()
-        # else:
-        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+#         # # grab the ES seg out frame to start
+#         # if frame_index == delta_ed_es:
+#         #     flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+#         #     flow_source = torch.from_numpy(flow_source).to(device).float()
+#         # else:
+#         #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
 
-        # convert to tensors and move to gpu with float dtype
-        # backward_motion = torch.from_numpy(backward_motion).to(device).float()
-        # generate motion field for backward motion
-        motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
-        # create frame i-1 relative to curr frame i 
-        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-        # use i-1 frame as next loop iter's i frame
-        flow_source = next_label
+#         # convert to tensors and move to gpu with float dtype
+#         # backward_motion = torch.from_numpy(backward_motion).to(device).float()
+#         # generate motion field for backward motion
+#         motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
+#         # create frame i-1 relative to curr frame i 
+#         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+#         # use i-1 frame as next loop iter's i frame
+#         flow_source = next_label
         
-        # DEBUGGING
-        if debug:
-            tmp = flow_source.cpu().detach().numpy()
-            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
-            print(f'flow_source unique vals: {np.unique(tmp)}')
-            print(f'flow_source.shape: {flow_source.shape}')
-            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
-            tmp_1 = one_hot(tmp[0])
-            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
+#         # DEBUGGING
+#         if debug:
+#             tmp = flow_source.cpu().detach().numpy()
+#             #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
+#             print(f'flow_source unique vals: {np.unique(tmp)}')
+#             print(f'flow_source.shape: {flow_source.shape}')
+#             # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
+#             tmp_1 = one_hot(tmp[0])
+#             vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
 
 
-    flow_source = flow_source.cpu().detach().numpy()
+#     flow_source = flow_source.cpu().detach().numpy()
     
-    return flow_source 
+#     return flow_source 
 
 #########################################################################################
 # FOR SLICING A SEGMENTATION INTO THE BOUNDARY POINT SETS
