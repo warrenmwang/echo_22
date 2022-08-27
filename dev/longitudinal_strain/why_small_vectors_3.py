@@ -4,9 +4,17 @@
 model_name = "dropout_v3_0_10_R2plus1DMotionSegNet.pth"
 
 #####################
+# import os
+# os.chdir("../..")
+# print(os.getcwd())
 import os
-os.chdir("../..")
+os.chdir("/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking")
 print(os.getcwd())
+import sys
+sys.path.append('/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking')
+
+
+
 
 # %config Completer.use_jedi = False
 
@@ -211,7 +219,8 @@ def generate_2dmotion_field(x, offset):
     grid_w = nn.Parameter(grid_w, requires_grad=False)
     grid_h = nn.Parameter(grid_h, requires_grad=False)
 
-    # split forward x,y into separate forward x and y grids
+    # split (4, 2, 112, 112) into 2 (4, 112, 112)
+    # presumably to keep the LV and NOT LV motions separate?
     offset_h, offset_w = torch.split(offset, 1, 1)
     offset_w = offset_w.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
     offset_h = offset_h.contiguous().view(-1, int(x_shape[2]), int(x_shape[3]))  # (b*c, h, w)
