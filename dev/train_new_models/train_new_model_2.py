@@ -7,10 +7,10 @@ model_name = args.name
 
 
 import os
-os.chdir("/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking")
+# os.chdir("/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking")
 
-import sys
-sys.path.append('/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking')
+# import sys
+# sys.path.append('/home/wang/workspace/JupyterNoteBooksAll/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking')
 
 import echonet
 from echonet.datasets import Echo
@@ -48,10 +48,9 @@ from src.model.dropout_v4_0_10_R2plus1D_18_MotionNet import dropout_v4_0_10_R2pl
 from src.model.dropout_v4_0_25_R2plus1D_18_MotionNet import dropout_v4_0_25_R2plus1D_18_MotionNet 
 
 
-
 from src.echonet_dataset import EchoNetDynamicDataset
 from src.clasfv_losses import deformation_motion_loss, motion_seg_loss, DiceLoss, categorical_dice
-from src.train_test import train, test, train_with_log, test_with_log
+from src.train_test import train, test
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -176,7 +175,6 @@ total_train_time = 0
 n_epoch = 10
 min_loss = 1e5
 
-# with open(f"./tmp_save_models/{model_name}_training_log.txt", "a") as log_file:
 for epoch in range(1, n_epoch + 1):
     print(f"{'-' * 32} Epoch {epoch} {'-' * 32}\n")
     start = time.time()
@@ -198,5 +196,3 @@ for epoch in range(1, n_epoch + 1):
 
     # try to get rid of runtime cuda errors (illegal mem access)
     # torch.cuda.empty_cache()
-
-    # log_file.write(f'total training took: {total_train_time // 60} m {total_train_time % 60:.2f}s\n')

@@ -810,119 +810,119 @@ def get_seg_and_warp_data(model, test_dataset, test_pat_index):
 #     return es_created_from_warping_ed, ed_created_from_warping_es
 
 
-# def warp_forward(I, motions, delta_ed_es, clip_index, debug=False):
-#     '''
-#     input:
-#         I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
-#         motions - shape ()
-#         delta_ed_es - integer defining how many forward iterations to take (max 31)
-#                         we are only interested in warping to/from ED/ES
-#     output:
-#         I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
+def warp_forward(I, motions, delta_ed_es, clip_index, debug=False):
+    '''
+    input:
+        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
+        motions - shape ()
+        delta_ed_es - integer defining how many forward iterations to take (max 31)
+                        we are only interested in warping to/from ED/ES
+    output:
+        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
         
-#     for now, try to do things all on the cpu
-#     '''
+    for now, try to do things all on the cpu
+    '''
     
-#     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
     
     
-#     # convert numpy ndarrays into tensor objects moved onto device
-#     flow_source = torch.from_numpy(I).to(device).float()
-#     motions = torch.from_numpy(motions).to(device).float()
+    # convert numpy ndarrays into tensor objects moved onto device
+    flow_source = torch.from_numpy(I).to(device).float()
+    motions = torch.from_numpy(motions).to(device).float()
 
-#     # warping FORWARD from ED -> ES
-#     # python range is [x, y), inclusive start and exclusive end
-#     for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
-#         # grab forward motion
-#         forward_motion = motions[:2, frame_index,...]
+    # warping FORWARD from ED -> ES
+    # python range is [x, y), inclusive start and exclusive end
+    for frame_index in range(31 - delta_ed_es - clip_index, 31 - clip_index + 1, 1):
+        # grab forward motion
+        forward_motion = motions[:2, frame_index,...]
 
-#         # # grab the ED seg out frame to warp
-#         # if frame_index == 0:
-#         #     # flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-#         #     flow_source = I
-#         #     print(f'type(flow_source): {type(flow_source)}')
-#         #     # flow_source = torch.from_numpy(flow_source).to(device).float()
-#         # else:
-#         #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+        # # grab the ED seg out frame to warp
+        # if frame_index == 0:
+        #     # flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+        #     flow_source = I
+        #     print(f'type(flow_source): {type(flow_source)}')
+        #     # flow_source = torch.from_numpy(flow_source).to(device).float()
+        # else:
+        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
 
-#         # convert to tensors and move to gpu with float dtype
-#         # forward_motion = torch.from_numpy(forward_motion).to(device).float()
-#         # generate motion field for forward motion
-#         motion_field = generate_2dmotion_field_custom(flow_source, forward_motion)
-#         # create frame i+1 relative to curr frame i 
-#         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-#         # use i+1 frame as next loop iter's i frame
-#         flow_source = next_label
+        # convert to tensors and move to gpu with float dtype
+        # forward_motion = torch.from_numpy(forward_motion).to(device).float()
+        # generate motion field for forward motion
+        motion_field = generate_2dmotion_field_custom(flow_source, forward_motion)
+        # create frame i+1 relative to curr frame i 
+        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+        # use i+1 frame as next loop iter's i frame
+        flow_source = next_label
         
         
-#         # DEBUGGING
-#         if debug:
-#             tmp = flow_source.cpu().detach().numpy()
-#             #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
-#             print(f'flow_source unique vals: {np.unique(tmp)}')
-#             print(f'flow_source.shape: {flow_source.shape}')
-#             # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
-#             tmp_1 = one_hot(tmp[0])
-#             vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
+        # DEBUGGING
+        if debug:
+            tmp = flow_source.cpu().detach().numpy()
+            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
+            print(f'flow_source unique vals: {np.unique(tmp)}')
+            print(f'flow_source.shape: {flow_source.shape}')
+            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
+            tmp_1 = one_hot(tmp[0])
+            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
 
-#     flow_source = flow_source.cpu().detach().numpy()
+    flow_source = flow_source.cpu().detach().numpy()
     
-#     return flow_source
+    return flow_source
 
-# def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
-#     '''
-#     input:
-#         I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
-#         motions - shape ()
-#         delta_ed_es - integer defining how many forward iterations to take (max 31)
-#                         we are only interested in warping to/from ED/ES
-#     output:
-#         I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
+def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
+    '''
+    input:
+        I - shape (1, 2, 112, 112), not one-hot encoded, must be the raw model segmentation output
+        motions - shape ()
+        delta_ed_es - integer defining how many forward iterations to take (max 31)
+                        we are only interested in warping to/from ED/ES
+    output:
+        I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
         
-#     for now, try to do things all on the cpu
+    for now, try to do things all on the cpu
 
-#     '''
-#     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    '''
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-#     # convert numpy ndarrays into tensor objects moved onto device
-#     flow_source = torch.from_numpy(I).to(device).float()
-#     motions = torch.from_numpy(motions).to(device).float()
+    # convert numpy ndarrays into tensor objects moved onto device
+    flow_source = torch.from_numpy(I).to(device).float()
+    motions = torch.from_numpy(motions).to(device).float()
     
-#     # warping BACKWARD from ED <- ES
-#     for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
-#         # grab backward motion
-#         backward_motion = motions[2:, frame_index,...]
+    # warping BACKWARD from ED <- ES
+    for frame_index in range(31 - clip_index, 31 - delta_ed_es - clip_index - 1, -1):
+        # grab backward motion
+        backward_motion = motions[2:, frame_index,...]
 
-#         # # grab the ES seg out frame to start
-#         # if frame_index == delta_ed_es:
-#         #     flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
-#         #     flow_source = torch.from_numpy(flow_source).to(device).float()
-#         # else:
-#         #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
+        # # grab the ES seg out frame to start
+        # if frame_index == delta_ed_es:
+        #     flow_source = np.array([curr_clip_segmentations[:, frame_index, ...]])
+        #     flow_source = torch.from_numpy(flow_source).to(device).float()
+        # else:
+        #     pass # use previous next_label as flow_source, should be redefined at end of previous loop iter
 
-#         # convert to tensors and move to gpu with float dtype
-#         # backward_motion = torch.from_numpy(backward_motion).to(device).float()
-#         # generate motion field for backward motion
-#         motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
-#         # create frame i-1 relative to curr frame i 
-#         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
-#         # use i-1 frame as next loop iter's i frame
-#         flow_source = next_label
+        # convert to tensors and move to gpu with float dtype
+        # backward_motion = torch.from_numpy(backward_motion).to(device).float()
+        # generate motion field for backward motion
+        motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
+        # create frame i-1 relative to curr frame i 
+        next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
+        # use i-1 frame as next loop iter's i frame
+        flow_source = next_label
         
-#         # DEBUGGING
-#         if debug:
-#             tmp = flow_source.cpu().detach().numpy()
-#             #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
-#             print(f'flow_source unique vals: {np.unique(tmp)}')
-#             print(f'flow_source.shape: {flow_source.shape}')
-#             # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
-#             tmp_1 = one_hot(tmp[0])
-#             vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
+        # DEBUGGING
+        if debug:
+            tmp = flow_source.cpu().detach().numpy()
+            #vis_single(one_hot(tmp[0]), title='flow_source', cmap='seismic')
+            print(f'flow_source unique vals: {np.unique(tmp)}')
+            print(f'flow_source.shape: {flow_source.shape}')
+            # vis_pair(tmp[0][0], tmp[0][1], first_title=f'0th @ {frame_index}', second_title=f'1th @ {frame_index}', cmap='gray')
+            tmp_1 = one_hot(tmp[0])
+            vis_single(tmp_1, title=f'{frame_index}, white pixels: {np.count_nonzero(tmp_1 == 1)}', cmap='gray')
 
 
-#     flow_source = flow_source.cpu().detach().numpy()
+    flow_source = flow_source.cpu().detach().numpy()
     
-#     return flow_source 
+    return flow_source 
 
 #########################################################################################
 # FOR SLICING A SEGMENTATION INTO THE BOUNDARY POINT SETS

@@ -6,7 +6,6 @@ import torch.nn.functional as F
 
 import numpy as np
 
-    
 class R2plus1D_18_MotionNet(nn.Module):
     def __init__(self, pretrained=True, output_channels=4):
         super(R2plus1D_18_MotionNet, self).__init__()
