@@ -471,7 +471,7 @@ def generate_2dmotion_field_custom(x, offset):
     return offsets
 
    
-
+# commented out bc these were doing the wrong thing, may or may not find them useful for future changes
 # def top_bottom_index(I):
 #     '''
 #     input:
@@ -878,8 +878,6 @@ def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
                         we are only interested in warping to/from ED/ES
     output:
         I_1 - shape (1, 2, 112, 112), not one-hot encoded, raw ES image, if want one-hot encoded need to apply np.argmax
-        
-    for now, try to do things all on the cpu
 
     '''
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -903,6 +901,7 @@ def warp_backward(I, motions, delta_ed_es, clip_index, debug=False):
         # convert to tensors and move to gpu with float dtype
         # backward_motion = torch.from_numpy(backward_motion).to(device).float()
         # generate motion field for backward motion
+        
         motion_field = generate_2dmotion_field_custom(flow_source, backward_motion)
         # create frame i-1 relative to curr frame i 
         next_label = F.grid_sample(flow_source, motion_field, align_corners=False, mode="bilinear", padding_mode='border')
@@ -1171,6 +1170,9 @@ def pol2cart(rho, theta):
     return x, y
 
 class Vector:
+    '''
+    class for representing vectors used in warping frames using the motion tracking data
+    '''
     def __init__(self, tail_x, tail_y, mag_x, mag_y):
         self.tail_x = tail_x
         self.tail_y = tail_y

@@ -1,0 +1,11 @@
+Starting Repo:
+https://github.com/echonet/dynamic
+
+Commands:
+ 
+git clone https://github.com/echonet/dynamic.git
+cd dynamic
+conda env create -n dynamic python=3.7.*
+conda activate dynamic
+pip install --user .
+pip install jupyterlab, matplotlib, SimpleITK, ipympl

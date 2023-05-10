@@ -1,0 +1,12 @@
+Using the slurm job management program, this should grab 4 gpus and 8 cpu threads and put you into an interactive bash session. Modify to your own needs.
+```
+srun -p gpu -n 8 --gres=gpu:4 --pty /bin/bash
+```
+I recommend creating a tmux session that just has the conda env activated and you can run this gpu-getting script to get bash session with the gpus needed. After that you can start your jupyter lab/notebook directly in the bash session. The PATH will retain the conda env.
+
+Example startup command sequence with all the commands written in full (change directories as needed): 
+
+cd ~
+conda activate dynamic
+srun -p gpu -n 8 --gres=gpu:4 --pty /bin/bash
+jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --notebook-dir ./summer2022research/echo_22
