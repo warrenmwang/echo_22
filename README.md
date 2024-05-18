@@ -1,3 +1,10 @@
+# Echo 22
+This is essentially a fork of Yida's original repo found [here](https://github.com/yc015/fully-automated-multi-heartbeat-echocardiography-video-segmentation-and-motion-tracking). Below is his original README.
+
+The work that I did during the Summer of 2022, which I will admit now is very messy, which can be found in the `./dev` directory. 
+
+---
+
 # Fully Automated Video Segmentation and Motion Tracking
 
 The code in this repository is an implementation of CLAS-FV framework described in the paper, "[Fully automated multi-heartbeat echocardiography video segmentation and motion tracking](http://eg.bucknell.edu/~jvs008/research/cardiac/SPIE22/chenSPIE22_preprint.pdf)," SPIE Medical Imaging 2022.
