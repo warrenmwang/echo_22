@@ -3,6 +3,8 @@ This is essentially a fork of Yida's original repo found [here](https://github.c
 
 The work that I did during the Summer of 2022, which I will admit now is very messy, which can be found in the `./dev` directory. 
 
+[Poster Link](http://eg.bucknell.edu/~jvs008/research/cardiac/posters/2022_Wang_Motion_Tracking_Poster.pdf)
+
 ---
 
 # Fully Automated Video Segmentation and Motion Tracking
